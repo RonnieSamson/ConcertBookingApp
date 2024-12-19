@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Concert.Data.Entity
+namespace ConcertBookingApp.Data.Entity
 {
     internal class Performance
     {

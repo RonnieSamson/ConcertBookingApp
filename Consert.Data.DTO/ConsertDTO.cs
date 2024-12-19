@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConcertBookingApp.Data.Entity
+namespace ConsertBookingApp.Data.DTO
 {
-    public class Concert
+    public class ConsertDTO
     {
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        
     }
 }

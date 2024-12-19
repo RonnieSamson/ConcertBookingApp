@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Concert.Data.Entity
+namespace ConcertBookingApp.Data.Entity
 {
     public class Booking
     {
@@ -19,6 +19,5 @@ namespace Concert.Data.Entity
         [MaxLength(50)]
         public string Email { get; set; }
 
-        public List<User>  { get; set; }
     }
 }
