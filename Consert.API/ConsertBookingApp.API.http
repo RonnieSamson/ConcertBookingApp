@@ -1,6 +1,9 @@
-@Consert.API_HostAddress = http://localhost:5134
-
-GET {{Consert.API_HostAddress}}/weatherforecast/
+# Hämta alla konserter
+GET http://localhost:5134/api/concert
 Accept: application/json
 
 ###
+
+# Hämta en specifik konsert (med Id = 1)
+GET http://localhost:5134/api/concert/1
+Accept: application/json

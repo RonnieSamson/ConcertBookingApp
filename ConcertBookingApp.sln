@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsertBookingApp.Data.DTO"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsertBookingApp.API", "Consert.API\ConsertBookingApp.API.csproj", "{D4DF4891-1743-4264-A458-95D16CD2AB21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsertBookingApp.MAUI", "ConsertBookingApp.MAUI\ConsertBookingApp.MAUI.csproj", "{132A5F5F-99D1-4F06-90C1-0543045EE1FC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{132A5F5F-99D1-4F06-90C1-0543045EE1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{132A5F5F-99D1-4F06-90C1-0543045EE1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{132A5F5F-99D1-4F06-90C1-0543045EE1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{132A5F5F-99D1-4F06-90C1-0543045EE1FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

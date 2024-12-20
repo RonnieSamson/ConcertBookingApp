@@ -2,7 +2,7 @@
 using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Maui;
 
-namespace ConsertBookingApp.MAUI
+namespace ConcertBookingApp.MAUI
 {
     public static class MauiProgram
     {

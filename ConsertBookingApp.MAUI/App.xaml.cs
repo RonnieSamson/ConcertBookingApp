@@ -1,4 +1,4 @@
-﻿namespace ConsertBookingApp.MAUI
+﻿namespace ConcertBookingApp.MAUI
 {
     public partial class App : Application
     {

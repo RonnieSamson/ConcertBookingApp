@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsertBookingApp.Data.DTO
+namespace ConcertBookingApp.Data.DTO
 {
     public class ConsertDTO
     {

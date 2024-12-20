@@ -1,5 +1,6 @@
 using ConcertBookingApp.Data;
 using ConcertBookingApp.Data.Entity;
+using ConsertBookingApp.API.Profiles;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,15 +13,10 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ConsertDbContext"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConcertDBContext"));
 });
 
-using (var scope = builder.Services.BuildServiceProvider().CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    context.Concerts.Add(new Concert { Title = "First Concert", Description = "This is the first concert" });
-    context.SaveChanges();
-}
+builder.Services.AddAutoMapper(typeof(ConsertProfile));
 
 var app = builder.Build();
 
