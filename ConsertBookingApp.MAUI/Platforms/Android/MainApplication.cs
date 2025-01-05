@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace ConcertBookingApp.MAUI
+namespace ConsertBookingApp.MAUI
 {
     [Application]
     public class MainApplication : MauiApplication

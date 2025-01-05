@@ -1,4 +1,4 @@
-﻿namespace ConcertBookingApp.MAUI
+﻿namespace ConsertBookingApp.MAUI
 {
     public partial class AppShell : Shell
     {

@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace ConcertBookingApp.MAUI
+namespace ConsertBookingApp.MAUI
 {
     public class Program
     {

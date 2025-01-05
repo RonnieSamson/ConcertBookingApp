@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace ConcertBookingApp.MAUI
+namespace ConsertBookingApp.MAUI
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate
