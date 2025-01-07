@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using CommunityToolkit.Maui.Extensions;
+using CommunityToolkit.Maui;
 
 namespace ConsertBookingApp.MAUI
 {
@@ -9,6 +11,7 @@ namespace ConsertBookingApp.MAUI
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

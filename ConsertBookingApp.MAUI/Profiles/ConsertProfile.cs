@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using ConcertBookingApp.Data.DTO;
-using ConcertBookingApp.Data.Entity;
+using ConsertBookingApp.MAUI.Models;
 
-namespace ConsertBookingApp.API.Profiles
+namespace ConsertBookingApp.MAUI.Profiles
 {
     public class ConsertProfile : Profile
     {
@@ -10,5 +10,6 @@ namespace ConsertBookingApp.API.Profiles
         {
             CreateMap<Concert, ConcertDto>().ReverseMap();
         }
+       
     }
 }

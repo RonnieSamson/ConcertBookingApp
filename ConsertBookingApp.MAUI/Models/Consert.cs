@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConcertBookingApp.Data.DTO
+namespace ConsertBookingApp.MAUI.Models
 {
-    public class ConsertDTO
+    public class Concert
     {
         public int Id { get; set; }
         public string Title { get; set; }
