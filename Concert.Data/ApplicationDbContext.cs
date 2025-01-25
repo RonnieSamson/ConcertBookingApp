@@ -29,6 +29,23 @@ namespace Concert.Data
                 .HasColumnType("nvarchar(36)")
                 .HasMaxLength(36)
                 .IsRequired();
+            modelBuilder.Entity<User>().Property(u => u.Name)
+                .HasColumnType("nvarchar(30)")
+                .HasMaxLength(30)
+                .IsRequired();
+            modelBuilder.Entity<User>().Property(u => u.Email)
+                .HasColumnType("nvarchar(50)")
+                .HasMaxLength(50)
+                .IsRequired();
+            modelBuilder.Entity<User>().Property(u => u.Password)
+                .HasColumnType("nvarchar(30)")
+                .HasMaxLength(30)
+                .IsRequired();
+            modelBuilder.Entity<Booking>()
+                .HasOne(b => b.User)
+                .WithMany(u => u.Bookings)
+                .HasForeignKey(b => b.UserId) 
+                .IsRequired(); 
 
         }
     }

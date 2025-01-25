@@ -15,7 +15,7 @@ namespace Concert.Data.Entity
         [MinLength(3)]
         public required string ID { get; set; }
         [StringLength(30)]
-        public required string name { get; set; }
+        public required string Name { get; set; }
         [StringLength(50)]
         public required string Email { get; set; }
         [StringLength(30)]
