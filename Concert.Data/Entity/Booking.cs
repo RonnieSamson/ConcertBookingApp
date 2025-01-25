@@ -19,6 +19,6 @@ namespace Concert.Data.Entity
         [MaxLength(50)]
         public string Email { get; set; }
 
-        public List<User>  { get; set; }
+        //public List<User>  Users { get; set; }
     }
 }
