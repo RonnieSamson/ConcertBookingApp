@@ -11,8 +11,8 @@ namespace Concert.Data.Entity
     internal class User
     {
         [Key]
-        [StringLength(36)]
-        [MinLength(10)]
+        
+        [MinLength(3)]
         public required string ID { get; set; }
         [StringLength(30)]
         public required string name { get; set; }
