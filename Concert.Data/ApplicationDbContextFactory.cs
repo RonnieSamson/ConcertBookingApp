@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-namespace Todo.Data;
+
+
+namespace Concert.Data;
 public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
 {
     public ApplicationDbContextFactory() { }
@@ -10,7 +12,7 @@ public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<Applicati
     {
         var builder = new ConfigurationBuilder()
         .SetBasePath(Directory.GetCurrentDirectory())
-        .AddJsonFile("jason1.json").Build();
+        .AddJsonFile("json1.json").Build();
         var connectionString = builder.GetConnectionString("ConcertBookingApp");
         if (string.IsNullOrEmpty(connectionString))
             throw new InvalidOperationException("The connection string was not set.");
