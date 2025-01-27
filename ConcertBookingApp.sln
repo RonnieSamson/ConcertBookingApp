@@ -5,11 +5,11 @@ VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcertBookingApp.Data", "Concert.Data\ConcertBookingApp.Data.csproj", "{34E255AA-3FF2-49D4-97E0-3FAC4588A0D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsertBookingApp.Data.DTO", "Consert.Data.DTO\ConsertBookingApp.Data.DTO.csproj", "{FC45321B-7494-4066-B7E7-A7940E853A24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.API", "Concert.API\Concert.API.csproj", "{1C03F7C4-CFAA-4225-AAD7-C39E907B5B97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsertBookingApp.API", "Consert.API\ConsertBookingApp.API.csproj", "{D4DF4891-1743-4264-A458-95D16CD2AB21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.DTO", "Concert.DTO\Concert.DTO.csproj", "{3CEA2F2E-6C22-467E-8782-88606DEBB5E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsertBookingApp.MAUI", "ConsertBookingApp.MAUI\ConsertBookingApp.MAUI.csproj", "{06C741EF-C4FE-4544-9CEC-51EA05130230}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.MAUI", "Concert.MAUI\Concert.MAUI.csproj", "{C65A1D28-E4A1-4DF8-8BFE-6307E0C69883}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +21,19 @@ Global
 		{34E255AA-3FF2-49D4-97E0-3FAC4588A0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34E255AA-3FF2-49D4-97E0-3FAC4588A0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34E255AA-3FF2-49D4-97E0-3FAC4588A0D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC45321B-7494-4066-B7E7-A7940E853A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC45321B-7494-4066-B7E7-A7940E853A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC45321B-7494-4066-B7E7-A7940E853A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC45321B-7494-4066-B7E7-A7940E853A24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06C741EF-C4FE-4544-9CEC-51EA05130230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06C741EF-C4FE-4544-9CEC-51EA05130230}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06C741EF-C4FE-4544-9CEC-51EA05130230}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06C741EF-C4FE-4544-9CEC-51EA05130230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C03F7C4-CFAA-4225-AAD7-C39E907B5B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C03F7C4-CFAA-4225-AAD7-C39E907B5B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C03F7C4-CFAA-4225-AAD7-C39E907B5B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C03F7C4-CFAA-4225-AAD7-C39E907B5B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEA2F2E-6C22-467E-8782-88606DEBB5E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEA2F2E-6C22-467E-8782-88606DEBB5E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEA2F2E-6C22-467E-8782-88606DEBB5E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEA2F2E-6C22-467E-8782-88606DEBB5E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C65A1D28-E4A1-4DF8-8BFE-6307E0C69883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65A1D28-E4A1-4DF8-8BFE-6307E0C69883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65A1D28-E4A1-4DF8-8BFE-6307E0C69883}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C65A1D28-E4A1-4DF8-8BFE-6307E0C69883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65A1D28-E4A1-4DF8-8BFE-6307E0C69883}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

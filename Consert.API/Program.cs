@@ -1,6 +1,6 @@
 using ConcertBookingApp.Data;
 using ConcertBookingApp.Data.Entity;
-using ConsertBookingApp.API.Profiles;
+using ConcertBookingApp.API.Profiles;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

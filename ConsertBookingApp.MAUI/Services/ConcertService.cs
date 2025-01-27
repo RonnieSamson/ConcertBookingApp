@@ -1,12 +1,12 @@
 ﻿using ConcertBookingApp.Data.DTO;
-using ConsertBookingApp.MAUI.Models;
+using ConcertBookingApp.MAUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsertBookingApp.MAUI.Services
+namespace ConcertBookingApp.MAUI.Services
 {
     public class ConcertService : IConcertService
     {
@@ -29,7 +29,7 @@ namespace ConsertBookingApp.MAUI.Services
         public async Task<IEnumerable<Concert>> GetConcertsAsync()
         {
             var concertDtos = await _restService.GetAsync<IEnumerable<ConcertDto>>("api/concerts");
-            // Mappa från ConcertDto till Concert
+            Console.WriteLine($"Hämtade data: {concertDtos}");
             return _mapper.Map<IEnumerable<Concert>>(concertDtos);
         }
 

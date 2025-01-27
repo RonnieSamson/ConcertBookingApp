@@ -1,0 +1,9 @@
+# Hämta alla konserter
+GET http://localhost:5134/api/concerts
+Accept: application/json
+
+###
+
+# Hämta en specifik konsert (med Id = 1)
+GET http://localhost:5134/api/concerts/1
+Accept: application/json

@@ -1,11 +1,11 @@
-﻿using ConsertBookingApp.MAUI.Models;
+﻿using ConcertBookingApp.MAUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsertBookingApp.MAUI.Services
+namespace ConcertBookingApp.MAUI.Services
 {
     public interface IConcertService
     {

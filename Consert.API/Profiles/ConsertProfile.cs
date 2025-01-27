@@ -2,7 +2,7 @@
 using ConcertBookingApp.Data.DTO;
 using ConcertBookingApp.Data.Entity;
 
-namespace ConsertBookingApp.API.Profiles
+namespace ConcertBookingApp.API.Profiles
 {
     public class ConsertProfile : Profile
     {

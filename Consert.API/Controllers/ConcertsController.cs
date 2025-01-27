@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ConcertBookingApp.Data;
 using ConcertBookingApp.Data.Entity;
 
-namespace ConsertBookingApp.API.Controllers
+namespace ConcertBookingApp.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
