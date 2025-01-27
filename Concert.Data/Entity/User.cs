@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Concert.Data.Entity
 {
-    internal class User
+    public class User
     {
         [Key]
         
