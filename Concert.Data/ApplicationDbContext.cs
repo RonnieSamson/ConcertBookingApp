@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Concert.Data.Entity;
+using Microsoft.IdentityModel.Tokens;
 
 
 namespace Concert.Data
@@ -44,9 +45,34 @@ namespace Concert.Data
             modelBuilder.Entity<Booking>()
                 .HasOne(b => b.User)
                 .WithMany(u => u.Bookings)
-                .HasForeignKey(b => b.UserId) 
-                .IsRequired(); 
+                .HasForeignKey(b => b.UserId)
+                .IsRequired();
+
+            SeedData(modelBuilder);
 
         }
+        private void SeedData(ModelBuilder builder)
+        {
+           var user1 = new User
+           {
+               ID = "1",
+               Name = "John",
+               Email = "John123@example.com",
+               Password = "John123",
+               Bookings = new List<Booking>
+               {
+                   new Booking
+                   {
+                       Id = 1,
+
+                       Name = "John",
+                    }
+              
+               }    
+           
+           };
+            builder.Entity<User>().HasData(user1);
+
+        }     
     }
 }
