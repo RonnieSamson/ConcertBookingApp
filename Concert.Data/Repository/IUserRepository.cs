@@ -7,7 +7,7 @@ using Concert.Data.Entity;
 
 namespace Concert.Data.Repository
 {
-    internal interface IUserRepository : IRepository<User>
+    public interface IUserRepository : IRepository<User>
     {
        Task<User?> GetUserByIdAsync(string id);
        Task<User?> GetUserByEmailAsync(string email);
