@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Concert.Data.Entity;
 using Microsoft.EntityFrameworkCore;
-using Concert.Data.Entity;
-using Microsoft.IdentityModel.Tokens;
 
 
 namespace Concert.Data
@@ -23,6 +17,7 @@ namespace Concert.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            // User Tabell
             modelBuilder.Entity<User>()
                 .HasKey(u => u.ID);
 
@@ -42,6 +37,28 @@ namespace Concert.Data
                 .HasColumnType("nvarchar(30)")
                 .HasMaxLength(30)
                 .IsRequired();
+            //Booking Tabell 
+            modelBuilder.Entity<Booking>()
+                .HasKey(b => b.Id);
+
+            modelBuilder.Entity<Booking>().Property(b => b.Id)
+                .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<Booking>().Property(b => b.Name)
+                .HasColumnType("nvarchar(50)")
+                .HasMaxLength(50)
+                .IsRequired();
+
+            modelBuilder.Entity<Booking>().Property(b => b.Email)
+                .HasColumnType("nvarchar(50)")
+                .HasMaxLength(50)
+                .IsRequired();
+
+            modelBuilder.Entity<Booking>().Property(b => b.UserId)
+                .HasColumnType("nvarchar(36)")
+                .IsRequired();
+
+
             modelBuilder.Entity<Booking>()
                 .HasOne(b => b.User)
                 .WithMany(u => u.Bookings)
@@ -53,26 +70,60 @@ namespace Concert.Data
         }
         private void SeedData(ModelBuilder builder)
         {
-           var user1 = new User
-           {
-               ID = "1",
-               Name = "John",
-               Email = "John123@example.com",
-               Password = "John123",
-               Bookings = new List<Booking>
-               {
-                   new Booking
-                   {
-                       Id = 1,
+            // Skapar användare 
+            var user1 = new User
+            {
+                ID = "1",
+                Name = "John",
+                Email = "John123@example.com",
+                Password = "John123",
 
-                       Name = "John",
-                    }
-              
-               }    
-           
-           };
-            builder.Entity<User>().HasData(user1);
+            };
 
-        }     
+            var user2 = new User
+            {
+                ID = "12",
+                Name = "Bob Bengtsson",
+                Email = "bob@example.com",
+                Password = "anotherpassword"
+            };
+
+            var user3 = new User
+            {
+                ID = "123",
+                Name = "Bob Bengtsson",
+                Email = "bob@example.com",
+                Password = "anotherpassword"
+            };
+
+
+            builder.Entity<User>().HasData(user1, user2, user3);
+
+            var booking1 = new Booking
+            {
+                Id = "1",
+                Name = "John",
+                Email = "alice@example.com",
+                UserId = "1"
+
+            };
+            var booking2 = new Booking
+            {
+                Id = "12",
+                Name = "Chrilleeeee",
+                Email = "Chrilleeeee@example.com",
+                UserId = "12"
+
+            };
+            var booking3 = new Booking
+            {
+                Id = "123",
+                Name = "Ronnieee",
+                Email = "RonniePonnie@example.com",
+                UserId = "123"
+
+            };
+            builder.Entity<Booking>().HasData(booking1, booking2, booking3);    
+        }
     }
 }
