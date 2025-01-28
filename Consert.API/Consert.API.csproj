@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Concert.Data\Concert.Data.csproj" />
-    <ProjectReference Include="..\Consert.Data.DTO\Consert.Data.DTO.csproj" />
+    <ProjectReference Include="..\Consert.Data.DTO\Concert.Data.DTO.csproj" />
   </ItemGroup>
 
 </Project>

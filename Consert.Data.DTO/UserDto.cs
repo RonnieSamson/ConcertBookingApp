@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consert.Data.DTO
+namespace Concert.Data.DTO
 {
-    internal class UserDto
+    public class UserDto
     {
         public string ID { get; set; } = null!;
         public string Name { get; set; } = null!;

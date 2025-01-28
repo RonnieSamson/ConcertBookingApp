@@ -67,7 +67,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Consert.Data.DTO\Consert.Data.DTO.csproj" />
+	  <ProjectReference Include="..\Consert.Data.DTO\Concert.Data.DTO.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.Data", "Concert.Data\Concert.Data.csproj", "{34E255AA-3FF2-49D4-97E0-3FAC4588A0D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consert.Data.DTO", "Consert.Data.DTO\Consert.Data.DTO.csproj", "{FC45321B-7494-4066-B7E7-A7940E853A24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.Data.DTO", "Consert.Data.DTO\Concert.Data.DTO.csproj", "{FC45321B-7494-4066-B7E7-A7940E853A24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consert.API", "Consert.API\Consert.API.csproj", "{D4DF4891-1743-4264-A458-95D16CD2AB21}"
 EndProject
