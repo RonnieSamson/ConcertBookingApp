@@ -14,7 +14,15 @@ namespace Concert.MAUI.Profiles
     {
         public ConcertProfile()
         {
-            CreateMap<Concerts, ConcertDto>().ReverseMap();
+            CreateMap<ConcertDto, Konsert>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Titel, opt => opt.MapFrom(src => src.Title))
+                .ForMember(dest => dest.Beskrivning, opt => opt.MapFrom(src => src.Description));
+            CreateMap<Konsert, ConcertDto>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Titel))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Beskrivning));
+
         }
 
     }

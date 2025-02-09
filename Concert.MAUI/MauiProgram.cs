@@ -1,4 +1,5 @@
-﻿using Concert.MAUI.Services;
+﻿using Concert.MAUI.Profiles;
+using Concert.MAUI.Services;
 using Microsoft.Extensions.Logging;
 
 namespace Concert.MAUI
@@ -20,14 +21,14 @@ namespace Concert.MAUI
             {
                 var client = new HttpClient
                 {
-                    BaseAddress = new Uri("http://192.168.0.30:5134/") // Bas-URL för ditt API
+                    BaseAddress = new Uri("http://localhost:5134/")
                 };
                 return client;
             });
 
             builder.Services.AddSingleton<IRestService, RestService>();
-            builder.Services.AddSingleton<ConcertService>();
-            builder.Services.AddAutoMapper(typeof(ConcertService));
+            builder.Services.AddSingleton<IConcertService, ConcertService>();
+            builder.Services.AddAutoMapper(typeof(ConcertProfile));
 
 
 #if DEBUG

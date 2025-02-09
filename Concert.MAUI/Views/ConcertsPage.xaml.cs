@@ -1,4 +1,4 @@
-using Concert.MAUI.Models;
+using Concert.DTO;
 using Concert.MAUI.Services;
 using System.Collections.ObjectModel;
 
@@ -6,11 +6,11 @@ namespace Concert.MAUI.Views;
 
 public partial class ConcertsPage : ContentPage
 {
-    private readonly ConcertService _concertService;
+    private readonly IConcertService _concertService;
 
-    public ObservableCollection<Concerts> Concerts { get; set; } = new();
+    public ObservableCollection<ConcertDto> Concerts { get; set; } = new();
 
-    public ConcertsPage(ConcertService concertService)
+    public ConcertsPage(IConcertService concertService)
     {
         InitializeComponent();
         _concertService = concertService;
@@ -23,7 +23,10 @@ public partial class ConcertsPage : ContentPage
     {
         try
         {
+            // Hämta konserter direkt som DTO
             var concerts = await _concertService.GetConcertsAsync();
+
+            // Rensa och fyll på ObservableCollection
             Concerts.Clear();
             foreach (var concert in concerts)
             {

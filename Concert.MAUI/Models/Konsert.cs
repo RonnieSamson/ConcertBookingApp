@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Concert.MAUI.Models
 {
-    public class Concerts
+    public class Konsert
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string Titel { get; set; }
+        public string Beskrivning { get; set; }
     }
 }

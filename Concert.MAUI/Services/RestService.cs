@@ -19,11 +19,24 @@ namespace Concert.MAUI.Services
 
         public async Task<T> GetAsync<T>(string uri)
         {
-            var response = await _client.GetAsync(uri);
-            response.EnsureSuccessStatusCode();
+            try
+            {
+                var response = await _client.GetAsync(uri);
+                response.EnsureSuccessStatusCode();
 
-            var content = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<T>(content)!;
+                var content = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"JSON Response: {content}"); // Logga JSON-svaret
+
+                return JsonSerializer.Deserialize<T>(content, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                })!;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetAsync: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task<T> PostAsync<T>(string uri, T data)

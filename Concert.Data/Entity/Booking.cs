@@ -9,15 +9,14 @@ namespace ConcertBookingApp.Data.Entity
 {
     public class Booking
     {
-        [Key]
-        
+        [Key] 
         public int Id { get; set; }
         [Required]
         [MaxLength(50)]
-        public string Name { get; set; }
-        [Required]
-        [MaxLength(50)]
-        public string Email { get; set; }
 
+        public string Name { get; set; }
+
+        public int ConcertId { get; set; }
+        public Concert Concert { get; set; }
     }
 }

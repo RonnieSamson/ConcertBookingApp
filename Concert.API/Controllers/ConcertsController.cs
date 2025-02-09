@@ -2,6 +2,8 @@
 using ConcertBookingApp.Data;
 using ConcertBookingApp.Data.Entity;
 using Microsoft.EntityFrameworkCore;
+using Concert.DTO;
+using AutoMapper;
 
 
 namespace Concert.API.Controllers
@@ -11,22 +13,30 @@ namespace Concert.API.Controllers
     public class ConcertsController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
 
-        public ConcertsController(AppDbContext context)
+        public ConcertsController(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         // GET: api/Concerts
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ConcertBookingApp.Data.Entity.Concert>>> GetConcerts()
+        public async Task<ActionResult<IEnumerable<ConcertDto>>> GetConcerts()
         {
-            return await _context.Concerts.ToListAsync();
+            var concerts = await _context.Concerts.ToListAsync();
+
+            // Mappa datan och spara den i en variabel för inspektion
+            var mappedConcerts = _mapper.Map<IEnumerable<ConcertDto>>(concerts);
+
+            // Debug-punkt: Här kan du inspektera mappedConcerts
+            return Ok(mappedConcerts);
         }
 
         // GET: api/Concerts/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ConcertBookingApp.Data.Entity.Concert>> GetConcert(int id)
+        public async Task<ActionResult<ConcertDto>> GetConcert(int id)
         {
             var concert = await _context.Concerts.FindAsync(id);
 
@@ -35,18 +45,36 @@ namespace Concert.API.Controllers
                 return NotFound();
             }
 
-            return concert;
+            return Ok(_mapper.Map<ConcertDto>(concert));
+        }
+
+        // POST: api/Concerts
+        [HttpPost]
+        public async Task<ActionResult<ConcertDto>> PostConcert(ConcertDto concertDto)
+        {
+            var concert = _mapper.Map<ConcertBookingApp.Data.Entity.Concert>(concertDto);
+            _context.Concerts.Add(concert);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetConcert), new { id = concert.Id }, _mapper.Map<ConcertDto>(concert));
         }
 
         // PUT: api/Concerts/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutConcert(int id, ConcertBookingApp.Data.Entity.Concert concert)
+        public async Task<IActionResult> PutConcert(int id, ConcertDto concertDto)
         {
-            if (id != concert.Id)
+            if (id != concertDto.Id)
             {
                 return BadRequest();
             }
+
+            var concert = await _context.Concerts.FindAsync(id);
+            if (concert == null)
+            {
+                return NotFound();
+            }
+
+            _mapper.Map(concertDto, concert);
 
             _context.Entry(concert).State = EntityState.Modified;
 
@@ -56,7 +84,7 @@ namespace Concert.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ConcertExists(id))
+                if (!_context.Concerts.Any(c => c.Id == id))
                 {
                     return NotFound();
                 }
@@ -67,17 +95,6 @@ namespace Concert.API.Controllers
             }
 
             return NoContent();
-        }
-
-        // POST: api/Concerts
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<ConcertBookingApp.Data.Entity.Concert>> PostConcert(ConcertBookingApp.Data.Entity.Concert concert)
-        {
-            _context.Concerts.Add(concert);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetConcert", new { id = concert.Id }, concert);
         }
 
         // DELETE: api/Concerts/5
@@ -94,11 +111,6 @@ namespace Concert.API.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
-        }
-
-        private bool ConcertExists(int id)
-        {
-            return _context.Concerts.Any(e => e.Id == id);
         }
     }
 }

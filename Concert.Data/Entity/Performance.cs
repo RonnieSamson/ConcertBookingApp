@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConcertBookingApp.Data.Entity
 {
-    internal class Performance
+    public class Performance
     {
+        public int Id { get; set; }
+        public DateTime Date { get; set; }
+        public int ConcertId { get; set; }
+        public Concert Concert { get; set; }
     }
 }
