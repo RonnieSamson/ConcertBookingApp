@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.Data.DTO", "Consert
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consert.API", "Consert.API\Consert.API.csproj", "{D4DF4891-1743-4264-A458-95D16CD2AB21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consert.MAUI", "Consert.MAUI\Consert.MAUI.csproj", "{07C2E0CF-832E-42F6-8D6F-125CF1B8DC3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.MAUI", "Concert.MAUI\Concert.MAUI.csproj", "{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4DF4891-1743-4264-A458-95D16CD2AB21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{07C2E0CF-832E-42F6-8D6F-125CF1B8DC3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07C2E0CF-832E-42F6-8D6F-125CF1B8DC3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07C2E0CF-832E-42F6-8D6F-125CF1B8DC3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07C2E0CF-832E-42F6-8D6F-125CF1B8DC3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
