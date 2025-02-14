@@ -73,7 +73,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Consert.API\Consert.API.csproj" />
 	  <ProjectReference Include="..\Consert.Data.DTO\Concert.Data.DTO.csproj" />
 	</ItemGroup>
 
