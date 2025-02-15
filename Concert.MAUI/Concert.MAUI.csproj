@@ -68,11 +68,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
-	  <Folder Include="Profiles\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <ProjectReference Include="..\Consert.Data.DTO\Concert.Data.DTO.csproj" />
 	</ItemGroup>
 
