@@ -12,11 +12,14 @@ namespace Concert.Data.Repository
     {
         private readonly ApplicationDbContext context;
         public IUserRepository Users { get; private set; }
+        public IBookingRepository Bookings { get; private set; }
         public UnitOfWork(ApplicationDbContext context)
         {
             this.context = context;
             Users = new UserRepository(context);
+            Bookings = new BookingRepository(context);
         }
+
         public async Task<int> CompleteAsync()
         {
             return await context.SaveChangesAsync();
@@ -48,6 +51,10 @@ namespace Concert.Data.Repository
         public async Task DeleteUserAsync(User user)
         {
             await Users.DeleteUserAsync(user);
+        }
+        public async Task<Booking> GetBookingByIdAsync(string id)
+        {
+            return await Bookings.GetBookingByIdAsync(id);
         }
 
 
