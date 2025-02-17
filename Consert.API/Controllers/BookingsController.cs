@@ -31,21 +31,22 @@ namespace Consert.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Booking>>> GetBookings()
         {
-            return await _unitOfWork.Bookings.ToListAsync();
+            var bookings = await _unitOfWork.Bookings.GetBookingsAsync();
+            return Ok(_mapper.Map<Booking>(bookings));
         }
 
         // GET: api/Bookings/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Booking>> GetBooking(string id)
         {
-            var booking = await _context.Bookings.FindAsync(id);
+            var booking = await _unitOfWork.GetBookingByIdAsync(id);
 
             if (booking == null)
             {
                 return NotFound();
             }
 
-            return booking;
+            return Ok(_mapper.Map<Booking>(booking));
         }
 
         // PUT: api/Bookings/5
@@ -58,11 +59,9 @@ namespace Consert.API.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(booking).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                await _unitOfWork.Bookings.UpdateBookingAsync(booking);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -76,7 +75,7 @@ namespace Consert.API.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok();
         }
 
         // POST: api/Bookings
@@ -84,31 +83,25 @@ namespace Consert.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Booking>> PostBooking(Booking booking)
         {
-            _context.Bookings.Add(booking);
-            await _context.SaveChangesAsync();
+            
+            await _unitOfWork.Bookings.AddBookingAsync(booking);
 
             return CreatedAtAction("GetBooking", new { id = booking.Id }, booking);
         }
 
         // DELETE: api/Bookings/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteBooking(string id)
+        public async Task<IActionResult> DeleteBooking(Booking booking)
         {
-            var booking = await _context.Bookings.FindAsync(id);
-            if (booking == null)
-            {
-                return NotFound();
-            }
 
-            _context.Bookings.Remove(booking);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            await _unitOfWork.Bookings.DeleteBookingAsync(booking);
+ 
+            return Ok();
         }
 
         private bool BookingExists(string id)
         {
-            return _context.Bookings.Any(e => e.Id == id);
+            return _mapper.Map<Booking>(_unitOfWork.Bookings.GetBookingByIdAsync(id)) != null;
         }
     }
 }

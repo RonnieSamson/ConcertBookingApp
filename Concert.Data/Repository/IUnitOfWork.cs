@@ -9,6 +9,7 @@ namespace Concert.Data.Repository
     public interface IUnitOfWork : IDisposable
     {
         IUserRepository Users { get; }
+        IBookingRepository Bookings { get; }
         Task<int> CompleteAsync();
 
         Task<User> GetUserByIdAsync(string id);
@@ -16,6 +17,8 @@ namespace Concert.Data.Repository
         Task AddUserAsync(User user);
         Task UpdateUserAsync(User user);
         Task DeleteUserAsync(User user);
+
+        Task<Booking> GetBookingByIdAsync(string id);
 
 
 

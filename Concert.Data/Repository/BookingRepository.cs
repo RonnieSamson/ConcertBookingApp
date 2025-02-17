@@ -1,4 +1,5 @@
 ﻿using Concert.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,28 +15,40 @@ namespace Concert.Data.Repository
         public BookingRepository(ApplicationDbContext context) : base(context)
         {
         }
-        
-        public Task AddBookingAsync(Booking booking)
+
+        public async Task<Booking> GetBookingByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            return await DbContext.Bookings.FindAsync(id);
         }
-        public Task DeleteBookingAsync(Booking booking)
+
+        public async Task<Booking?> GetBookingByUserIdAsync(string userId)
         {
-            throw new NotImplementedException();
+            return await DbContext.Bookings.FirstOrDefaultAsync(b => b.UserId == userId);
         }
-        public Task<Booking> GetBookingByIdAsync(string id)
+
+        public async Task<IEnumerable<Booking>> GetBookingsAsync()
         {
-            throw new NotImplementedException();
+            return await DbContext.Bookings.ToListAsync();
         }
-        public Task<Booking?> GetBookingByUserIdAsync(string userId)
+
+        public async Task AddBookingAsync(Booking booking)
         {
-            throw new NotImplementedException();
+            await DbContext.Bookings.AddAsync(booking);
         }
-        public Task UpdateBookingAsync(Booking booking)
+
+        public async Task UpdateBookingAsync(Booking booking)
         {
-            throw new NotImplementedException();
+            DbContext.Bookings.Update(booking);
         }
+
+        public async Task DeleteBookingAsync(Booking booking)
+        {
+            DbContext.Bookings.Remove(booking);
+        }
+
+
+
+
+
     }
-    
-    
 }
