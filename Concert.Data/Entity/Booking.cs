@@ -5,19 +5,13 @@ namespace Concert.Data.Entity
 {
     public class Booking
     {
-        [Key]
+       
+        public string Id { get; set; }    
 
-        public string Id { get; set; }
-        [Required]
-        [MaxLength(50)]
-        public string Name { get; set; }
-        [Required]
-        [MaxLength(50)]
-        public string Email { get; set; }
+        public DateTime BookingDate { get; set; }
         public string UserId { get; set; }
-        [ForeignKey("UserId")]
         public User User { get; set; }
-
-        //public List<User>  Users { get; set; }
+        public string ConcertId { get; set; }
+        public ConcertEntity Concert { get; set; }
     }
 }
