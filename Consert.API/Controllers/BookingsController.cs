@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Concert.Data;
 using Concert.Data.Entity;
+using Concert.Data.Repository;
+using AutoMapper;
 
 namespace Consert.API.Controllers
 {
@@ -14,18 +16,22 @@ namespace Consert.API.Controllers
     [ApiController]
     public class BookingsController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public BookingsController(ApplicationDbContext context)
+        public BookingsController(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _context = context;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+
         }
 
         // GET: api/Bookings
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Booking>>> GetBookings()
         {
-            return await _context.Bookings.ToListAsync();
+            return await _unitOfWork.Bookings.ToListAsync();
         }
 
         // GET: api/Bookings/5
