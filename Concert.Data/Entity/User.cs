@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Concert.Data.Entity
 {
-    internal class User
+    public class User
     {
         [Key]
-        [StringLength(36)]
-        [MinLength(10)]
+
+        [MinLength(3)]
         public required string ID { get; set; }
         [StringLength(30)]
-        public required string name { get; set; }
+        public required string Name { get; set; }
         [StringLength(50)]
         public required string Email { get; set; }
         [StringLength(30)]
