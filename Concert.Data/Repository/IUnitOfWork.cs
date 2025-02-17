@@ -10,5 +10,9 @@ namespace Concert.Data.Repository
     {
         IUserRepository Users { get; }
         Task<int> CompleteAsync();
+        Task<string> GetUserByIdAsync();
+        
+        
+
     }
 }

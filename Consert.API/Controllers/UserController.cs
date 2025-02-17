@@ -13,17 +13,17 @@ namespace Consert.API.Controllers
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public UserController(IUserRepository userRepository, IMapper mapper)
+        public UserController(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _userRepository = userRepository;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
         [HttpGet("{id}")]
         public async Task <IActionResult> GetUserById(string id)
         {
-            var users = await _userRepository.GetUserByIdAsync(id);
+            var users = await _unitOfWork.GetUserByIdAsync(id);
             return Ok(_mapper.Map<UserDto>(users));
         }
         [HttpGet("getUserIdFromEmail")]

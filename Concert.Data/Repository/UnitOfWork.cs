@@ -26,6 +26,16 @@ namespace Concert.Data.Repository
             context.Dispose();
         }
 
+        public Task<string> GetUserByIdAsync(string id)
+        {
+            return GetUserByIdAsync(string id);
+        }
+
+
+       
+
+
+
     }
 
 }
