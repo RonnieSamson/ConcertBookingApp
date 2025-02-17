@@ -26,13 +26,29 @@ namespace Concert.Data.Repository
             context.Dispose();
         }
 
-        public Task<string> GetUserByIdAsync(string id)
+        public async Task<User> GetUserByIdAsync(string id)
         {
-            return GetUserByIdAsync(string id);
+            return await Users.GetUserByIdAsync(id);
+        }
+        public async Task<User> GetUserByEmailAsync(string email)
+        {
+            return await Users.GetUserByEmailAsync(email);
         }
 
+        public async Task AddUserAsync(User user)
+        {
+            await Users.AddUserAsync(user);
+        }
 
-       
+        public async Task UpdateUserAsync(User user)
+        {
+            await Users.UpdateUserAsync(user);
+        }
+
+        public async Task DeleteUserAsync(User user)
+        {
+            await Users.DeleteUserAsync(user);
+        }
 
 
 

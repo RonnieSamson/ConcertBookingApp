@@ -9,7 +9,7 @@ namespace Concert.Data.Repository
 {
     public interface IUserRepository : IRepository<User>
     {
-       Task<User> GetUserByIdAsync(string id);
+       Task<User?> GetUserByIdAsync(string id);
        Task<User?> GetUserByEmailAsync(string email);
        Task AddUserAsync(User user);
         Task UpdateUserAsync(User user);
