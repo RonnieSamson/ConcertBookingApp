@@ -10,6 +10,7 @@ namespace ConcertBookingApp.Data.Entity
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
+        public string location { get; set; }
         public int ConcertId { get; set; }
         public Concert Concert { get; set; }
     }
