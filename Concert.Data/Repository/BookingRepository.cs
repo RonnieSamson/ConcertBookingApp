@@ -1,54 +1,42 @@
-﻿using Concert.Data.Entity;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Concert.Data.Repository;
+using Concert.Data;
+using Concert.Data.Entity;
 
-namespace Concert.Data.Repository
+public class BookingRepository : Repository<Booking>, IBookingRepository
 {
-    public class BookingRepository : Repository<Booking>, IBookingRepository
+    public ApplicationDbContext DbContext => Context as ApplicationDbContext;
+
+    public BookingRepository(ApplicationDbContext context) : base(context)
     {
+    }
 
-        public ApplicationDbContext DbContext => Context as ApplicationDbContext;
-        public BookingRepository(ApplicationDbContext context) : base(context)
-        {
-        }
+    public async Task<Booking?> GetBookingByIdAsync(string id)
+    {
+        return (await Find(b => b.Id == id)).FirstOrDefault();
+    }
 
-        public async Task<Booking> GetBookingByIdAsync(string id)
-        {
-            return await DbContext.Bookings.FindAsync(id);
-        }
+    public async Task<Booking?> GetBookingByUserIdAsync(string userId)
+    {
+        return (await Find(b => b.UserId == userId)).FirstOrDefault();
+    }
 
-        public async Task<Booking?> GetBookingByUserIdAsync(string userId)
-        {
-            return await DbContext.Bookings.FirstOrDefaultAsync(b => b.UserId == userId);
-        }
+    public async Task<IEnumerable<Booking>> GetBookingsAsync()
+    {
+        return await All();
+    }
 
-        public async Task<IEnumerable<Booking>> GetBookingsAsync()
-        {
-            return await DbContext.Bookings.ToListAsync();
-        }
+    public void AddBooking(Booking booking)
+    {
+        Insert(booking); 
+    }
 
-        public async Task AddBookingAsync(Booking booking)
-        {
-            await DbContext.Bookings.AddAsync(booking);
-        }
+    public void UpdateBooking(Booking booking)
+    {
+        DbContext.Bookings.Update(booking); 
+    }
 
-        public async Task UpdateBookingAsync(Booking booking)
-        {
-            DbContext.Bookings.Update(booking);
-        }
-
-        public async Task DeleteBookingAsync(Booking booking)
-        {
-            DbContext.Bookings.Remove(booking);
-        }
-
-
-
-
-
+    public void DeleteBooking(Booking booking)
+    {
+        Delete(booking); 
     }
 }

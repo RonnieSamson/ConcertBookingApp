@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Concert.Data;
 using Concert.Data.Entity;
 using Concert.Data.Repository;
 using AutoMapper;
 
-namespace Consert.API.Controllers
+namespace Concert.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class BookingsController : ControllerBase
     {
-        
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
@@ -24,22 +19,21 @@ namespace Consert.API.Controllers
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-
         }
 
-        // GET: api/Bookings
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Booking>>> GetBookings()
         {
             var bookings = await _unitOfWork.Bookings.GetBookingsAsync();
-            return Ok(_mapper.Map<Booking>(bookings));
+            return Ok(_mapper.Map<IEnumerable<Booking>>(bookings));
         }
 
-        // GET: api/Bookings/5
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<Booking>> GetBooking(string id)
         {
-            var booking = await _unitOfWork.GetBookingByIdAsync(id);
+            var booking = await _unitOfWork.Bookings.GetBookingByIdAsync(id); 
 
             if (booking == null)
             {
@@ -49,59 +43,48 @@ namespace Consert.API.Controllers
             return Ok(_mapper.Map<Booking>(booking));
         }
 
-        // PUT: api/Bookings/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBooking(string id, Booking booking)
+        public async Task<IActionResult> UpdateBooking(string id, [FromBody] Booking booking)
         {
             if (id != booking.Id)
             {
                 return BadRequest();
             }
 
-            try
-            {
-                await _unitOfWork.Bookings.UpdateBookingAsync(booking);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!BookingExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            var existingBooking = await _unitOfWork.Bookings.GetBookingByIdAsync(id);
+            if (existingBooking == null) return NotFound();
+
+            _unitOfWork.Bookings.UpdateBooking(booking);
+            await _unitOfWork.CompleteAsync(); 
 
             return Ok();
         }
 
-        // POST: api/Bookings
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPost]
-        public async Task<ActionResult<Booking>> PostBooking(Booking booking)
+        public async Task<ActionResult<Booking>> CreateBooking([FromBody] Booking booking)
         {
-            
-            await _unitOfWork.Bookings.AddBookingAsync(booking);
+            _unitOfWork.Bookings.AddBooking(booking); 
+            await _unitOfWork.CompleteAsync(); 
 
-            return CreatedAtAction("GetBooking", new { id = booking.Id }, booking);
+            return CreatedAtAction(nameof(GetBooking), new { id = booking.Id }, booking);
         }
 
-        // DELETE: api/Bookings/5
+       
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteBooking(Booking booking)
+        public async Task<IActionResult> DeleteBooking(string id)
         {
+            var booking = await _unitOfWork.Bookings.GetBookingByIdAsync(id);
+            if (booking == null) return NotFound();
 
-            await _unitOfWork.Bookings.DeleteBookingAsync(booking);
- 
+            _unitOfWork.Bookings.DeleteBooking(booking); 
+            await _unitOfWork.CompleteAsync(); 
+
             return Ok();
         }
 
-        private bool BookingExists(string id)
-        {
-            return _mapper.Map<Booking>(_unitOfWork.Bookings.GetBookingByIdAsync(id)) != null;
-        }
+        
+       
     }
 }

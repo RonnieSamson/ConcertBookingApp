@@ -12,8 +12,8 @@ namespace Concert.Data.Repository
         Task<Booking> GetBookingByIdAsync(string id);
         Task<Booking?> GetBookingByUserIdAsync(string userId);   
         Task<IEnumerable<Booking>> GetBookingsAsync();
-        Task AddBookingAsync(Booking booking);
-        Task UpdateBookingAsync(Booking booking);
-        Task DeleteBookingAsync(Booking booking);
+        void AddBooking(Booking booking);
+        void UpdateBooking(Booking booking);
+        void DeleteBooking(Booking booking);
     }
 }
