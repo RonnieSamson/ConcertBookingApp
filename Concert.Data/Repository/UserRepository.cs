@@ -27,7 +27,7 @@ public class UserRepository : Repository<User>, IUserRepository
 
     public void UpdateUser(User user)
     {
-        DbContext.Users.Update(user);
+        Update(user);
     }
 
     public void DeleteUser(User user)

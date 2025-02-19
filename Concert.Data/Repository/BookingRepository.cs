@@ -32,7 +32,7 @@ public class BookingRepository : Repository<Booking>, IBookingRepository
 
     public void UpdateBooking(Booking booking)
     {
-        DbContext.Bookings.Update(booking); 
+        Update(booking); 
     }
 
     public void DeleteBooking(Booking booking)

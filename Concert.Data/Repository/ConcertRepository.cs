@@ -29,7 +29,7 @@ namespace Concert.Data.Repository
 
         public void UpdateConcert(ConcertEntity concert)
         {
-            DbContext.Concerts.Update(concert);
+            Update(concert);
         }
 
         public void DeleteConcert(ConcertEntity concert)

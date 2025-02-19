@@ -40,5 +40,11 @@ namespace Concert.Data.Repository
             Context.Set<TEntity>().RemoveRange(entities);
         }
 
+        public void Update(TEntity entity)
+        {
+            Context.Set<TEntity>().Update(entity);
+        }
+
+
     }
 }

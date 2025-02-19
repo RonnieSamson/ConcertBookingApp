@@ -32,7 +32,7 @@ namespace Concert.Data.Repository
 
         public void UpdatePerformance(Performance performance)
         {
-            DbContext.Performances.Update(performance);
+            Update(performance);
         }
 
         public void DeletePerformance(Performance performance)
