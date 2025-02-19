@@ -151,7 +151,7 @@ namespace Concert.Data
 
             Performance performance1 = new Performance
             {
-                Id = 1,
+                Id = "1",
                 StartTime = new DateTime(2024, 1, 1, 12, 0, 0),
                 EndTime = new DateTime(2024, 1, 1, 12, 0, 0),
                 ConcertId = "1"
@@ -159,7 +159,7 @@ namespace Concert.Data
 
             Performance performance2 = new Performance
             {
-                Id = 2,
+                Id = "2",
                 StartTime = new DateTime(2024, 1, 1, 12, 0, 0),
                 EndTime = new DateTime(2024, 1, 1, 12, 0, 0),
                 ConcertId = "2"
@@ -167,7 +167,7 @@ namespace Concert.Data
 
             Performance performance3 = new Performance
             {
-                Id = 3,
+                Id = "3",
                 StartTime = new DateTime(2024, 1, 1, 12, 0, 0),
                 EndTime = new DateTime(2024, 1, 1, 12, 0, 0),
                 ConcertId = "3"

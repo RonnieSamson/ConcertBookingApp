@@ -10,18 +10,9 @@ namespace Concert.Data.Repository
     {
         IUserRepository Users { get; }
         IBookingRepository Bookings { get; }
+        IConcertRepository Concerts { get; }
+        IPerformanceRepository Performances { get; }
         Task<int> CompleteAsync();
-
-        Task<User> GetUserByIdAsync(string id);
-        Task<User> GetUserByEmailAsync(string email);
-        Task AddUserAsync(User user);
-        Task UpdateUserAsync(User user);
-        Task DeleteUserAsync(User user);
-
-        Task<Booking> GetBookingByIdAsync(string id);
-
-
-
 
     }
 }
