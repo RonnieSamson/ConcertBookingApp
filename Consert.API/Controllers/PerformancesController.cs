@@ -51,7 +51,7 @@ namespace Consert.API.Controllers
             return Ok();
         }
 
-        [HttpPost]
+        [HttpPost("Add")]
         public async Task<IActionResult> AddPerformance([FromBody] Performance performance)
         {
             _unitOfWork.Performances.AddPerformance(performance);
@@ -59,7 +59,7 @@ namespace Consert.API.Controllers
             return Ok();
         }
 
-        [HttpPost]
+        [HttpDelete("DeleteByObject")]
         public async Task<IActionResult> DeletePerformance([FromBody] Performance performance)
         {
             _unitOfWork.Performances.DeletePerformance(performance);
@@ -67,7 +67,7 @@ namespace Consert.API.Controllers
             return Ok();
         }
 
-        [HttpPost]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePerformance(string id)
         {
             var performance = await _unitOfWork.Performances.GetPerformanceByIdAsync(id);
@@ -76,10 +76,5 @@ namespace Consert.API.Controllers
             await _unitOfWork.CompleteAsync();
             return Ok();
         }
-
-        
-
-
-
     }
 }
