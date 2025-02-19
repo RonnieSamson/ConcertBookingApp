@@ -112,11 +112,8 @@ namespace Concert.Data.Migrations
 
             modelBuilder.Entity("Concert.Data.Entity.Performance", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ConcertId")
                         .IsRequired()
@@ -137,21 +134,21 @@ namespace Concert.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = "1",
                             ConcertId = "1",
                             EndTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
                             StartTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = 2,
+                            Id = "2",
                             ConcertId = "2",
                             EndTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
                             StartTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = 3,
+                            Id = "3",
                             ConcertId = "3",
                             EndTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
                             StartTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified)
