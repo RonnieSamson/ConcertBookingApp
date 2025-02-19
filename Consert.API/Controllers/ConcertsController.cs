@@ -68,7 +68,7 @@ namespace Concert.API.Controllers
             _unitOfWork.Concerts.AddConcert(concert); // Ändrat från AddBookingAsync
             await _unitOfWork.CompleteAsync(); // Sparar ändringen i databasen
 
-            return CreatedAtAction(nameof(GetConcert), new { id = concert.Id }, concert);
+            return CreatedAtAction(nameof(GetConcert), new { id = concert.ConcertId }, concert);
         }
 
         // ✅ Ta bort en konsert
