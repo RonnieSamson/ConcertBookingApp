@@ -13,12 +13,14 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Todo"))
-);
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IConcertRepository, ConcertRepository>();
+builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IPerformanceRepository, PerformanceRepository>();
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConcertBookingApp")));
+
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
