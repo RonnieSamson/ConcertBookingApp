@@ -23,4 +23,5 @@ namespace Concert.MAUI.Profiles
                 .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId));
 
         }
+    }
 }
