@@ -8,5 +8,6 @@ namespace Concert.MAUI.Services
 {
     public class HttpsClientHandlerService
     {
+
     }
 }
