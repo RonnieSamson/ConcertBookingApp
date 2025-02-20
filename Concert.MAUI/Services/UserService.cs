@@ -40,7 +40,7 @@ namespace Concert.MAUI.Services
             if (isNewUser)
                 await _restService.PostAsync<User>("users", userDto);
             else
-                await _restService.PutAsync<User>($"users/{user.ID}", userDto);
+                await _restService.PutAsync<User>($"users/{user.Id}", userDto);
         }
 
         
