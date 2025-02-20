@@ -1,7 +1,9 @@
-﻿using CommunityToolkit.Maui;
+using CommunityToolkit.Maui;
 using Concert.MAUI.Services;
 using Concert.MAUI.ViewModels;
 using Concert.MAUI.Views;
+using AutoMapper;
+
 namespace Concert.MAUI
 {
     public static class MauiProgram
@@ -21,6 +23,11 @@ namespace Concert.MAUI
                 });
 
             // Continue initializing your .NET MAUI App here
+            builder.Services.AddSingleton<IHttpsClientHandlerService, HttpsClientHandlerService>();
+            builder.Services.AddSingleton<IRestService, RestService>();
+            builder.Services.AddSingleton<IUserService, UserService>();
+
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             builder.Services.AddSingleton<IConcertService, ConcertService>();
             builder.Services.AddTransient<HomepageViewModel>();
