@@ -1,6 +1,6 @@
-﻿using Concert.Data.Repository;
-using Concert.Data;
+﻿using Concert.Data;
 using Concert.Data.Entity;
+using Concert.Data.Repository;
 
 public class UserRepository : Repository<User>, IUserRepository
 {
@@ -20,7 +20,7 @@ public class UserRepository : Repository<User>, IUserRepository
         return (await Find(u => u.Email == email)).FirstOrDefault();
     }
 
-    public void AddUser(User user) 
+    public void AddUser(User user)
     {
         Insert(user);
     }

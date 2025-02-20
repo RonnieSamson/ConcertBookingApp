@@ -1,12 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Concert.Data.Entity
+﻿namespace Concert.Data.Entity
 {
     public class Booking
     {
-       
-        public string Id { get; set; }    
+
+        public string Id { get; set; }
 
         public DateTime BookingDate { get; set; }
         public string UserId { get; set; }

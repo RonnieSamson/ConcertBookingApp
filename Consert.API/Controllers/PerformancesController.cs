@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Concert.Data.Entity;
 using Concert.Data.Repository;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Consert.API.Controllers

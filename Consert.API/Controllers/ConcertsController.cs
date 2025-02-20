@@ -2,9 +2,6 @@
 using Concert.Data.Entity;
 using Concert.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Concert.API.Controllers
 {
@@ -84,6 +81,6 @@ namespace Concert.API.Controllers
             return Ok();
         }
 
-       
+
     }
 }

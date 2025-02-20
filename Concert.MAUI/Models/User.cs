@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace Concert.MAUI.Models
+﻿namespace Concert.MAUI.Models
 {
-   public class User
+    public class User
     {
         public string ID { get; set; } = null!;
         public string Name { get; set; } = null!;

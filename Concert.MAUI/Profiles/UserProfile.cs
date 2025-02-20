@@ -1,17 +1,12 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Concert.MAUI.Models;
 using Concert.Data.DTO;
+using Concert.MAUI.Models;
 
 namespace Concert.MAUI.Profiles
 {
     public class UserProfile : Profile
     {
-        public UserProfile() 
+        public UserProfile()
         {
             CreateMap<User, UserDto>()
                 .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.ID))

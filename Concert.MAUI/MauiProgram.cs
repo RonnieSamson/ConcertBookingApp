@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using CommunityToolkit.Maui;
+﻿using CommunityToolkit.Maui;
 namespace Concert.MAUI
 {
     public static class MauiProgram
