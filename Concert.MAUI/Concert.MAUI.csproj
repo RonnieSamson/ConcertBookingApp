@@ -71,4 +71,10 @@
 	  <ProjectReference Include="..\Consert.Data.DTO\Concert.Data.DTO.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
