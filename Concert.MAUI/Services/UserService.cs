@@ -1,6 +1,53 @@
-﻿namespace Concert.MAUI.Services
+﻿using AutoMapper;
+using Concert.Data.DTO;
+using Concert.MAUI.Models;
+
+namespace Concert.MAUI.Services
 {
-    internal class UserService
+    public class UserService : IUserService
     {
+        private readonly IRestService _restService;
+        private readonly IMapper _mapper;
+
+        public UserService(IRestService restService, IMapper mapper)
+        {
+            _restService = restService;
+            _mapper = mapper;
+        }
+
+      
+        public async Task<List<User>?> GetAllUsersAsync()
+        {
+            return await _restService.GetAsync<List<User>>("users");
+        }
+
+        
+        public async Task<User?> GetUserByIdAsync(string id)
+        {
+            return await _restService.GetAsync<User>($"users/{id}");
+        }
+
+        public async Task<User?> GetUserByEmailAsync(string email)
+        {
+            return await _restService.GetAsync<User>($"users/getUserByEmail/{email}");
+        }
+
+        
+        public async Task SaveUserAsync(User user, bool isNewUser)
+        {
+            var userDto = _mapper.Map<UserDto>(user);
+
+            if (isNewUser)
+                await _restService.PostAsync<User>("users", userDto);
+            else
+                await _restService.PutAsync<User>($"users/{user.ID}", userDto);
+        }
+
+        
+        public async Task DeleteUserAsync(string id)
+        {
+            await _restService.DeleteAsync($"users/{id}");
+        }
     }
 }
+
