@@ -35,7 +35,6 @@ namespace Concert.MAUI.Services
             };
         }
 
-        // ✅ GET - Hämtar data från API:et
         public async Task<T?> GetAsync<T>(string endpoint)
         {
             try
@@ -55,7 +54,6 @@ namespace Concert.MAUI.Services
             }
         }
 
-        // ✅ POST - Skickar data till API:et
         public async Task<T?> PostAsync<T>(string endpoint, object data)
         {
             try
@@ -78,7 +76,7 @@ namespace Concert.MAUI.Services
             }
         }
 
-        // ✅ PUT - Uppdaterar data i API:et
+        
         public async Task<T?> PutAsync<T>(string endpoint, object data)
         {
             try
@@ -101,7 +99,7 @@ namespace Concert.MAUI.Services
             }
         }
 
-        // ✅ DELETE - Tar bort data från API:et
+        
         public async Task DeleteAsync(string endpoint)
         {
             try
