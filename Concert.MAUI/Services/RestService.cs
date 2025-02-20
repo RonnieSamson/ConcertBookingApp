@@ -11,7 +11,7 @@ namespace Concert.MAUI.Services
         private JsonSerializerOptions _serializerOptions;
         private IHttpsClientHandlerService _httpsClientHandlerService;
         private IMapper _mapper;
-        private const string _baseUrl = "https://localhost:5001/api/"; 
+        private const string _baseUrl = "https://localhost:5001/api/";
 
         public RestService(IHttpsClientHandlerService httpsClientHandlerService, IMapper mapper)
         {
@@ -39,7 +39,7 @@ namespace Concert.MAUI.Services
         {
             try
             {
-                var response = await _client.GetAsync($"{_baseUrl}{endpoint}"); 
+                var response = await _client.GetAsync($"{_baseUrl}{endpoint}");
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
@@ -49,7 +49,7 @@ namespace Concert.MAUI.Services
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"\tERROR {ex.Message}"); 
+                Debug.WriteLine($"\tERROR {ex.Message}");
                 return default;
             }
         }
@@ -76,7 +76,7 @@ namespace Concert.MAUI.Services
             }
         }
 
-        
+
         public async Task<T?> PutAsync<T>(string endpoint, object data)
         {
             try
@@ -99,7 +99,7 @@ namespace Concert.MAUI.Services
             }
         }
 
-        
+
         public async Task DeleteAsync(string endpoint)
         {
             try

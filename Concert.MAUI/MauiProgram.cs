@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Maui;
 using Concert.MAUI.Services;
-using AutoMapper;
 namespace Concert.MAUI
 {
     public static class MauiProgram

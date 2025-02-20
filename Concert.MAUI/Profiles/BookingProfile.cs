@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Concert.MAUI.Profiles
+﻿namespace Concert.MAUI.Profiles
 {
     public class BookingProfile : AutoMapper.Profile
     {
@@ -23,4 +17,5 @@ namespace Concert.MAUI.Profiles
                 .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId));
 
         }
+    }
 }

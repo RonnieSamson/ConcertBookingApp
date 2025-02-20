@@ -31,7 +31,7 @@ namespace Concert.API.Controllers
 
 
         [HttpGet("getUserByEmail")]
-        public async Task<IActionResult> GetUserByEmail([FromQuery] string email)
+        public async Task<IActionResult> GetUserByEmail(string email)
         {
             var user = await _unitOfWork.Users.GetUserByEmailAsync(email);
             if (user == null) return NotFound();
