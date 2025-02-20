@@ -1,5 +1,5 @@
-using Concert.Data.Repository;
 using Concert.Data;
+using Concert.Data.Repository;
 using Microsoft.EntityFrameworkCore;
 
 

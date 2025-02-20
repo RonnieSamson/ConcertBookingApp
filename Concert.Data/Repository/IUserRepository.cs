@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Concert.Data.Entity;
+﻿using Concert.Data.Entity;
 
 namespace Concert.Data.Repository
 {
@@ -8,8 +6,8 @@ namespace Concert.Data.Repository
     {
         Task<User?> GetUserByIdAsync(string id);
         Task<User?> GetUserByEmailAsync(string email);
-        void AddUser(User user); 
-        void UpdateUser(User user); 
-        void DeleteUser(User user); 
+        void AddUser(User user);
+        void UpdateUser(User user);
+        void DeleteUser(User user);
     }
 }

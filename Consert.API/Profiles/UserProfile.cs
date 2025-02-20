@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Concert.Data.Entity;
 using Concert.Data.DTO;
+using Concert.Data.Entity;
 
 
 

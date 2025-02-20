@@ -1,9 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Concert.Data.Entity
+﻿namespace Concert.Data.Entity
 {
     public class User
-    {   
+    {
         public string Id { get; set; }
         public required string Name { get; set; }
         public required string Email { get; set; }

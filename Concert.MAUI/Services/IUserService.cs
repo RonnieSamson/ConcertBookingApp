@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Concert.MAUI.Models;
 
 namespace Concert.MAUI.Services
 {
-    internal interface IUserService
+    public interface IUserService
     {
+        Task<List<User>?> GetAllUsersAsync();
+        Task<User?> GetUserByIdAsync(string id);
+        Task<User?> GetUserByEmailAsync(string email);
+        Task SaveUserAsync(User user, bool isNewUser);
+        Task DeleteUserAsync(string id);
     }
 }

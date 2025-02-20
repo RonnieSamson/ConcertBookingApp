@@ -1,6 +1,6 @@
-﻿using Concert.Data.Repository;
-using Concert.Data;
+﻿using Concert.Data;
 using Concert.Data.Entity;
+using Concert.Data.Repository;
 
 public class BookingRepository : Repository<Booking>, IBookingRepository
 {
@@ -27,16 +27,16 @@ public class BookingRepository : Repository<Booking>, IBookingRepository
 
     public void AddBooking(Booking booking)
     {
-        Insert(booking); 
+        Insert(booking);
     }
 
     public void UpdateBooking(Booking booking)
     {
-        Update(booking); 
+        Update(booking);
     }
 
     public void DeleteBooking(Booking booking)
     {
-        Delete(booking); 
+        Delete(booking);
     }
 }

@@ -1,6 +1,4 @@
 ﻿using Concert.Data.Entity;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Concert.Data.Repository
 {
