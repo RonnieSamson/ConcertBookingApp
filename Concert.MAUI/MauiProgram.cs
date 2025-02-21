@@ -1,5 +1,12 @@
-﻿using CommunityToolkit.Maui;
+using CommunityToolkit.Maui;
 using Concert.MAUI.Services;
+
+
+using Concert.MAUI.ViewModels;
+using Concert.MAUI.Views;
+using AutoMapper;
+
+
 namespace Concert.MAUI
 {
     public static class MauiProgram
@@ -25,7 +32,16 @@ namespace Concert.MAUI
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+            builder.Services.AddSingleton<IConcertService, ConcertService>();
+            builder.Services.AddTransient<HomepageViewModel>();
+            builder.Services.AddTransient<Homepage>();
+            builder.Services.AddSingleton<HttpClient>();
+            builder.Services.AddSingleton<IRestService, RestService>();
+            builder.Services.AddSingleton<IConcertService, ConcertService>();
+            
+
             return builder.Build();
+
         }
     }
 }
