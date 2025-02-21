@@ -29,7 +29,7 @@ namespace Concert.MAUI.Services
 
         public async Task<User?> GetUserByEmailAsync(string email)
         {
-            return await _restService.GetAsync<User>($"users/getUserByEmail?email={email}"); ;
+            return await _restService.GetAsync<User>($"User/getUserByEmail?email={email}"); ;
         }
 
 
