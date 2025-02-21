@@ -22,7 +22,7 @@ namespace Concert.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ConcertEntity>>> GetConcerts()
         {
-            var concerts = await _unitOfWork.Concerts.GetConcertsAsync(); // Ändrat från Bookings
+            var concerts = await _unitOfWork.Concerts.GetConcertsAsync(); 
             return Ok(_mapper.Map<IEnumerable<ConcertEntity>>(concerts));
         }
 
@@ -30,7 +30,7 @@ namespace Concert.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ConcertEntity>> GetConcert(string id)
         {
-            var concert = await _unitOfWork.Concerts.GetConcertByIdAsync(id); // Ändrat från GetBookingByIdAsync
+            var concert = await _unitOfWork.Concerts.GetConcertByIdAsync(id);
 
             if (concert == null)
             {
@@ -53,7 +53,7 @@ namespace Concert.API.Controllers
             if (existingConcert == null) return NotFound();
 
             _unitOfWork.Concerts.UpdateConcert(concert);
-            await _unitOfWork.CompleteAsync(); // Sparar ändringen i databasen
+            await _unitOfWork.CompleteAsync(); 
 
             return Ok();
         }
@@ -62,8 +62,8 @@ namespace Concert.API.Controllers
         [HttpPost]
         public async Task<ActionResult<ConcertEntity>> CreateConcert([FromBody] ConcertEntity concert)
         {
-            _unitOfWork.Concerts.AddConcert(concert); // Ändrat från AddBookingAsync
-            await _unitOfWork.CompleteAsync(); // Sparar ändringen i databasen
+            _unitOfWork.Concerts.AddConcert(concert);
+            await _unitOfWork.CompleteAsync(); 
 
             return CreatedAtAction(nameof(GetConcert), new { id = concert.ConcertId }, concert);
         }
@@ -75,8 +75,8 @@ namespace Concert.API.Controllers
             var concert = await _unitOfWork.Concerts.GetConcertByIdAsync(id);
             if (concert == null) return NotFound();
 
-            _unitOfWork.Concerts.DeleteConcert(concert); // Ändrat från DeleteBookingAsync
-            await _unitOfWork.CompleteAsync(); // Sparar ändringen i databasen
+            _unitOfWork.Concerts.DeleteConcert(concert);
+            await _unitOfWork.CompleteAsync();
 
             return Ok();
         }
