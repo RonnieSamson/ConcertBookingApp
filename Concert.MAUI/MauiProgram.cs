@@ -28,13 +28,11 @@ namespace Concert.MAUI
             builder.Services.AddSingleton<IUserService, UserService>();
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
             builder.Services.AddSingleton<IConcertService, ConcertService>();
             builder.Services.AddTransient<HomepageViewModel>();
             builder.Services.AddTransient<Homepage>();
             builder.Services.AddSingleton<HttpClient>();
-            builder.Services.AddSingleton<IRestService, RestService>();
-            builder.Services.AddSingleton<IConcertService, ConcertService>();
+            
             
 
             return builder.Build();
