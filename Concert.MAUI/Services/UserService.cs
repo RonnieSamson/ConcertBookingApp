@@ -15,13 +15,13 @@ namespace Concert.MAUI.Services
             _mapper = mapper;
         }
 
-      
+
         public async Task<List<User>?> GetAllUsersAsync()
         {
             return await _restService.GetAsync<List<User>>("users");
         }
 
-        
+
         public async Task<User?> GetUserByIdAsync(string id)
         {
             return await _restService.GetAsync<User>($"users/{id}");
@@ -32,7 +32,7 @@ namespace Concert.MAUI.Services
             return await _restService.GetAsync<User>($"users/getUserByEmail?email={email}"); ;
         }
 
-        
+
         public async Task SaveUserAsync(User user, bool isNewUser)
         {
             var userDto = _mapper.Map<UserDto>(user);
@@ -43,7 +43,7 @@ namespace Concert.MAUI.Services
                 await _restService.PutAsync<User>($"users/{user.Id}", userDto);
         }
 
-        
+
         public async Task DeleteUserAsync(string id)
         {
             await _restService.DeleteAsync($"users/{id}");

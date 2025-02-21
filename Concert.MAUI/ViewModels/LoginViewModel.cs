@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Concert.MAUI.ViewModels
 {
-    public class UserViewModel
+    internal class LoginViewModel
     {
     }
 }

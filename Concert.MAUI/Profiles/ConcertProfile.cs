@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Concert.MAUI.Models;
 using Concert.Data.DTO;
 
 namespace Concert.MAUI.Profiles

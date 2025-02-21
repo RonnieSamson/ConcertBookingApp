@@ -1,9 +1,4 @@
 ﻿using Concert.Data.DTO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Concert.MAUI.Profiles
 {
@@ -11,7 +6,7 @@ namespace Concert.MAUI.Profiles
     {
         public PerformanceProfile()
         {
-            CreateMap<Concert.MAUI.Models.Performance, PerformanceDto >()
+            CreateMap<Concert.MAUI.Models.Performance, PerformanceDto>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime))
                 .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime));
