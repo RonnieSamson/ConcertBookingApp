@@ -38,20 +38,20 @@ namespace Concert.MAUI.ViewModels
 
         private async Task LoginAsync()
         {
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
             {
-                errorMessage = "Please enter your email and password";
-                isErrorVisible = true;
+                ErrorMessage = "Please enter your email and password";
+                IsErrorVisible = true;
                 return;
             }
-            var user = await _userService.GetUserByEmailAsync(email);
-            if (user == null || user.Password != password)
+            var user = await _userService.GetUserByEmailAsync(Email);
+            if (user == null || user.Password != Password)
             {
-                errorMessage = "Invalid email or password";
-                isErrorVisible = true;
+                ErrorMessage = "Invalid email or password";
+                IsErrorVisible = true;
                 return;
             }
-            isErrorVisible = false;
+            IsErrorVisible = false;
             await Shell.Current.GoToAsync("//Homepage");
             
 
