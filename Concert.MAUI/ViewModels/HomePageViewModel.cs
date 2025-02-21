@@ -18,6 +18,7 @@ namespace Concert.MAUI.ViewModels
         public HomepageViewModel(IConcertService concertService)
         {
             _concertService = concertService;
+            
         }
 
         [RelayCommand]
