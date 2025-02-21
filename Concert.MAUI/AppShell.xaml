@@ -3,8 +3,6 @@
     x:Class="Concert.MAUI.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
- 
-    xmlns:local="clr-namespace:Concert.MAUI"
     xmlns:views="clr-namespace:Concert.MAUI.Views"
     Title="Concert.MAUI"
     Shell.FlyoutBehavior="Flyout">
@@ -17,8 +15,8 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:Homepage}"
+        ContentTemplate="{DataTemplate views:Homepage}"
         Route="Homepage" />
- master
+ 
 
 </Shell>
