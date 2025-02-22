@@ -20,7 +20,7 @@ namespace Concert.MAUI.Services
         }
         public async Task<List<Performance>?> GetPerformancesByConcertIdAsync(string concertId)
         {
-            return await _restService.GetAsync<List<Performance>>($"performances?concertId={concertId}");
+            return await _restService.GetAsync<List<Performance>>($"Performances/byConcert/{concertId}");
         }
 
     }

@@ -15,6 +15,11 @@ namespace Concert.Data.Repository
             return (await Find(p => p.Id == id)).FirstOrDefault();
         }
 
+        public async Task<IEnumerable<Performance>> GetPerformancesByConcertIdAsync(string concertId)
+        {
+            return await Find(p => p.ConcertId == concertId);
+        }
+
         public async Task<IEnumerable<Performance>> GetPerformancesAsync()
         {
             return await All();

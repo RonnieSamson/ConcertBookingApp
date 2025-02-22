@@ -25,6 +25,18 @@ namespace Consert.API.Controllers
             return Ok(_mapper.Map<IEnumerable<Performance>>(performances));
         }
 
+        [HttpGet("byConcert/{concertId}")]
+        public async Task<ActionResult<IEnumerable<Performance>>> GetPerformancesByConcertId(string concertId)
+        {
+            var performances = await _unitOfWork.Performances.GetPerformancesByConcertIdAsync(concertId);
+            if (performances == null || !performances.Any())
+            {
+                return NotFound();
+            }
+            return Ok(_mapper.Map<IEnumerable<Performance>>(performances));
+        }
+
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Performance>> GetPerformance(string id)
         {
