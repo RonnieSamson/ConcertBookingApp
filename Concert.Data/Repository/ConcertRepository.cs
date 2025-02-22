@@ -1,4 +1,5 @@
 ﻿using Concert.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Concert.Data.Repository
 {
@@ -17,7 +18,9 @@ namespace Concert.Data.Repository
 
         public async Task<IEnumerable<ConcertEntity>> GetConcertsAsync()
         {
-            return await All();
+            return await DbContext.Concerts
+           .Include(c => c.Performances) // 🔹 Inkluderar performances
+           .ToListAsync();
         }
 
         public void AddConcert(ConcertEntity concert)
