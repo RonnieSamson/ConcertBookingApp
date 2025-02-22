@@ -60,7 +60,7 @@ namespace Concert.MAUI.ViewModels
             }
         }
 
-        [RelayCommand]
+        //[RelayCommand]
         private async Task BookPerformance(string concertId, string userId)
         {
             bool sucess = await _bookingService.BookPerformanceAsync(userId, concertId);
