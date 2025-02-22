@@ -57,6 +57,7 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         private async Task LoadPerformances(string concertId)
         {
+            Console.WriteLine($"🔍 LoadPerformancesCommand körs för ConcertId: {concertId}");
             if (ConcertPerformances.ContainsKey(concertId) && ConcertPerformances[concertId].Count == 0)
             {
                 var performances = await _performanceService.GetPerformancesByConcertIdAsync(concertId);
@@ -67,6 +68,7 @@ namespace Concert.MAUI.ViewModels
                         ConcertPerformances[concertId].Add(performance);
                     }
                 }
+                Console.WriteLine($"✅ {ConcertPerformances[concertId].Count} performances inlagda");
                 OnPropertyChanged(nameof(ConcertPerformances));
             }
             
