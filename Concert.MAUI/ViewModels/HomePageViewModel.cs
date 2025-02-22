@@ -35,11 +35,11 @@ namespace Concert.MAUI.ViewModels
             if (concertsList != null)
             {
                 Concerts.Clear();
-                concertPerformances.Clear();
+                ConcertPerformances.Clear();
                 foreach (var concert in concertsList)
                 {
                     Concerts.Add(concert);
-                    concertPerformances[concert.ConcertId] = new ObservableCollection<Performance>();
+                    ConcertPerformances[concert.ConcertId] = new ObservableCollection<Performance>(concert.Performances);
                 }
                 Concerts = new ObservableCollection<Concert.MAUI.Models.Concert>(Concerts);
             }
@@ -47,14 +47,14 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         private async Task LoadPerformances(string concertId)
         {
-            if (concertPerformances.ContainsKey(concertId) && concertPerformances[concertId].Count == 0)
+            if (ConcertPerformances.ContainsKey(concertId) && ConcertPerformances[concertId].Count == 0)
             {
                 var performances = await _performanceService.GetPerformancesByConcertIdAsync(concertId);
                 if (performances != null)
                 {
                     foreach (var performance in performances)
                     {
-                        concertPerformances[concertId].Add(performance);
+                        ConcertPerformances[concertId].Add(performance);
                     }
                 }
             }
