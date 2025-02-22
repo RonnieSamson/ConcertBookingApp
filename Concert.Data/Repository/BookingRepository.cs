@@ -15,9 +15,10 @@ public class BookingRepository : Repository<Booking>, IBookingRepository
         return (await Find(b => b.Id == id)).FirstOrDefault();
     }
 
-    public async Task<Booking?> GetBookingByUserIdAsync(string userId)
+    public async Task<IEnumerable<Booking>> GetBookingsByUserIdAsync(string userId)
     {
-        return (await Find(b => b.UserId == userId)).FirstOrDefault();
+        var bookings = await Find(b => b.UserId == userId);
+        return bookings.ToList(); 
     }
 
     public async Task<IEnumerable<Booking>> GetBookingsAsync()

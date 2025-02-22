@@ -113,7 +113,8 @@ namespace Concert.Data.Migrations
             modelBuilder.Entity("Concert.Data.Entity.Performance", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("ConcertId")
                         .IsRequired()

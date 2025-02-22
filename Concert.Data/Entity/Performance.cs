@@ -1,4 +1,6 @@
-﻿namespace Concert.Data.Entity
+﻿using System.Text.Json.Serialization;
+
+namespace Concert.Data.Entity
 {
     public class Performance
     {
@@ -6,6 +8,8 @@
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public string ConcertId { get; set; }
+        
+        [JsonIgnore]
         public ConcertEntity Concert { get; set; }
     }
 }

@@ -80,6 +80,14 @@ namespace Concert.API.Controllers
 
             return Ok();
         }
+        [HttpGet("byUser/{userId}")]
+        public async Task<ActionResult<IEnumerable<Booking>>> GetBookingsByUser(string userId)
+        {
+            var bookings = await _unitOfWork.Bookings.GetBookingsByUserIdAsync(userId);
+            if (bookings == null || !bookings.Any()) return NotFound();
+
+            return Ok(_mapper.Map<IEnumerable<Booking>>(bookings));
+        }
 
 
 

@@ -64,6 +64,28 @@ namespace Concert.Data
                 .HasForeignKey(b => b.UserId)
                 .IsRequired();
 
+            // Performances tabellen
+            modelBuilder.Entity<Performance>()
+                .HasKey(p => p.Id);
+            modelBuilder.Entity<Performance>().Property(p => p.Id)
+                .HasColumnType("nvarchar(36)")
+                .HasMaxLength(36)
+                .IsRequired();
+            modelBuilder.Entity<Performance>().Property(p => p.StartTime)
+                .IsRequired();
+            modelBuilder.Entity<Performance>()
+                .Property(p => p.EndTime)
+                .IsRequired();
+            modelBuilder.Entity<Performance>()
+                .Property(p => p.ConcertId)
+                .IsRequired();
+            modelBuilder.Entity<Performance>()
+                .HasOne(p => p.Concert)
+                .WithMany(c => c.Performances)
+                .HasForeignKey(p => p.ConcertId)
+                .IsRequired();
+
+
             SeedData(modelBuilder);
         }
 
