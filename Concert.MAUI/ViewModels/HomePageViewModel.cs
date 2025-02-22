@@ -57,6 +57,7 @@ namespace Concert.MAUI.ViewModels
                         ConcertPerformances[concertId].Add(performance);
                     }
                 }
+                OnPropertyChanged(nameof(ConcertPerformances));
             }
         }
 
