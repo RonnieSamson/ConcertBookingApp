@@ -25,7 +25,7 @@ namespace Concert.MAUI.ViewModels
             _concertService = concertService;
             _performanceService = performanceService;
             _bookingService = bookingService;
-
+            Task.Run(async () => await LoadConcerts());
         }
 
         [RelayCommand]
@@ -41,6 +41,7 @@ namespace Concert.MAUI.ViewModels
                     Concerts.Add(concert);
                     concertPerformances[concert.ConcertId] = new ObservableCollection<Performance>();
                 }
+                Concerts = new ObservableCollection<Concert.MAUI.Models.Concert>(Concerts);
             }
         }
         [RelayCommand]
@@ -59,13 +60,13 @@ namespace Concert.MAUI.ViewModels
             }
         }
 
-        //[RelayCommand]
+        [RelayCommand]
         private async Task BookPerformance(string concertId, string userId)
         {
             bool sucess = await _bookingService.BookPerformanceAsync(userId, concertId);
             if (sucess)
             {
-                
+                Console.WriteLine($"✅ Bokning lyckades för konsert {concertId} av användare {userId}");
             }
         }
     }

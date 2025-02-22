@@ -2,7 +2,8 @@
     x:Class="Concert.MAUI.Views.Homepage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Home">
+    Title="Home"
+    x:Name="Page">
 
     <VerticalStackLayout Padding="20">
         <CollectionView ItemsSource="{Binding Concerts}">
