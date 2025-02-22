@@ -27,6 +27,8 @@ namespace Concert.MAUI
             builder.Services.AddSingleton<IHttpsClientHandlerService, HttpsClientHandlerService>();
             builder.Services.AddSingleton<IRestService, RestService>();
             builder.Services.AddSingleton<IUserService, UserService>();
+            builder.Services.AddSingleton<IBookingService, BookingService>();
+            builder.Services.AddSingleton<IPerformanceService, PerformanceService>();
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddSingleton<IConcertService, ConcertService>();
