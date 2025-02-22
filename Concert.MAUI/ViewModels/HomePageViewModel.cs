@@ -58,21 +58,40 @@ namespace Concert.MAUI.ViewModels
         private async Task LoadPerformances(string concertId)
         {
             Console.WriteLine($"🔍 LoadPerformancesCommand körs för ConcertId: {concertId}");
-            if (ConcertPerformances.ContainsKey(concertId) && ConcertPerformances[concertId].Count == 0)
+
+            // 🛑 Hämta ALLTID performances, oavsett dictionaryn!
+            var performances = await _performanceService.GetPerformancesByConcertIdAsync(concertId);
+
+            if (performances == null || !performances.Any())
             {
-                var performances = await _performanceService.GetPerformancesByConcertIdAsync(concertId);
-                if (performances != null)
-                {
-                    foreach (var performance in performances)
-                    {
-                        ConcertPerformances[concertId].Add(performance);
-                    }
-                }
-                Console.WriteLine($"✅ {ConcertPerformances[concertId].Count} performances inlagda");
-                OnPropertyChanged(nameof(ConcertPerformances));
+                Console.WriteLine($"❌ Inga performances hittades för ConcertId: {concertId}");
+                return;
             }
-            
+
+            Console.WriteLine($"✅ {performances.Count} performances hittades för ConcertId: {concertId}");
+
+            // Om dictionaryn inte innehåller concertId, skapa en ny entry
+            if (!ConcertPerformances.ContainsKey(concertId))
+            {
+                ConcertPerformances[concertId] = new ObservableCollection<Performance>();
+            }
+            else
+            {
+                // 🧹 Rensa tidigare performances innan vi lägger till nya
+                ConcertPerformances[concertId].Clear();
+            }
+
+            foreach (var performance in performances)
+            {
+                ConcertPerformances[concertId].Add(performance);
+            }
+
+            Console.WriteLine($"🎵 {ConcertPerformances[concertId].Count} performances inlagda i dictionaryn");
+
+            // 🔄 Tvinga UI att uppdateras
+            OnPropertyChanged(nameof(ConcertPerformances));
         }
+
 
         //[RelayCommand]
         private async Task BookPerformance(string concertId, string userId)
