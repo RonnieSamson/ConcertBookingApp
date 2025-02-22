@@ -14,11 +14,21 @@ namespace Concert.MAUI.ViewModels
         private readonly IPerformanceService _performanceService;
         private readonly IBookingService _bookingService;
 
-        [ObservableProperty]
-        private ObservableCollection<Concert.MAUI.Models.Concert> concerts = new();
+        private ObservableCollection<Concert.MAUI.Models.Concert> _concerts = new();
 
-        [ObservableProperty]
-        private Dictionary<string, ObservableCollection<Performance>> concertPerformances = new();
+        public ObservableCollection<Concert.MAUI.Models.Concert> Concerts
+        {
+            get => _concerts;
+            set => SetProperty(ref _concerts, value);
+        }
+
+        private Dictionary<string, ObservableCollection<Performance>> _concertPerformances = new();
+
+        public Dictionary<string, ObservableCollection<Performance>> ConcertPerformances
+        {
+            get => _concertPerformances;
+            set => SetProperty(ref _concertPerformances, value);
+        }
 
         public HomepageViewModel(IConcertService concertService, IPerformanceService performanceService, IBookingService bookingService)
         {
