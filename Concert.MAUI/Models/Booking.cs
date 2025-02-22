@@ -8,5 +8,7 @@
 
         public string Email { get; set; } = null!;
         public string UserId { get; set; } = null!;
+        public DateTime BookingDate { get; set; }
+        public string ConcertId { get; set; } = null!;
     }
 }
