@@ -22,10 +22,10 @@
                                 Text="{Binding Title}" />
                             <Label FontSize="14" Text="{Binding Description}" />
                             <Button
-                                Command="{Binding Source={x:Reference Page}, Path=BindingContext.LoadPerformancesCommand}"
+                                Command="{Binding LoadPerformancesCommand}"
                                 CommandParameter="{Binding ConcertId}"
                                 Text="Show Performances" />
-                            <CollectionView IsVisible="{Binding Source={x:Reference Page}, Path=BindingContext.ConcertPerformances[ConcertId].Count, Converter={StaticResource CountToVisibilityConverter}}" ItemsSource="{Binding Source={x:Reference Page}, Path=BindingContext.ConcertPerformances[ConcertId]}">
+                            <CollectionView IsVisible="{Binding SelectedPerformances}">
                                 <CollectionView.ItemTemplate>
                                     <DataTemplate>
                                         <Border

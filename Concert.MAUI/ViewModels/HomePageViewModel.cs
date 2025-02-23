@@ -22,12 +22,12 @@ namespace Concert.MAUI.ViewModels
             set => SetProperty(ref _concerts, value);
         }
 
-        private Dictionary<string, ObservableCollection<Performance>> _concertPerformances = new();
+        private ObservableCollection<Performance> _selectedPerformances = new();
 
-        public Dictionary<string, ObservableCollection<Performance>> ConcertPerformances
+        public ObservableCollection<Performance> SelectedPerformances
         {
-            get => _concertPerformances;
-            set => SetProperty(ref _concertPerformances, value);
+            get => _selectedPerformances;
+            set => SetProperty(ref _selectedPerformances, value);
         }
 
         public HomepageViewModel(IConcertService concertService, IPerformanceService performanceService, IBookingService bookingService)
@@ -45,13 +45,13 @@ namespace Concert.MAUI.ViewModels
             if (concertsList != null)
             {
                 Concerts.Clear();
-                ConcertPerformances.Clear();
+                
                 foreach (var concert in concertsList)
                 {
                     Concerts.Add(concert);
-                    ConcertPerformances[concert.ConcertId] = new ObservableCollection<Performance>(concert.Performances);
+                    
                 }
-                Concerts = new ObservableCollection<Concert.MAUI.Models.Concert>(Concerts);
+                //Concerts = new ObservableCollection<Concert.MAUI.Models.Concert>(Concerts);
             }
         }
         [RelayCommand]
@@ -59,38 +59,26 @@ namespace Concert.MAUI.ViewModels
         {
             Console.WriteLine($"🔍 LoadPerformancesCommand körs för ConcertId: {concertId}");
 
-            // 🛑 Hämta ALLTID performances, oavsett dictionaryn!
-            var performances = await _performanceService.GetPerformancesByConcertIdAsync(concertId);
-
-            if (performances == null || !performances.Any())
+            var performancesList = await _performanceService.GetPerformancesByConcertIdAsync(concertId);
+            if (performancesList == null || !performancesList.Any())
             {
                 Console.WriteLine($"❌ Inga performances hittades för ConcertId: {concertId}");
                 return;
             }
 
-            Console.WriteLine($"✅ {performances.Count} performances hittades för ConcertId: {concertId}");
-
-            // Om dictionaryn inte innehåller concertId, skapa en ny entry
-            if (!ConcertPerformances.ContainsKey(concertId))
+            // 🧹 Rensa tidigare performances innan vi lägger till nya
+            SelectedPerformances.Clear();
+            foreach (var performance in performancesList)
             {
-                ConcertPerformances[concertId] = new ObservableCollection<Performance>();
-            }
-            else
-            {
-                // 🧹 Rensa tidigare performances innan vi lägger till nya
-                ConcertPerformances[concertId].Clear();
+                SelectedPerformances.Add(performance);
             }
 
-            foreach (var performance in performances)
-            {
-                ConcertPerformances[concertId].Add(performance);
-            }
+            Console.WriteLine($"✅ {SelectedPerformances.Count} performances inlagda i listan");
 
-            Console.WriteLine($"🎵 {ConcertPerformances[concertId].Count} performances inlagda i dictionaryn");
-
-            // 🔄 Tvinga UI att uppdateras
-            OnPropertyChanged(nameof(ConcertPerformances));
+            // 🔄 Uppdatera UI
+            OnPropertyChanged(nameof(SelectedPerformances));
         }
+
 
 
         //[RelayCommand]
