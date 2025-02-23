@@ -24,7 +24,7 @@ namespace Concert.MAUI.Services
 
         public async Task<User?> GetUserByIdAsync(string id)
         {
-            return await _restService.GetAsync<User>($"users/{id}");
+            return await _restService.GetAsync<User>($"user/{id}");
         }
 
         public async Task<User?> GetUserByEmailAsync(string email)

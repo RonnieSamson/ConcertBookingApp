@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Concert.MAUI.Models;
 using AutoMapper;
+using System.Text.Json;
 
 namespace Concert.MAUI.Services
 {
@@ -22,6 +23,13 @@ namespace Concert.MAUI.Services
         {
             return await _restService.GetAsync<List<Performance>>($"Performances/byConcert/{concertId}");
         }
+
+        public async Task<Performance?> GetPerformanceByIdAsync(string id)
+        {
+            return await _restService.GetAsync<Performance>($"Performances/{id}");
+        }
+
+
 
     }
 }

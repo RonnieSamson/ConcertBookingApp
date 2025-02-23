@@ -19,7 +19,7 @@ namespace Concert.MAUI.ViewModels
         private ObservableCollection<Performance> performances = new();
 
         [ObservableProperty]
-        private ObservableCollection<Performance> selectedPerformances = new();
+        private ObservableCollection<object> selectedPerformances = new();
 
         [ObservableProperty]
         private string concertId;
@@ -30,12 +30,16 @@ namespace Concert.MAUI.ViewModels
         public PerformancePageViewModel(IPerformanceService performanceService)
         {
             _performanceService = performanceService;
+            
         }
 
         partial void OnConcertIdChanged(string value)
         {
             _ = LoadPerformancesAsync();
         }
+
+
+       
 
         public async Task LoadPerformancesAsync()
         {
@@ -50,7 +54,6 @@ namespace Concert.MAUI.ViewModels
             }
         }
 
-        // Använd [RelayCommand] för att automatiskt generera kommandot med namnet BookSelectedPerformancesCommand.
         [RelayCommand]
         public async Task BookSelectedPerformancesAsync()
         {
@@ -61,18 +64,24 @@ namespace Concert.MAUI.ViewModels
                 return;
             }
 
-            // Skapa en kommaseparerad sträng av valda performance IDs
-            var selectedPerformanceIds = string.Join(",", SelectedPerformances.Select(p => p.Id));
+            // Konvertera objekt till Performance och hämta deras Id
+            var selectedPerformanceIds = string.Join(",",
+                SelectedPerformances.Cast<Performance>().Select(p => p.Id));
 
             // Bygg en dictionary med dina parametrar
             var routeParameters = new Dictionary<string, object>
-            {
-                { "UserIdQuery", UserId },
-                { "ConcertIdQuery", ConcertId },
-                { "PerformanceIdsQuery", selectedPerformanceIds }
-            };
+    {
+        { "UserIdQuery", UserId },
+        { "ConcertIdQuery", ConcertId },
+        { "PerformanceIdsQuery", selectedPerformanceIds }
+    };
 
+            // Navigera till BookingPage
             await Shell.Current.GoToAsync($"///BookingPage", routeParameters);
         }
+
+
+
+
     }
 }

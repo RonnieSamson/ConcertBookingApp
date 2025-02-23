@@ -10,5 +10,6 @@ namespace Concert.MAUI.Services
     public interface IPerformanceService
     {
         Task<List<Performance>?> GetPerformancesByConcertIdAsync(string concertId);
+        Task<Performance?> GetPerformanceByIdAsync(string id);
     }
 }

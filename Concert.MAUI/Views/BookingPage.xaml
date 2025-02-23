@@ -1,8 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="Concert.MAUI.Views.BookingPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Booking">
+    x:Name="Page"
+    Title="Booking"
+    BackgroundColor="White">
 
     <VerticalStackLayout Padding="20">
         <Label Text="Booking Page"
@@ -10,17 +13,72 @@
                TextColor="Black"
                HorizontalOptions="Center" />
 
-        <!-- Displays user ID, concert ID, and the comma-separated performance IDs -->
-        <Label Text="{Binding UserIdQuery}"
-               FontSize="16"
-               TextColor="Red" />
+        <Button Text="Load User Data"
+                Command="{Binding LoadUserDataCommand}"
+                BackgroundColor="Blue"
+                TextColor="White"
+                Padding="10"
+                Margin="10"/>
 
-        <Label Text="{Binding ConcertIdQuery}"
+        <Label Text="User ID:"
                FontSize="16"
-               TextColor="Blue" />
+               FontAttributes="Bold"/>
+        <Label Text="{Binding User.Id}"
+               FontSize="16"
+               TextColor="Blue"/>
 
-        <Label Text="{Binding PerformanceIdsQuery}"
+        <Label Text="Username:"
                FontSize="16"
-               TextColor="Green" />
+               FontAttributes="Bold"/>
+        <Label Text="{Binding User.Name}"
+               FontSize="16"
+               TextColor="Blue"/>
+
+        <Label Text="Email:"
+               FontSize="16"
+               FontAttributes="Bold"/>
+        <Label Text="{Binding User.Email}"
+               FontSize="16"
+               TextColor="Blue"/>
+
+        <Button Text="Load Performances"
+                Command="{Binding LoadPerformancesCommand}"
+                BackgroundColor="Blue"
+                TextColor="White"
+                Padding="10"
+                Margin="10"/>
+
+        <CollectionView ItemsSource="{Binding Performances}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Margin="5"
+                        Padding="10"
+                        BackgroundColor="White"
+                        Stroke="Gray"
+                        StrokeThickness="2">
+                        <VerticalStackLayout>
+                            <Label FontSize="12" Text="{Binding Id}" />
+                            <Label FontSize="12" Text="{Binding StartTime, StringFormat='Start: {0:HH:mm dd/MM/yyyy}'}" />
+                            <Label FontSize="12" Text="{Binding EndTime, StringFormat='End: {0:HH:mm dd/MM/yyyy}'}" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <HorizontalStackLayout Margin="10" Spacing="20">
+            <Button Text="Confirm Booking"
+                    Command="{Binding ConfirmBookingCommand}"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Padding="10"/>
+
+            <Button Text="Cancel"
+                    Command="{Binding CancelBookingCommand}"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    Padding="10"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
