@@ -22,34 +22,9 @@
                                 Text="{Binding Title}" />
                             <Label FontSize="14" Text="{Binding Description}" />
                             <Button
-                                Command="{Binding Source={x:Reference Page}, Path=BindingContext.LoadPerformancesCommand}"
+                                Command="{Binding Source={x:Reference Page}, Path=BindingContext.ShowPerformancesCommand}"
                                 CommandParameter="{Binding ConcertId}"
                                 Text="Show Performances" />
-                            <CollectionView IsVisible="{Binding Source={x:Reference Page}, Path=BindingContext.SelectedPerformances}" ItemsSource="{Binding Source={x:Reference Page}, Path=BindingContext.SelectedPerformances}">
-                                <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Border
-                                            Margin="5"
-                                            Padding="5"
-                                            BackgroundColor="LightGray"
-                                            Stroke="Gray"
-                                            StrokeThickness="1">
-                                            <HorizontalStackLayout>
-                                                <VerticalStackLayout>
-                                                    <Label FontSize="12" Text="{Binding StartTime, StringFormat='Start: {0:HH:mm dd/MM/yyyy}'}" />
-                                                    <Label FontSize="12" Text="{Binding EndTime, StringFormat='End: {0:HH:mm dd/MM/yyyy}'}" />
-                                                </VerticalStackLayout>
-                                                <Button
-                                                    BackgroundColor="Green"
-                                                    Command="{Binding Source={x:Reference Page}, Path=BindingContext.BookPerformanceCommand}"
-                                                    CommandParameter="{Binding ConcertId}"
-                                                    Text="Book"
-                                                    TextColor="White" />
-                                            </HorizontalStackLayout>
-                                        </Border>
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
-                            </CollectionView>
                         </VerticalStackLayout>
                     </Border>
                 </DataTemplate>

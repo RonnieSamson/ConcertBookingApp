@@ -11,12 +11,20 @@
         Title="Login"
         ContentTemplate="{DataTemplate views:LoginPage}"
         Route="login" />
-    
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate views:Homepage}"
         Route="Homepage" />
- 
+
+    <ShellContent
+        Title="Performances"  
+        ContentTemplate="{DataTemplate views:PerformanceDetailsPage}" 
+        Route="PerformanceDetailsPage"/>
+
+    <ShellContent
+        Title="Booking"  
+        ContentTemplate="{DataTemplate views:BookingPage}" 
+        Route="BookingPage"/>
 
 </Shell>

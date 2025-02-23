@@ -37,6 +37,10 @@ namespace Concert.MAUI
             builder.Services.AddSingleton<HttpClient>();
             builder.Services.AddTransient<LoginViewModel>();
             builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<PerformancePageViewModel>();
+            builder.Services.AddTransient<PerformanceDetailsPage>();
+            builder.Services.AddTransient<BookingPageViewModel>();
+            builder.Services.AddTransient<BookingPage>();
 
 
 
