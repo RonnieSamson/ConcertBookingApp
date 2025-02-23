@@ -8,8 +8,10 @@ using Concert.MAUI.Services;
 
 namespace Concert.MAUI.ViewModels
 {
+    
     public partial class HomepageViewModel : ObservableObject
     {
+        
         private readonly IConcertService _concertService;
         private readonly IPerformanceService _performanceService;
         private readonly IBookingService _bookingService;
@@ -29,12 +31,13 @@ namespace Concert.MAUI.ViewModels
             get => _selectedPerformances;
             set => SetProperty(ref _selectedPerformances, value);
         }
-
+        
         public HomepageViewModel(IConcertService concertService, IPerformanceService performanceService, IBookingService bookingService)
         {
             _concertService = concertService;
             _performanceService = performanceService;
             _bookingService = bookingService;
+
             Task.Run(async () => await LoadConcerts());
         }
 
