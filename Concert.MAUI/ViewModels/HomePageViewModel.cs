@@ -8,8 +8,10 @@ using Concert.MAUI.Services;
 
 namespace Concert.MAUI.ViewModels
 {
+    
     public partial class HomepageViewModel : ObservableObject
     {
+        
         private readonly IConcertService _concertService;
         private readonly IPerformanceService _performanceService;
         private readonly IBookingService _bookingService;
@@ -22,19 +24,20 @@ namespace Concert.MAUI.ViewModels
             set => SetProperty(ref _concerts, value);
         }
 
-        private Dictionary<string, ObservableCollection<Performance>> _concertPerformances = new();
+        private ObservableCollection<Performance> _selectedPerformances = new();
 
-        public Dictionary<string, ObservableCollection<Performance>> ConcertPerformances
+        public ObservableCollection<Performance> SelectedPerformances
         {
-            get => _concertPerformances;
-            set => SetProperty(ref _concertPerformances, value);
+            get => _selectedPerformances;
+            set => SetProperty(ref _selectedPerformances, value);
         }
-
+        
         public HomepageViewModel(IConcertService concertService, IPerformanceService performanceService, IBookingService bookingService)
         {
             _concertService = concertService;
             _performanceService = performanceService;
             _bookingService = bookingService;
+
             Task.Run(async () => await LoadConcerts());
         }
 
@@ -45,32 +48,41 @@ namespace Concert.MAUI.ViewModels
             if (concertsList != null)
             {
                 Concerts.Clear();
-                ConcertPerformances.Clear();
+                
                 foreach (var concert in concertsList)
                 {
                     Concerts.Add(concert);
-                    ConcertPerformances[concert.ConcertId] = new ObservableCollection<Performance>(concert.Performances);
+                    
                 }
-                Concerts = new ObservableCollection<Concert.MAUI.Models.Concert>(Concerts);
+                //Concerts = new ObservableCollection<Concert.MAUI.Models.Concert>(Concerts);
             }
         }
         [RelayCommand]
         private async Task LoadPerformances(string concertId)
         {
-            if (ConcertPerformances.ContainsKey(concertId) && ConcertPerformances[concertId].Count == 0)
+            Console.WriteLine($"🔍 LoadPerformancesCommand körs för ConcertId: {concertId}");
+
+            var performancesList = await _performanceService.GetPerformancesByConcertIdAsync(concertId);
+            if (performancesList == null || !performancesList.Any())
             {
-                var performances = await _performanceService.GetPerformancesByConcertIdAsync(concertId);
-                if (performances != null)
-                {
-                    foreach (var performance in performances)
-                    {
-                        ConcertPerformances[concertId].Add(performance);
-                    }
-                }
-                OnPropertyChanged(nameof(ConcertPerformances));
+                Console.WriteLine($"❌ Inga performances hittades för ConcertId: {concertId}");
+                return;
             }
-            
+
+            // 🧹 Rensa tidigare performances innan vi lägger till nya
+            SelectedPerformances.Clear();
+            foreach (var performance in performancesList)
+            {
+                SelectedPerformances.Add(performance);
+            }
+
+            Console.WriteLine($"✅ {SelectedPerformances.Count} performances inlagda i listan");
+
+            // 🔄 Uppdatera UI
+            OnPropertyChanged(nameof(SelectedPerformances));
         }
+
+
 
         //[RelayCommand]
         private async Task BookPerformance(string concertId, string userId)
