@@ -77,20 +77,31 @@ namespace Concert.MAUI.Services
                 var json = JsonSerializer.Serialize(data, _serializerOptions);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
+                // 🔍 Debug-logga URL och payload innan request
+                Debug.WriteLine($"[HTTP POST] URL: {_baseUrl}{endpoint}");
+                Debug.WriteLine($"[HTTP POST] Payload: {json}");
+
                 var response = await _client.PostAsync($"{_baseUrl}{endpoint}", content);
+
+                Debug.WriteLine($"[HTTP POST] Response Status: {response.StatusCode}");
+
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine($"[HTTP POST] Response Content: {responseContent}");
+
                     return JsonSerializer.Deserialize<T>(responseContent, _serializerOptions);
                 }
+
                 return default;
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"\tERROR {ex.Message}");
+                Debug.WriteLine($"[HTTP POST] ERROR: {ex.Message}");
                 return default;
             }
         }
+
 
 
 

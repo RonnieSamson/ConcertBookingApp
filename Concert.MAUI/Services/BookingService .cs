@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Concert.Data.DTO;
 using Concert.MAUI.Models;
 
 namespace Concert.MAUI.Services
@@ -18,13 +19,18 @@ namespace Concert.MAUI.Services
             _restService = restService;
             _mapper = mapper;
         }
-        public async Task<bool> BookPerformanceAsync(string userid, string concertId)
+        public async Task<bool> BookPerformanceAsync(string userId, string concertId)
         {
-            var booking = new Booking { UserId = userid, ConcertId = concertId, BookingDate = DateTime.UtcNow };
-            var response = await _restService.PostAsync<Booking>("bookings", booking);
+            var bookingDto = new BookingDto
+            {
+                UserId = userId,
+                ConcertId = concertId
+            };
+
+            var response = await _restService.PostAsync<BookingDto>("bookings/book", bookingDto);
             return response != null;
         }
 
-        
+
     }
 }

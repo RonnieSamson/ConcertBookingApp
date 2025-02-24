@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Concert.Data.DTO;
 using Concert.Data.Entity;
 using Concert.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -59,9 +60,13 @@ namespace Concert.API.Controllers
         }
 
 
-        [HttpPost]
-        public async Task<ActionResult<Booking>> CreateBooking([FromBody] Booking booking)
+        [HttpPost("book")]
+        public async Task<IActionResult> CreateBooking([FromBody] BookingDto bookingDto)
         {
+            if (bookingDto == null)
+                return BadRequest("Invalid booking data.");
+
+            var booking = _mapper.Map<Booking>(bookingDto);
             _unitOfWork.Bookings.AddBooking(booking);
             await _unitOfWork.CompleteAsync();
 
