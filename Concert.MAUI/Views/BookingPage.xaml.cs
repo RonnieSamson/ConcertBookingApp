@@ -10,6 +10,9 @@ public partial class BookingPage : ContentPage
     {
         InitializeComponent();
         BindingContext = viewModel;
-        
+
+        Task.Run(async () => await viewModel.InitializeAsync());
+
+
     }
 }

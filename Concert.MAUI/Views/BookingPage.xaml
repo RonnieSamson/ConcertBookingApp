@@ -8,45 +8,42 @@
     BackgroundColor="White">
 
     <VerticalStackLayout Padding="20">
-        <Label Text="Booking Page"
-               FontSize="24"
-               TextColor="Black"
-               HorizontalOptions="Center" />
+        <Label
+            FontSize="24"
+            HorizontalOptions="Center"
+            Text="Booking Page"
+            TextColor="Black" />
 
-        <Button Text="Load User Data"
-                Command="{Binding LoadUserDataCommand}"
-                BackgroundColor="Blue"
-                TextColor="White"
-                Padding="10"
-                Margin="10"/>
 
-        <Label Text="User ID:"
-               FontSize="16"
-               FontAttributes="Bold"/>
-        <Label Text="{Binding User.Id}"
-               FontSize="16"
-               TextColor="Blue"/>
 
-        <Label Text="Username:"
-               FontSize="16"
-               FontAttributes="Bold"/>
-        <Label Text="{Binding User.Name}"
-               FontSize="16"
-               TextColor="Blue"/>
+        <Label
+            FontAttributes="Bold"
+            FontSize="16"
+            Text="User ID:" />
+        <Label
+            FontSize="16"
+            Text="{Binding User.Id}"
+            TextColor="Blue" />
 
-        <Label Text="Email:"
-               FontSize="16"
-               FontAttributes="Bold"/>
-        <Label Text="{Binding User.Email}"
-               FontSize="16"
-               TextColor="Blue"/>
+        <Label
+            FontAttributes="Bold"
+            FontSize="16"
+            Text="Username:" />
+        <Label
+            FontSize="16"
+            Text="{Binding User.Name}"
+            TextColor="Blue" />
 
-        <Button Text="Load Performances"
-                Command="{Binding LoadPerformancesCommand}"
-                BackgroundColor="Blue"
-                TextColor="White"
-                Padding="10"
-                Margin="10"/>
+        <Label
+            FontAttributes="Bold"
+            FontSize="16"
+            Text="Email:" />
+        <Label
+            FontSize="16"
+            Text="{Binding User.Email}"
+            TextColor="Blue" />
+
+
 
         <CollectionView ItemsSource="{Binding Performances}">
             <CollectionView.ItemTemplate>
@@ -68,17 +65,19 @@
         </CollectionView>
 
         <HorizontalStackLayout Margin="10" Spacing="20">
-            <Button Text="Confirm Booking"
-                    Command="{Binding ConfirmBookingCommand}"
-                    BackgroundColor="Green"
-                    TextColor="White"
-                    Padding="10"/>
+            <Button
+                Padding="10"
+                BackgroundColor="Green"
+                Command="{Binding ConfirmBookingCommand}"
+                Text="Confirm Booking"
+                TextColor="White" />
 
-            <Button Text="Cancel"
-                    Command="{Binding CancelBookingCommand}"
-                    BackgroundColor="Red"
-                    TextColor="White"
-                    Padding="10"/>
+            <Button
+                Padding="10"
+                BackgroundColor="Red"
+                Command="{Binding CancelBookingCommand}"
+                Text="Cancel"
+                TextColor="White" />
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
