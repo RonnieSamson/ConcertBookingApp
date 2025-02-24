@@ -54,7 +54,7 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         private async Task ShowPerformances(string concertId)
         {
-            await Shell.Current.GoToAsync($"///PerformanceDetailsPage?ConcertId={concertId}&UserId={UserId}");
+            await Shell.Current.GoToAsync($"{nameof(PerformanceDetailsPage)}?ConcertId={concertId}&UserId={UserId}");
         }
     }
 }

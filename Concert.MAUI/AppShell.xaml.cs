@@ -7,7 +7,7 @@ namespace Concert.MAUI
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute("performanceDetails", typeof(PerformanceDetailsPage));
+            Routing.RegisterRoute(nameof(PerformanceDetailsPage), typeof(PerformanceDetailsPage));
             Routing.RegisterRoute(nameof(BookingPage), typeof(BookingPage));
 
         }
