@@ -6,6 +6,7 @@ using CommunityToolkit.Mvvm.Input;
 using Microsoft.Maui.Controls;
 using Concert.MAUI.Services;
 using Concert.MAUI.Models;
+using Concert.MAUI.Views;
 
 namespace Concert.MAUI.ViewModels
 {
@@ -77,7 +78,8 @@ namespace Concert.MAUI.ViewModels
     };
 
             // Navigera till BookingPage
-            await Shell.Current.GoToAsync($"///BookingPage", routeParameters);
+            await Shell.Current.GoToAsync(nameof(BookingPage), routeParameters);
+
         }
 
 
