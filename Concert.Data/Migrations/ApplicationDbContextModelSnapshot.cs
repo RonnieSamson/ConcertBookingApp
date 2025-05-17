@@ -32,9 +32,9 @@ namespace Concert.Data.Migrations
                     b.Property<DateTime>("BookingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ConcertId")
+                    b.Property<string>("PerformanceId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -42,7 +42,7 @@ namespace Concert.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ConcertId");
+                    b.HasIndex("PerformanceId");
 
                     b.HasIndex("UserId");
 
@@ -53,21 +53,21 @@ namespace Concert.Data.Migrations
                         {
                             Id = "1",
                             BookingDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcertId = "1",
+                            PerformanceId = "1",
                             UserId = "1"
                         },
                         new
                         {
                             Id = "2",
-                            BookingDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcertId = "2",
+                            BookingDate = new DateTime(2024, 1, 2, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            PerformanceId = "2",
                             UserId = "2"
                         },
                         new
                         {
                             Id = "3",
-                            BookingDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcertId = "3",
+                            BookingDate = new DateTime(2024, 1, 3, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            PerformanceId = "3",
                             UserId = "3"
                         });
                 });
@@ -75,15 +75,18 @@ namespace Concert.Data.Migrations
             modelBuilder.Entity("Concert.Data.Entity.ConcertEntity", b =>
                 {
                     b.Property<string>("ConcertId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("ConcertId");
 
@@ -118,7 +121,8 @@ namespace Concert.Data.Migrations
 
                     b.Property<string>("ConcertId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
@@ -137,22 +141,22 @@ namespace Concert.Data.Migrations
                         {
                             Id = "1",
                             ConcertId = "1",
-                            EndTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
+                            EndTime = new DateTime(2024, 1, 1, 14, 0, 0, 0, DateTimeKind.Unspecified),
                             StartTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = "2",
                             ConcertId = "2",
-                            EndTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            StartTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified)
+                            EndTime = new DateTime(2024, 1, 2, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            StartTime = new DateTime(2024, 1, 2, 18, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = "3",
                             ConcertId = "3",
-                            EndTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            StartTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified)
+                            EndTime = new DateTime(2024, 1, 3, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            StartTime = new DateTime(2024, 1, 3, 19, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -207,9 +211,9 @@ namespace Concert.Data.Migrations
 
             modelBuilder.Entity("Concert.Data.Entity.Booking", b =>
                 {
-                    b.HasOne("Concert.Data.Entity.ConcertEntity", "Concert")
-                        .WithMany()
-                        .HasForeignKey("ConcertId")
+                    b.HasOne("Concert.Data.Entity.Performance", "Performance")
+                        .WithMany("Bookings")
+                        .HasForeignKey("PerformanceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -219,7 +223,7 @@ namespace Concert.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Concert");
+                    b.Navigation("Performance");
 
                     b.Navigation("User");
                 });
@@ -238,6 +242,11 @@ namespace Concert.Data.Migrations
             modelBuilder.Entity("Concert.Data.Entity.ConcertEntity", b =>
                 {
                     b.Navigation("Performances");
+                });
+
+            modelBuilder.Entity("Concert.Data.Entity.Performance", b =>
+                {
+                    b.Navigation("Bookings");
                 });
 
             modelBuilder.Entity("Concert.Data.Entity.User", b =>

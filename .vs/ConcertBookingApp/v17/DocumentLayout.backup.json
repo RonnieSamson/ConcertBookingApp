@@ -1,0 +1,548 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Concertbookingapp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\views\\performancedetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\views\\performancedetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|c:\\concertbookingapp\\consert.api\\profiles\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|solutionrelative:consert.api\\profiles\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|c:\\concertbookingapp\\consert.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|solutionrelative:consert.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\profiles\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\profiles\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|c:\\concertbookingapp\\consert.api\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|solutionrelative:consert.api\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\services\\restservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\services\\restservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\profiles\\bookingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\profiles\\bookingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|c:\\concertbookingapp\\consert.api\\profiles\\bookingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|solutionrelative:consert.api\\profiles\\bookingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC45321B-7494-4066-B7E7-A7940E853A24}|Consert.Data.DTO\\Concert.Data.DTO.csproj|c:\\concertbookingapp\\consert.data.dto\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC45321B-7494-4066-B7E7-A7940E853A24}|Consert.Data.DTO\\Concert.Data.DTO.csproj|solutionrelative:consert.data.dto\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\profiles\\concertprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\profiles\\concertprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\services\\bookingservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\services\\bookingservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\viewmodels\\bookingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\viewmodels\\bookingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|c:\\concertbookingapp\\consert.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4DF4891-1743-4264-A458-95D16CD2AB21}|Consert.API\\Consert.API.csproj|solutionrelative:consert.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\views\\bookingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\views\\bookingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\viewmodels\\homepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\viewmodels\\homepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\viewmodels\\performancepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\viewmodels\\performancepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\views\\bookingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\views\\bookingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\services\\iperformanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\services\\iperformanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\services\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\services\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Concerts.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\services\\performanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\services\\performanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI - GF63\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\9.0.40\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\views\\performancedetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\views\\performancedetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Performances.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|c:\\concertbookingapp\\concert.maui\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}|Concert.MAUI\\Concert.MAUI.csproj|solutionrelative:concert.maui\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Bookings.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Consert.API\\Profiles\\UserProfile.cs",
+              "RelativeDocumentMoniker": "Consert.API\\Profiles\\UserProfile.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Consert.API\\Profiles\\UserProfile.cs",
+              "RelativeToolTip": "Consert.API\\Profiles\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:49:34.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookingProfile.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Consert.API\\Profiles\\BookingProfile.cs",
+              "RelativeDocumentMoniker": "Consert.API\\Profiles\\BookingProfile.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Consert.API\\Profiles\\BookingProfile.cs",
+              "RelativeToolTip": "Consert.API\\Profiles\\BookingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T10:31:17.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookingProfile.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Profiles\\BookingProfile.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Profiles\\BookingProfile.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Profiles\\BookingProfile.cs",
+              "RelativeToolTip": "Concert.MAUI\\Profiles\\BookingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T09:57:07.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConcertProfile.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Profiles\\ConcertProfile.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Profiles\\ConcertProfile.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Profiles\\ConcertProfile.cs",
+              "RelativeToolTip": "Concert.MAUI\\Profiles\\ConcertProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T10:27:54.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RestService.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\RestService.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Services\\RestService.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\RestService.cs",
+              "RelativeToolTip": "Concert.MAUI\\Services\\RestService.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAowFMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T17:12:29.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookingsController.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Consert.API\\Controllers\\BookingsController.cs",
+              "RelativeDocumentMoniker": "Consert.API\\Controllers\\BookingsController.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Consert.API\\Controllers\\BookingsController.cs",
+              "RelativeToolTip": "Consert.API\\Controllers\\BookingsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T09:35:21.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PerformanceDetailsPage.xaml",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\PerformanceDetailsPage.xaml",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Views\\PerformanceDetailsPage.xaml",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\PerformanceDetailsPage.xaml",
+              "RelativeToolTip": "Concert.MAUI\\Views\\PerformanceDetailsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-23T13:11:11.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Consert.API\\Program.cs",
+              "RelativeDocumentMoniker": "Consert.API\\Program.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Consert.API\\Program.cs",
+              "RelativeToolTip": "Consert.API\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T10:31:53.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Profiles\\UserProfile.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Profiles\\UserProfile.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Profiles\\UserProfile.cs",
+              "RelativeToolTip": "Concert.MAUI\\Profiles\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:52:41.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Services\\UserService.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\UserService.cs",
+              "RelativeToolTip": "Concert.MAUI\\Services\\UserService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:01:54.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookingDto.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Consert.Data.DTO\\BookingDto.cs",
+              "RelativeDocumentMoniker": "Consert.Data.DTO\\BookingDto.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Consert.Data.DTO\\BookingDto.cs",
+              "RelativeToolTip": "Consert.Data.DTO\\BookingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:57:15.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookingService .cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\BookingService .cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Services\\BookingService .cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\BookingService .cs",
+              "RelativeToolTip": "Concert.MAUI\\Services\\BookingService .cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwB0AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T13:30:51.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BookingPageViewModel.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\ViewModels\\BookingPageViewModel.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\ViewModels\\BookingPageViewModel.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\ViewModels\\BookingPageViewModel.cs",
+              "RelativeToolTip": "Concert.MAUI\\ViewModels\\BookingPageViewModel.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwFcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T13:09:49.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Consert.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Consert.API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Consert.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Consert.API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T09:39:41.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Homepage.xaml",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\Homepage.xaml",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Views\\Homepage.xaml",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\Homepage.xaml",
+              "RelativeToolTip": "Concert.MAUI\\Views\\Homepage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-23T13:10:55.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HomePageViewModel.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\ViewModels\\HomePageViewModel.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\ViewModels\\HomePageViewModel.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\ViewModels\\HomePageViewModel.cs",
+              "RelativeToolTip": "Concert.MAUI\\ViewModels\\HomePageViewModel.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T13:10:51.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BookingPage.xaml",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\BookingPage.xaml",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Views\\BookingPage.xaml",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\BookingPage.xaml",
+              "RelativeToolTip": "Concert.MAUI\\Views\\BookingPage.xaml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-23T13:10:02.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PerformancePageViewModel.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\ViewModels\\PerformancePageViewModel.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\ViewModels\\PerformancePageViewModel.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\ViewModels\\PerformancePageViewModel.cs",
+              "RelativeToolTip": "Concert.MAUI\\ViewModels\\PerformancePageViewModel.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwE0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T13:15:25.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BookingPage.xaml.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\BookingPage.xaml.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Views\\BookingPage.xaml.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\BookingPage.xaml.cs",
+              "RelativeToolTip": "Concert.MAUI\\Views\\BookingPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T17:51:17.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IPerformanceService.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\IPerformanceService.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Services\\IPerformanceService.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\IPerformanceService.cs",
+              "RelativeToolTip": "Concert.MAUI\\Services\\IPerformanceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T17:08:39.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IBookingService.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\IBookingService.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Services\\IBookingService.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\IBookingService.cs",
+              "RelativeToolTip": "Concert.MAUI\\Services\\IBookingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:54:15.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\AppShell.xaml.cs",
+              "RelativeToolTip": "Concert.MAUI\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T08:28:19.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "dbo.Concerts.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Concerts.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Concerts.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-23T19:56:33.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\IUserService.cs",
+              "RelativeToolTip": "Concert.MAUI\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:30:37.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PerformanceService.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\PerformanceService.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Services\\PerformanceService.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Services\\PerformanceService.cs",
+              "RelativeToolTip": "Concert.MAUI\\Services\\PerformanceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T13:30:57.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Microsoft.Maui.Controls.targets",
+              "DocumentMoniker": "C:\\Users\\MSI - GF63\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\9.0.40\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
+              "RelativeDocumentMoniker": "..\\Users\\MSI - GF63\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\9.0.40\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
+              "ToolTip": "C:\\Users\\MSI - GF63\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\9.0.40\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
+              "RelativeToolTip": "..\\Users\\MSI - GF63\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\9.0.40\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAvwKoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-02-23T17:31:35.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "Concert.MAUI\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwCsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T14:00:54.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PerformanceDetailsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\PerformanceDetailsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Views\\PerformanceDetailsPage.xaml.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\PerformanceDetailsPage.xaml.cs",
+              "RelativeToolTip": "Concert.MAUI\\Views\\PerformanceDetailsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T14:26:51.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Homepage.xaml.cs",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\Homepage.xaml.cs",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Views\\Homepage.xaml.cs",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\Homepage.xaml.cs",
+              "RelativeToolTip": "Concert.MAUI\\Views\\Homepage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T15:06:39.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "dbo.Performances.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Performances.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Performances.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-23T13:44:46.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "Concert.MAUI\\Views\\LoginPage.xaml",
+              "ToolTip": "C:\\Concertbookingapp\\Concert.MAUI\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "Concert.MAUI\\Views\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-23T13:11:00.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "dbo.Users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-23T13:08:09.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "dbo.Bookings.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Bookings.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ConcertBookingApp/True/SqlTable/dbo.Bookings.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-23T13:08:06.502Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

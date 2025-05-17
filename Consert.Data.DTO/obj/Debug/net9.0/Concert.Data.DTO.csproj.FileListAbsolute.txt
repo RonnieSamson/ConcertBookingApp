@@ -1,0 +1,12 @@
+C:\Concertbookingapp\Consert.Data.DTO\bin\Debug\net9.0\Concert.Data.DTO.deps.json
+C:\Concertbookingapp\Consert.Data.DTO\bin\Debug\net9.0\Concert.Data.DTO.dll
+C:\Concertbookingapp\Consert.Data.DTO\bin\Debug\net9.0\Concert.Data.DTO.pdb
+C:\Concertbookingapp\Consert.Data.DTO\obj\Debug\net9.0\Concert.Data.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Concertbookingapp\Consert.Data.DTO\obj\Debug\net9.0\Concert.Data.DTO.AssemblyInfoInputs.cache
+C:\Concertbookingapp\Consert.Data.DTO\obj\Debug\net9.0\Concert.Data.DTO.AssemblyInfo.cs
+C:\Concertbookingapp\Consert.Data.DTO\obj\Debug\net9.0\Concert.Data.DTO.csproj.CoreCompileInputs.cache
+C:\Concertbookingapp\Consert.Data.DTO\obj\Debug\net9.0\Concert.Data.DTO.sourcelink.json
+C:\Concertbookingapp\Consert.Data.DTO\obj\Debug\net9.0\Concert.Data.DTO.dll
+C:\Concertbookingapp\Consert.Data.DTO\obj\Debug\net9.0\refint\Concert.Data.DTO.dll
+C:\Concertbookingapp\Consert.Data.DTO\obj\Debug\net9.0\Concert.Data.DTO.pdb
+C:\Concertbookingapp\Consert.Data.DTO\obj\Debug\net9.0\ref\Concert.Data.DTO.dll

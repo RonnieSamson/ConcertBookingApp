@@ -6,8 +6,7 @@
     Title="Performances">
 
     <VerticalStackLayout Padding="20">
-        <Label Text="{Binding ConcertId}" FontSize="16" TextColor="Red" />
-        <Label Text="{Binding UserId}" FontSize="16" TextColor="Blue" />
+        
 
         <CollectionView ItemsSource="{Binding Performances}"
                         SelectionMode="Multiple"

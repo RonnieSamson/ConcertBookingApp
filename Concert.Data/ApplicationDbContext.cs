@@ -21,7 +21,7 @@ namespace Concert.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // 🟢 User-tabellen
+            // User-tabellen
             modelBuilder.Entity<User>()
                 .HasKey(u => u.Id);
 
@@ -45,7 +45,7 @@ namespace Concert.Data
                 .HasMaxLength(30)
                 .IsRequired();
 
-            // 🟢 Booking-tabellen
+            // Booking-tabellen
             modelBuilder.Entity<Booking>()
                 .HasKey(b => b.Id);
 
@@ -58,66 +58,93 @@ namespace Concert.Data
                 .HasColumnType("nvarchar(36)")
                 .IsRequired();
 
+            modelBuilder.Entity<Booking>().Property(b => b.PerformanceId)
+                .HasColumnType("nvarchar(36)")
+                .IsRequired();
+
             modelBuilder.Entity<Booking>()
                 .HasOne(b => b.User)
                 .WithMany(u => u.Bookings)
                 .HasForeignKey(b => b.UserId)
                 .IsRequired();
 
-            // Performances tabellen
+            modelBuilder.Entity<Booking>()
+                .HasOne(b => b.Performance)
+                .WithMany(p => p.Bookings)
+                .HasForeignKey(b => b.PerformanceId)
+                .IsRequired();
+
+            // ConcertEntity-tabellen
+            modelBuilder.Entity<ConcertEntity>()
+                .HasKey(c => c.ConcertId);
+
+            modelBuilder.Entity<ConcertEntity>().Property(c => c.ConcertId)
+                .HasColumnType("nvarchar(36)")
+                .HasMaxLength(36)
+                .IsRequired();
+
+            modelBuilder.Entity<ConcertEntity>().Property(c => c.Title)
+                .HasColumnType("nvarchar(100)")
+                .HasMaxLength(100)
+                .IsRequired();
+
+            modelBuilder.Entity<ConcertEntity>().Property(c => c.Description)
+                .HasColumnType("nvarchar(500)")
+                .HasMaxLength(500);
+
+            // Performance-tabellen
             modelBuilder.Entity<Performance>()
                 .HasKey(p => p.Id);
+
             modelBuilder.Entity<Performance>().Property(p => p.Id)
                 .HasColumnType("nvarchar(36)")
                 .HasMaxLength(36)
                 .IsRequired();
+
             modelBuilder.Entity<Performance>().Property(p => p.StartTime)
                 .IsRequired();
-            modelBuilder.Entity<Performance>()
-                .Property(p => p.EndTime)
+
+            modelBuilder.Entity<Performance>().Property(p => p.EndTime)
                 .IsRequired();
-            modelBuilder.Entity<Performance>()
-                .Property(p => p.ConcertId)
+
+            modelBuilder.Entity<Performance>().Property(p => p.ConcertId)
+                .HasColumnType("nvarchar(36)")
+                .HasMaxLength(36)
                 .IsRequired();
+
             modelBuilder.Entity<Performance>()
                 .HasOne(p => p.Concert)
                 .WithMany(c => c.Performances)
                 .HasForeignKey(p => p.ConcertId)
                 .IsRequired();
 
-
             SeedData(modelBuilder);
         }
 
         private void SeedData(ModelBuilder builder)
         {
-            // 🟢 Seeda konserter först!
+            // Seeda konserter
             var concert1 = new ConcertEntity
             {
                 ConcertId = "1",
                 Title = "Rock Night",
                 Description = "A night of rock music"
             };
-
             var concert2 = new ConcertEntity
             {
                 ConcertId = "2",
                 Title = "Jazz Night",
                 Description = "A night of jazz music"
             };
-
             var concert3 = new ConcertEntity
             {
                 ConcertId = "3",
                 Title = "Pop Night",
                 Description = "A night of pop music"
             };
-
-
-
             builder.Entity<ConcertEntity>().HasData(concert1, concert2, concert3);
 
-            // 🟢 Seeda användare
+            // Seeda användare
             var user1 = new User
             {
                 Id = "1",
@@ -125,7 +152,6 @@ namespace Concert.Data
                 Email = "John123@example.com",
                 Password = "John123",
             };
-
             var user2 = new User
             {
                 Id = "2",
@@ -133,7 +159,6 @@ namespace Concert.Data
                 Email = "bob@example.com",
                 Password = "anotherpassword"
             };
-
             var user3 = new User
             {
                 Id = "3",
@@ -141,62 +166,56 @@ namespace Concert.Data
                 Email = "alice@example.com",
                 Password = "securepassword"
             };
-
             builder.Entity<User>().HasData(user1, user2, user3);
 
-            // 🟢 Seeda bokningar (❌ Ta bort ID!)
+            // Seeda performances
+            var performance1 = new Performance
+            {
+                Id = "1",
+                StartTime = new DateTime(2024, 1, 1, 12, 0, 0),
+                EndTime = new DateTime(2024, 1, 1, 14, 0, 0),
+                ConcertId = "1"
+            };
+            var performance2 = new Performance
+            {
+                Id = "2",
+                StartTime = new DateTime(2024, 1, 2, 18, 0, 0),
+                EndTime = new DateTime(2024, 1, 2, 20, 0, 0),
+                ConcertId = "2"
+            };
+            var performance3 = new Performance
+            {
+                Id = "3",
+                StartTime = new DateTime(2024, 1, 3, 19, 0, 0),
+                EndTime = new DateTime(2024, 1, 3, 21, 0, 0),
+                ConcertId = "3"
+            };
+            builder.Entity<Performance>().HasData(performance1, performance2, performance3);
+
+            
             var booking1 = new Booking
             {
                 Id = "1",
                 BookingDate = new DateTime(2024, 1, 1, 12, 0, 0),
                 UserId = "1",
-                ConcertId = "1"  // 🔹 Nu finns denna concert i `Concerts`
+                PerformanceId = "1"
+                
             };
-
             var booking2 = new Booking
             {
                 Id = "2",
-                BookingDate = new DateTime(2024, 1, 1, 12, 0, 0),
+                BookingDate = new DateTime(2024, 1, 2, 18, 0, 0),
                 UserId = "2",
-                ConcertId = "2"
+                PerformanceId = "2"
             };
-
             var booking3 = new Booking
             {
                 Id = "3",
-                BookingDate = new DateTime(2024, 1, 1, 12, 0, 0),
+                BookingDate = new DateTime(2024, 1, 3, 19, 0, 0),
                 UserId = "3",
-                ConcertId = "3"
+                PerformanceId = "3"
             };
-
             builder.Entity<Booking>().HasData(booking1, booking2, booking3);
-
-            Performance performance1 = new Performance
-            {
-                Id = "1",
-                StartTime = new DateTime(2024, 1, 1, 12, 0, 0),
-                EndTime = new DateTime(2024, 1, 1, 12, 0, 0),
-                ConcertId = "1"
-            };
-
-            Performance performance2 = new Performance
-            {
-                Id = "2",
-                StartTime = new DateTime(2024, 1, 1, 12, 0, 0),
-                EndTime = new DateTime(2024, 1, 1, 12, 0, 0),
-                ConcertId = "2"
-            };
-
-            Performance performance3 = new Performance
-            {
-                Id = "3",
-                StartTime = new DateTime(2024, 1, 1, 12, 0, 0),
-                EndTime = new DateTime(2024, 1, 1, 12, 0, 0),
-                ConcertId = "3"
-            };
-
-            builder.Entity<Performance>().HasData(performance1, performance2, performance3);
         }
-
     }
 }

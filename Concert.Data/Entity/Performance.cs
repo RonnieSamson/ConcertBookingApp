@@ -7,9 +7,13 @@ namespace Concert.Data.Entity
         public string Id { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+
+        // Koppling till ConcertEntity
         public string ConcertId { get; set; }
         
-        [JsonIgnore]
         public ConcertEntity Concert { get; set; }
+
+        // Koppling till Booking
+        public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
     }
 }
