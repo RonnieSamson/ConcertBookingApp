@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Concert.MAUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+65b66ef87821c86161d45b730ec24b1212f1935b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+e26329107eb36aae6e94c8a8c286b239361c3662")]
 [assembly: System.Reflection.AssemblyProductAttribute("Concert.MAUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Concert.MAUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

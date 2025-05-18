@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.Data", "Concert.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.Data.DTO", "Consert.Data.DTO\Concert.Data.DTO.csproj", "{FC45321B-7494-4066-B7E7-A7940E853A24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consert.API", "Consert.API\Consert.API.csproj", "{D4DF4891-1743-4264-A458-95D16CD2AB21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.API", "Consert.API\Concert.API.csproj", "{D4DF4891-1743-4264-A458-95D16CD2AB21}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.MAUI", "Concert.MAUI\Concert.MAUI.csproj", "{A295E1CA-A4D7-4A9D-8813-D6ED3CBC3A8A}"
 EndProject

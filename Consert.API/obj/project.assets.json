@@ -8497,9 +8497,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Concertbookingapp\\Consert.API\\Consert.API.csproj",
-      "projectName": "Consert.API",
-      "projectPath": "C:\\Concertbookingapp\\Consert.API\\Consert.API.csproj",
+      "projectUniqueName": "C:\\Concertbookingapp\\Consert.API\\Concert.API.csproj",
+      "projectName": "Concert.API",
+      "projectPath": "C:\\Concertbookingapp\\Consert.API\\Concert.API.csproj",
       "packagesPath": "C:\\Users\\MSI - GF63\\.nuget\\packages\\",
       "outputPath": "C:\\Concertbookingapp\\Consert.API\\obj\\",
       "projectStyle": "PackageReference",
