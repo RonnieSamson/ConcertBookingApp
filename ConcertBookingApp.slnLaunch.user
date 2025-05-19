@@ -7,7 +7,7 @@
         "Action": "Start"
       },
       {
-        "Path": "Consert.API\\Consert.API.csproj",
+        "Path": "Consert.API\\Concert.API.csproj",
         "Action": "Start"
       }
     ]
