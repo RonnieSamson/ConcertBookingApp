@@ -133,16 +133,18 @@ namespace Concert.MAUI.Services
 
 
 
-        public async Task DeleteAsync(string endpoint)
+        public async Task<bool> DeleteAsync(string endpoint)
         {
             try
             {
                 var response = await _client.DeleteAsync($"{_baseUrl}{endpoint}");
                 response.EnsureSuccessStatusCode();
+                return true;
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"\tERROR {ex.Message}");
+                return false;
             }
         }
     }

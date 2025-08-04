@@ -26,7 +26,7 @@ namespace Concert.MAUI.ViewModels
         }
 
         [ObservableProperty]
-        private string userId;
+        private string? userId;
 
         public HomepageViewModel(IConcertService concertService, IPerformanceService performanceService, IBookingService bookingService)
         {
@@ -43,6 +43,7 @@ namespace Concert.MAUI.ViewModels
             var concertsList = await _concertService.GetAllConcertsAsync();
             if (concertsList != null)
             {
+                // Clear existing concerts to prevent duplicates
                 Concerts.Clear();
                 foreach (var concert in concertsList)
                 {
@@ -55,6 +56,12 @@ namespace Concert.MAUI.ViewModels
         private async Task ShowPerformances(string concertId)
         {
             await Shell.Current.GoToAsync($"{nameof(PerformanceDetailsPage)}?ConcertId={concertId}&UserId={UserId}");
+        }
+
+        [RelayCommand]
+        private async Task ViewMyBookings()
+        {
+            await Shell.Current.GoToAsync($"{nameof(MyBookingsPage)}");
         }
     }
 }

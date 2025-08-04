@@ -41,6 +41,8 @@ namespace Concert.MAUI
             builder.Services.AddTransient<PerformanceDetailsPage>();
             builder.Services.AddTransient<BookingPageViewModel>();
             builder.Services.AddTransient<BookingPage>();
+            builder.Services.AddTransient<MyBookingsViewModel>();
+            builder.Services.AddTransient<MyBookingsPage>();
 
 
 

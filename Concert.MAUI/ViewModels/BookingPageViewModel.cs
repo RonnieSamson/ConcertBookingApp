@@ -8,7 +8,6 @@ using Concert.MAUI.Services;
 namespace Concert.MAUI.ViewModels
 {
     [QueryProperty(nameof(UserIdQuery), nameof(UserIdQuery))]
-    [QueryProperty(nameof(ConcertIdQuery), nameof(ConcertIdQuery))]
     [QueryProperty(nameof(PerformanceIdsQuery), nameof(PerformanceIdsQuery))]
     public partial class BookingPageViewModel : ObservableObject
     {
@@ -17,19 +16,25 @@ namespace Concert.MAUI.ViewModels
         private readonly IBookingService _bookingService;
 
         [ObservableProperty]
-        private string userIdQuery;
+        private string? userIdQuery;
 
         [ObservableProperty]
-        private string concertIdQuery;
+        private string? performanceIdsQuery;
 
         [ObservableProperty]
-        private string performanceIdsQuery;
-
-        [ObservableProperty]
-        private User user;
+        private User? user;
 
         [ObservableProperty]
         private ObservableCollection<Performance> performances = new();
+
+        [ObservableProperty]
+        private string customerName = string.Empty;
+
+        [ObservableProperty]
+        private string customerEmail = string.Empty;
+
+        [ObservableProperty]
+        private Performance? selectedPerformance;
 
         public BookingPageViewModel(IUserService userService, IPerformanceService performanceService, IBookingService bookingService)
         {
@@ -52,6 +57,11 @@ namespace Concert.MAUI.ViewModels
                 try
                 {
                     User = await _userService.GetUserByIdAsync(UserIdQuery);
+                    if (User != null)
+                    {
+                        CustomerName = User.Name;
+                        CustomerEmail = User.Email;
+                    }
                 }
                 catch (HttpRequestException ex)
                 {
@@ -88,9 +98,22 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         public async Task ConfirmBookingAsync()
         {
-            if (await _bookingService.BookPerformanceAsync(User.Id, ConcertIdQuery))
+            if (SelectedPerformance == null)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Please select a performance!", "OK");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(CustomerName) || string.IsNullOrEmpty(CustomerEmail))
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Please provide customer name and email!", "OK");
+                return;
+            }
+
+            if (await _bookingService.BookPerformanceAsync(SelectedPerformance.Id, CustomerName, CustomerEmail))
             {
                 await Application.Current.MainPage.DisplayAlert("Success", "Booking confirmed!", "OK");
+                await Shell.Current.GoToAsync("..");
             }
             else
             {

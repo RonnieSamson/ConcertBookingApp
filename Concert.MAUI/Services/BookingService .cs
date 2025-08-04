@@ -19,18 +19,30 @@ namespace Concert.MAUI.Services
             _restService = restService;
             _mapper = mapper;
         }
-        public async Task<bool> BookPerformanceAsync(string userId, string concertId)
+        
+        public async Task<bool> BookPerformanceAsync(string performanceId, string customerName, string customerEmail)
         {
             var bookingDto = new BookingDto
             {
-                UserId = userId,
-                ConcertId = concertId
+                PerformanceId = performanceId,
+                CustomerName = customerName,
+                CustomerEmail = customerEmail,
+                BookingDate = DateTime.UtcNow
             };
 
             var response = await _restService.PostAsync<BookingDto>("bookings/book", bookingDto);
             return response != null;
         }
 
+        public async Task<IEnumerable<Booking>?> GetBookingsByEmailAsync(string email)
+        {
+            var bookingDtos = await _restService.GetAsync<IEnumerable<BookingDto>>($"bookings/byEmail/{email}");
+            return bookingDtos?.Select(dto => _mapper.Map<Booking>(dto));
+        }
 
+        public async Task<bool> CancelBookingAsync(string bookingId)
+        {
+            return await _restService.DeleteAsync($"bookings/{bookingId}");
+        }
     }
 }

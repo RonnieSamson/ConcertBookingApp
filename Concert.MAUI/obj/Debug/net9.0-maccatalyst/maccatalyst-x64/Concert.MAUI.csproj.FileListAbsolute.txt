@@ -301,6 +301,3 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\r
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.pdb
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.genruntimeconfig.cache
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\Concert.MAUI.dll
-C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll

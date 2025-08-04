@@ -27,4 +27,9 @@
         ContentTemplate="{DataTemplate views:BookingPage}" 
         Route="BookingPage"/>
 
+    <ShellContent
+        Title="My Bookings"  
+        ContentTemplate="{DataTemplate views:MyBookingsPage}" 
+        Route="MyBookingsPage"/>
+
 </Shell>

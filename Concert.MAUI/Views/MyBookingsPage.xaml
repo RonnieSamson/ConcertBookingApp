@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Concert.MAUI.Views.MyBookingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="Page"
+    Title="My Bookings">
+
+    <VerticalStackLayout Padding="20">
+        <Entry
+            x:Name="EmailEntry"
+            Placeholder="Enter your email"
+            Text="{Binding CustomerEmail}" />
+        <Button
+            Command="{Binding LoadBookingsCommand}"
+            Text="Load My Bookings" />
+
+        <Label
+            FontAttributes="Bold"
+            FontSize="18"
+            Text="Your Bookings:"
+            Margin="0,20,0,10" />
+
+        <CollectionView ItemsSource="{Binding Bookings}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Margin="5"
+                        Padding="15"
+                        BackgroundColor="LightBlue"
+                        Stroke="DarkBlue"
+                        StrokeThickness="2">
+                        <VerticalStackLayout>
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="{Binding CustomerName, StringFormat='Customer: {0}'}" />
+                            <Label
+                                FontSize="14"
+                                Text="{Binding CustomerEmail, StringFormat='Email: {0}'}" />
+                            <Label
+                                FontSize="14"
+                                Text="{Binding PerformanceId, StringFormat='Performance ID: {0}'}" />
+                            <Label
+                                FontSize="12"
+                                Text="{Binding BookingDate, StringFormat='Booked on: {0:yyyy-MM-dd HH:mm}'}" />
+                            <Button
+                                BackgroundColor="Red"
+                                Command="{Binding Source={x:Reference Page}, Path=BindingContext.CancelBookingCommand}"
+                                CommandParameter="{Binding Id}"
+                                Text="Cancel Booking"
+                                TextColor="White" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

@@ -65,6 +65,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Views.LoginPa
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
 
+[C:/Concertbookingapp/Concert.MAUI/Views/MyBookingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Views.MyBookingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MyBookingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MyBookingsPage.xaml
+
 [C:/Concertbookingapp/Concert.MAUI/Views/PerformanceDetailsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Views.PerformanceDetailsPage.xaml

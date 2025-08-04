@@ -2,7 +2,10 @@
 {
     public class BookingDto
     {
-        public string UserId { get; set; }
-        public string ConcertId { get; set; }
+        public string? Id { get; set; }
+        public required string PerformanceId { get; set; }
+        public required string CustomerName { get; set; }
+        public required string CustomerEmail { get; set; }
+        public DateTime BookingDate { get; set; }
     }
 }

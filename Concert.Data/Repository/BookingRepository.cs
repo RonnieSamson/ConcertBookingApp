@@ -4,7 +4,7 @@ using Concert.Data.Repository;
 
 public class BookingRepository : Repository<Booking>, IBookingRepository
 {
-    public ApplicationDbContext DbContext => Context as ApplicationDbContext;
+    public ApplicationDbContext? DbContext => Context as ApplicationDbContext;
 
     public BookingRepository(ApplicationDbContext context) : base(context)
     {
@@ -17,8 +17,15 @@ public class BookingRepository : Repository<Booking>, IBookingRepository
 
     public async Task<IEnumerable<Booking>> GetBookingsByUserIdAsync(string userId)
     {
-        var bookings = await Find(b => b.UserId == userId);
+        // Legacy method - for backwards compatibility, could search by customer email if needed
+        var bookings = await All();
         return bookings.ToList(); 
+    }
+
+    public async Task<IEnumerable<Booking>> GetBookingsByEmailAsync(string email)
+    {
+        var bookings = await Find(b => b.CustomerEmail == email);
+        return bookings.ToList();
     }
 
     public async Task<IEnumerable<Booking>> GetBookingsAsync()

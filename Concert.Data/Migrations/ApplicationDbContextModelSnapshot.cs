@@ -32,19 +32,23 @@ namespace Concert.Data.Migrations
                     b.Property<DateTime>("BookingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PerformanceId")
+                    b.Property<string>("CustomerEmail")
                         .IsRequired()
-                        .HasColumnType("nvarchar(36)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("UserId")
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PerformanceId")
                         .IsRequired()
                         .HasColumnType("nvarchar(36)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PerformanceId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Bookings");
 
@@ -53,22 +57,25 @@ namespace Concert.Data.Migrations
                         {
                             Id = "1",
                             BookingDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            PerformanceId = "1",
-                            UserId = "1"
+                            CustomerEmail = "john.doe@example.com",
+                            CustomerName = "John Doe",
+                            PerformanceId = "1"
                         },
                         new
                         {
                             Id = "2",
                             BookingDate = new DateTime(2024, 1, 2, 18, 0, 0, 0, DateTimeKind.Unspecified),
-                            PerformanceId = "2",
-                            UserId = "2"
+                            CustomerEmail = "jane.smith@example.com",
+                            CustomerName = "Jane Smith",
+                            PerformanceId = "2"
                         },
                         new
                         {
                             Id = "3",
                             BookingDate = new DateTime(2024, 1, 3, 19, 0, 0, 0, DateTimeKind.Unspecified),
-                            PerformanceId = "3",
-                            UserId = "3"
+                            CustomerEmail = "bob.johnson@example.com",
+                            CustomerName = "Bob Johnson",
+                            PerformanceId = "3"
                         });
                 });
 
@@ -217,15 +224,7 @@ namespace Concert.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Concert.Data.Entity.User", "User")
-                        .WithMany("Bookings")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Performance");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Concert.Data.Entity.Performance", b =>
@@ -245,11 +244,6 @@ namespace Concert.Data.Migrations
                 });
 
             modelBuilder.Entity("Concert.Data.Entity.Performance", b =>
-                {
-                    b.Navigation("Bookings");
-                });
-
-            modelBuilder.Entity("Concert.Data.Entity.User", b =>
                 {
                     b.Navigation("Bookings");
                 });

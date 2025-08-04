@@ -14,9 +14,6 @@
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.UserIdQuery">
             <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.userIdQuery"/>
         </member>
-        <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.ConcertIdQuery">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.concertIdQuery"/>
-        </member>
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.PerformanceIdsQuery">
             <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.performanceIdsQuery"/>
         </member>
@@ -25,6 +22,15 @@
         </member>
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.Performances">
             <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.performances"/>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.CustomerName">
+            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.customerName"/>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.CustomerEmail">
+            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.customerEmail"/>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.SelectedPerformance">
+            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.selectedPerformance"/>
         </member>
         <member name="F:Concert.MAUI.ViewModels.BookingPageViewModel.loadUserDataCommand">
             <summary>The backing field for <see cref="P:Concert.MAUI.ViewModels.BookingPageViewModel.LoadUserDataCommand"/>.</summary>
@@ -54,6 +60,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.HomepageViewModel.UserId">
             <inheritdoc cref="F:Concert.MAUI.ViewModels.HomepageViewModel.userId"/>
@@ -70,6 +77,12 @@
         <member name="P:Concert.MAUI.ViewModels.HomepageViewModel.ShowPerformancesCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Concert.MAUI.ViewModels.HomepageViewModel.ShowPerformances(System.String)"/>.</summary>
         </member>
+        <member name="F:Concert.MAUI.ViewModels.HomepageViewModel.viewMyBookingsCommand">
+            <summary>The backing field for <see cref="P:Concert.MAUI.ViewModels.HomepageViewModel.ViewMyBookingsCommand"/>.</summary>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.HomepageViewModel.ViewMyBookingsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Concert.MAUI.ViewModels.HomepageViewModel.ViewMyBookings"/>.</summary>
+        </member>
         <member name="T:Concert.MAUI.ViewModels.LoginViewModel">
             <inheritdoc/>
         </member>
@@ -84,6 +97,29 @@
         </member>
         <member name="P:Concert.MAUI.ViewModels.LoginViewModel.IsErrorVisible">
             <inheritdoc cref="F:Concert.MAUI.ViewModels.LoginViewModel.isErrorVisible"/>
+        </member>
+        <member name="T:Concert.MAUI.ViewModels.MyBookingsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.MyBookingsViewModel.CustomerEmail">
+            <inheritdoc cref="F:Concert.MAUI.ViewModels.MyBookingsViewModel.customerEmail"/>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.MyBookingsViewModel.Bookings">
+            <inheritdoc cref="F:Concert.MAUI.ViewModels.MyBookingsViewModel.bookings"/>
+        </member>
+        <member name="F:Concert.MAUI.ViewModels.MyBookingsViewModel.loadBookingsCommand">
+            <summary>The backing field for <see cref="P:Concert.MAUI.ViewModels.MyBookingsViewModel.LoadBookingsCommand"/>.</summary>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.MyBookingsViewModel.LoadBookingsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Concert.MAUI.ViewModels.MyBookingsViewModel.LoadBookings"/>.</summary>
+        </member>
+        <member name="F:Concert.MAUI.ViewModels.MyBookingsViewModel.cancelBookingCommand">
+            <summary>The backing field for <see cref="P:Concert.MAUI.ViewModels.MyBookingsViewModel.CancelBookingCommand"/>.</summary>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.MyBookingsViewModel.CancelBookingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Concert.MAUI.ViewModels.MyBookingsViewModel.CancelBooking(System.String)"/>.</summary>
         </member>
         <member name="T:Concert.MAUI.ViewModels.PerformancePageViewModel">
             <inheritdoc/>
@@ -247,9 +283,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserIdQuery">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserIdQuery" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConcertIdQuery">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConcertIdQuery" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PerformanceIdsQuery">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PerformanceIdsQuery" generated properties.</summary>
         </member>
@@ -258,6 +291,15 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Performances">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Performances" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CustomerName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CustomerName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CustomerEmail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CustomerEmail" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedPerformance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedPerformance" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserId" generated properties.</summary>
@@ -274,6 +316,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsErrorVisible">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsErrorVisible" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Bookings">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Bookings" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedPerformances">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedPerformances" generated properties.</summary>
         </member>
@@ -289,9 +334,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserIdQuery">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserIdQuery" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConcertIdQuery">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConcertIdQuery" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PerformanceIdsQuery">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PerformanceIdsQuery" generated properties.</summary>
         </member>
@@ -300,6 +342,15 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Performances">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Performances" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CustomerName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CustomerName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CustomerEmail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CustomerEmail" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedPerformance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedPerformance" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserId" generated properties.</summary>
@@ -315,6 +366,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsErrorVisible">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsErrorVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Bookings">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Bookings" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedPerformances">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedPerformances" generated properties.</summary>

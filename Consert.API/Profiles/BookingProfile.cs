@@ -11,7 +11,8 @@ namespace Concert.API.Profiles
             // DTO → Entity
             CreateMap<BookingDto, Booking>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore()) // ID sätts av databasen
-                .ForMember(dest => dest.BookingDate, opt => opt.MapFrom(src => DateTime.UtcNow));
+                .ForMember(dest => dest.BookingDate, opt => opt.MapFrom(src => DateTime.UtcNow))
+                .ForMember(dest => dest.Performance, opt => opt.Ignore()); // Navigation property will be loaded separately
 
             // Entity → DTO
             CreateMap<Booking, BookingDto>();

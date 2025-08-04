@@ -54,18 +54,18 @@ namespace Concert.Data
                 .HasMaxLength(36)
                 .ValueGeneratedOnAdd();
 
-            modelBuilder.Entity<Booking>().Property(b => b.UserId)
-                .HasColumnType("nvarchar(36)")
-                .IsRequired();
-
             modelBuilder.Entity<Booking>().Property(b => b.PerformanceId)
                 .HasColumnType("nvarchar(36)")
                 .IsRequired();
 
-            modelBuilder.Entity<Booking>()
-                .HasOne(b => b.User)
-                .WithMany(u => u.Bookings)
-                .HasForeignKey(b => b.UserId)
+            modelBuilder.Entity<Booking>().Property(b => b.CustomerName)
+                .HasColumnType("nvarchar(100)")
+                .HasMaxLength(100)
+                .IsRequired();
+
+            modelBuilder.Entity<Booking>().Property(b => b.CustomerEmail)
+                .HasColumnType("nvarchar(255)")
+                .HasMaxLength(255)
                 .IsRequired();
 
             modelBuilder.Entity<Booking>()
@@ -197,7 +197,8 @@ namespace Concert.Data
             {
                 Id = "1",
                 BookingDate = new DateTime(2024, 1, 1, 12, 0, 0),
-                UserId = "1",
+                CustomerName = "John Doe",
+                CustomerEmail = "john.doe@example.com",
                 PerformanceId = "1"
                 
             };
@@ -205,14 +206,16 @@ namespace Concert.Data
             {
                 Id = "2",
                 BookingDate = new DateTime(2024, 1, 2, 18, 0, 0),
-                UserId = "2",
+                CustomerName = "Jane Smith",
+                CustomerEmail = "jane.smith@example.com",
                 PerformanceId = "2"
             };
             var booking3 = new Booking
             {
                 Id = "3",
                 BookingDate = new DateTime(2024, 1, 3, 19, 0, 0),
-                UserId = "3",
+                CustomerName = "Bob Johnson",
+                CustomerEmail = "bob.johnson@example.com",
                 PerformanceId = "3"
             };
             builder.Entity<Booking>().HasData(booking1, booking2, booking3);
