@@ -134,6 +134,11 @@ namespace Concert.Data.Migrations
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
@@ -149,6 +154,7 @@ namespace Concert.Data.Migrations
                             Id = "1",
                             ConcertId = "1",
                             EndTime = new DateTime(2024, 1, 1, 14, 0, 0, 0, DateTimeKind.Unspecified),
+                            Location = "Göteborg Arena",
                             StartTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -156,6 +162,7 @@ namespace Concert.Data.Migrations
                             Id = "2",
                             ConcertId = "2",
                             EndTime = new DateTime(2024, 1, 2, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            Location = "Stockholm Globen",
                             StartTime = new DateTime(2024, 1, 2, 18, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -163,6 +170,7 @@ namespace Concert.Data.Migrations
                             Id = "3",
                             ConcertId = "3",
                             EndTime = new DateTime(2024, 1, 3, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            Location = "Malmö Live",
                             StartTime = new DateTime(2024, 1, 3, 19, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });

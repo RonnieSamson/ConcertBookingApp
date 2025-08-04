@@ -4,15 +4,18 @@ namespace Concert.MAUI.Views;
 
 public partial class BookingPage : ContentPage
 {
-    
+    private readonly BookingPageViewModel _viewModel;
 
     public BookingPage(BookingPageViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel;
+        _viewModel = viewModel;
+        BindingContext = _viewModel;
+    }
 
-        Task.Run(async () => await viewModel.InitializeAsync());
-
-
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await _viewModel.InitializeAsync();
     }
 }

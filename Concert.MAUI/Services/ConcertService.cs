@@ -17,12 +17,22 @@ namespace Concert.MAUI.Services
 
         public async Task<List<Concert.MAUI.Models.Concert>?> GetAllConcertsAsync()
         {
-            return await _restService.GetAsync<List<Concert.MAUI.Models.Concert>>("concerts");
+            // Hämta DTOs från API
+            var concertDtos = await _restService.GetAsync<List<ConcertDto>>("concerts");
+            if (concertDtos == null) return null;
+
+            // Konvertera till MAUI Models
+            return _mapper.Map<List<Concert.MAUI.Models.Concert>>(concertDtos);
         }
 
         public async Task<Concert.MAUI.Models.Concert?> GetConcertByIdAsync(string id)
         {
-            return await _restService.GetAsync<Concert.MAUI.Models.Concert>($"concerts/{id}");
+            // Hämta DTO från API
+            var concertDto = await _restService.GetAsync<ConcertDto>($"concerts/{id}");
+            if (concertDto == null) return null;
+
+            // Konvertera till MAUI Model
+            return _mapper.Map<Concert.MAUI.Models.Concert>(concertDto);
         }
 
         public async Task SaveConcertAsync(Concert.MAUI.Models.Concert concert, bool isNewConcert)

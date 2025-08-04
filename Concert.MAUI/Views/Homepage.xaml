@@ -3,7 +3,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:Concert.MAUI.ViewModels"
-    xmlns:dto="clr-namespace:Concert.Data.DTO;assembly=Concert.Data.DTO"
+    xmlns:models="clr-namespace:Concert.MAUI.Models"
+    x:DataType="vm:HomepageViewModel"
     x:Name="Page"
     Title="Concert Booking App">
 
@@ -27,7 +28,7 @@
 
         <CollectionView ItemsSource="{Binding Concerts}">
             <CollectionView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="models:Concert">
                     <Border
                         Margin="5"
                         Padding="10"
@@ -40,6 +41,10 @@
                                 FontSize="18"
                                 Text="{Binding Title}" />
                             <Label FontSize="14" Text="{Binding Description}" />
+                            <Label 
+                                FontSize="12" 
+                                TextColor="Gray"
+                                Text="{Binding BookingCount, StringFormat='Bookings: {0}'}" />
                             <Button
                                 Command="{Binding Source={x:Reference Page}, Path=BindingContext.ShowPerformancesCommand}"
                                 CommandParameter="{Binding ConcertId}"

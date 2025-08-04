@@ -1,3 +1,4 @@
+C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.dll.config
 C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.runtimeconfig.json
 C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.dll
 C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.pdb
@@ -256,9 +257,8 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\m
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\plus.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\check.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -271,8 +271,9 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\r
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\plus.png
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\check.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.outputs
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
@@ -289,6 +290,8 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\c
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\_ProcessedBundleResourcesPath.items
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\_ProcessedContentPath.items
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.csproj.AssemblyReference.cache
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.csproj.SuggestedBindingRedirects.cache
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.dll.config
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.AssemblyInfoInputs.cache
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.AssemblyInfo.cs
@@ -301,6 +304,3 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\r
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.pdb
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.genruntimeconfig.cache
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\Concert.MAUI.dll
-C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.dll.config
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.csproj.SuggestedBindingRedirects.cache
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.dll.config

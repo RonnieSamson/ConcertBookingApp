@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run MAUI App (Windows)",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"run",
+				"--project",
+				"Concert.MAUI/Concert.MAUI.csproj",
+				"--framework",
+				"net9.0-windows10.0.19041.0"
+			],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "new"
+			}
+		},
+		{
+			"label": "Build MAUI App",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"Concert.MAUI/Concert.MAUI.csproj"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$msCompile"
+			]
+		}
+	]
+}

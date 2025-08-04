@@ -4,7 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:Concert.MAUI.ViewModels"
-    xmlns:dto="clr-namespace:Concert.Data.DTO;assembly=Concert.Data.DTO"
+    xmlns:models="clr-namespace:Concert.MAUI.Models"
+    x:DataType="vm:MyBookingsViewModel"
     x:Name="Page"
     Title="My Bookings">
 
@@ -25,7 +26,7 @@
 
         <CollectionView ItemsSource="{Binding Bookings}">
             <CollectionView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="models:Booking">
                     <Border
                         Margin="5"
                         Padding="15"
@@ -42,7 +43,7 @@
                                 Text="{Binding CustomerEmail, StringFormat='Email: {0}'}" />
                             <Label
                                 FontSize="14"
-                                Text="{Binding PerformanceId, StringFormat='Performance ID: {0}'}" />
+                                Text="{Binding PerformanceName, StringFormat='Performance: {0}'}" />
                             <Label
                                 FontSize="12"
                                 Text="{Binding BookingDate, StringFormat='Booked on: {0:yyyy-MM-dd HH:mm}'}" />

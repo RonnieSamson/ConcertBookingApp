@@ -29,20 +29,29 @@ namespace Concert.MAUI
             builder.Services.AddSingleton<IUserService, UserService>();
             builder.Services.AddSingleton<IBookingService, BookingService>();
             builder.Services.AddSingleton<IPerformanceService, PerformanceService>();
+            builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>(); // ✅ Authentication Service
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddSingleton<IConcertService, ConcertService>();
+            
+            // ViewModels
             builder.Services.AddTransient<HomepageViewModel>();
-            builder.Services.AddTransient<Homepage>();
-            builder.Services.AddSingleton<HttpClient>();
             builder.Services.AddTransient<LoginViewModel>();
-            builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<PerformancePageViewModel>();
-            builder.Services.AddTransient<PerformanceDetailsPage>();
             builder.Services.AddTransient<BookingPageViewModel>();
-            builder.Services.AddTransient<BookingPage>();
             builder.Services.AddTransient<MyBookingsViewModel>();
+            
+            // Views
+            builder.Services.AddTransient<Homepage>();
+            builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<PerformanceDetailsPage>();
+            builder.Services.AddTransient<BookingPage>();
             builder.Services.AddTransient<MyBookingsPage>();
+            
+            // Shell
+            builder.Services.AddSingleton<AppShell>();
+            
+            builder.Services.AddSingleton<HttpClient>();
 
 
 

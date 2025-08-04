@@ -1,0 +1,62 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch MAUI App (Windows)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/Concert.MAUI/bin/Debug/net9.0-windows10.0.19041.0/win10-x64/Concert.MAUI.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/Concert.MAUI",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "preLaunchTask": "Build MAUI App",
+            "env": {
+                "DOTNET_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Run MAUI App (Windows) - Fast Start",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/Concert.MAUI/Concert.MAUI.csproj",
+                "--framework",
+                "net9.0-windows10.0.19041.0",
+                "--no-build"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "preLaunchTask": "Build MAUI App"
+        },
+        {
+            "name": "Launch API Server",
+            "type": "coreclr", 
+            "request": "launch",
+            "program": "${workspaceFolder}/Consert.API/bin/Debug/net9.0/Concert.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Consert.API",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch Full App (API + MAUI)",
+            "configurations": ["Launch API Server", "Launch MAUI App (Windows)"]
+        }
+    ]
+}

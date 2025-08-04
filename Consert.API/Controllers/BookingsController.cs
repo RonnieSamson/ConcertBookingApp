@@ -60,7 +60,7 @@ namespace Concert.API.Controllers
             return Ok(_mapper.Map<BookingDto>(existingBooking));
         }
 
-        [HttpPost("book")]
+        [HttpPost]
         public async Task<IActionResult> CreateBooking([FromBody] BookingDto bookingDto)
         {
             if (bookingDto == null)
@@ -82,6 +82,7 @@ namespace Concert.API.Controllers
 
             var booking = _mapper.Map<Booking>(bookingDto);
             booking.Id = Guid.NewGuid().ToString(); // Generate new ID
+            booking.BookingDate = DateTime.UtcNow;
             
             _unitOfWork.Bookings.AddBooking(booking);
             await _unitOfWork.CompleteAsync();
@@ -114,15 +115,7 @@ namespace Concert.API.Controllers
             return Ok();
         }
 
-        [HttpGet("byUser/{userId}")]
-        public async Task<ActionResult<IEnumerable<BookingDto>>> GetBookingsByUser(string userId)
-        {
-            var bookings = await _unitOfWork.Bookings.GetBookingsByUserIdAsync(userId);
-            if (bookings == null || !bookings.Any()) return NotFound();
-
-            return Ok(_mapper.Map<IEnumerable<BookingDto>>(bookings));
-        }
-
+        // ✅ BEHÖVER VI: Hämta bokningar via email (för MyBookingsPage)
         [HttpGet("byEmail/{email}")]
         public async Task<ActionResult<IEnumerable<BookingDto>>> GetBookingsByEmail(string email)
         {

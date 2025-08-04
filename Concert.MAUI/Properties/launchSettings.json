@@ -2,6 +2,20 @@
   "profiles": {
     "Windows Machine": {
       "commandName": "Project",
+      "dotnetRunMessages": true,
+      "applicationUrl": "",
+      "nativeDebugging": false
+    },
+    "Android Local Device": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    },
+    "iOS Local Device": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    },
+    "iOS Simulator": {
+      "commandName": "Project", 
       "nativeDebugging": false
     }
   }

@@ -61,9 +61,13 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         public async Task BookSelectedPerformancesAsync()
         {
+            System.Diagnostics.Debug.WriteLine("=== BookSelectedPerformancesAsync called ===");
+            System.Diagnostics.Debug.WriteLine($"SelectedPerformances count: {SelectedPerformances?.Count ?? 0}");
+            
             // Kontrollera om några performances är valda
             if (SelectedPerformances == null || !SelectedPerformances.Any())
             {
+                System.Diagnostics.Debug.WriteLine("No performances selected!");
                 await Shell.Current.DisplayAlert("Error", "Please select at least one performance", "OK");
                 return;
             }
@@ -71,18 +75,22 @@ namespace Concert.MAUI.ViewModels
             // Konvertera objekt till Performance och hämta deras Id
             var selectedPerformanceIds = string.Join(",",
                 SelectedPerformances.Cast<Performance>().Select(p => p.Id));
+                
+            System.Diagnostics.Debug.WriteLine($"Selected performance IDs: {selectedPerformanceIds}");
+            System.Diagnostics.Debug.WriteLine($"UserId: {UserId}");
+            System.Diagnostics.Debug.WriteLine($"ConcertId: {ConcertId}");
 
             // Bygg en dictionary med dina parametrar
             var routeParameters = new Dictionary<string, object>
-    {
-        { "UserIdQuery", UserId },
-        { "ConcertIdQuery", ConcertId },
-        { "PerformanceIdsQuery", selectedPerformanceIds }
-    };
+            {
+                { "UserIdQuery", UserId },
+                { "ConcertIdQuery", ConcertId },
+                { "PerformanceIdsQuery", selectedPerformanceIds }
+            };
 
+            System.Diagnostics.Debug.WriteLine("Navigating to BookingPage...");
             // Navigera till BookingPage
             await Shell.Current.GoToAsync(nameof(BookingPage), routeParameters);
-
         }
 
 

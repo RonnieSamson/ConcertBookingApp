@@ -19,17 +19,7 @@ namespace Concert.API.Controllers
             _mapper = mapper;
         }
 
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetUserById(string id)
-        {
-            var user = await _unitOfWork.Users.GetUserByIdAsync(id);
-            if (user == null) return NotFound();
-
-            return Ok(_mapper.Map<UserDto>(user));
-        }
-
-
+        // ✅ BEHÖVER VI: För autentisering via email
         [HttpGet("getUserByEmail")]
         public async Task<IActionResult> GetUserByEmail(string email)
         {
@@ -39,42 +29,25 @@ namespace Concert.API.Controllers
             return Ok(_mapper.Map<UserDto>(user));
         }
 
-
-        [HttpPost("addUser")]
-        public async Task<IActionResult> AddUser([FromBody] UserDto userDto)
+        // ✅ BEHÖVER VI: För registrering
+        [HttpPost("register")]
+        public async Task<IActionResult> RegisterUser([FromBody] UserDto userDto)
         {
+            if (userDto == null || string.IsNullOrEmpty(userDto.Email) || string.IsNullOrEmpty(userDto.Password))
+                return BadRequest("Email and Password are required.");
+
+            // Check if user already exists
+            var existingUser = await _unitOfWork.Users.GetUserByEmailAsync(userDto.Email);
+            if (existingUser != null)
+                return Conflict("User with this email already exists.");
+
             var user = _mapper.Map<User>(userDto);
+            user.Id = Guid.NewGuid().ToString();
+            
             _unitOfWork.Users.AddUser(user);
             await _unitOfWork.CompleteAsync();
 
-            return Ok();
-        }
-
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser(string id, [FromBody] UserDto userDto)
-        {
-            var existingUser = await _unitOfWork.Users.GetUserByIdAsync(id);
-            if (existingUser == null) return NotFound();
-
-            var updatedUser = _mapper.Map(userDto, existingUser);
-            _unitOfWork.Users.UpdateUser(updatedUser);
-            await _unitOfWork.CompleteAsync();
-
-            return Ok();
-        }
-
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(string id)
-        {
-            var user = await _unitOfWork.Users.GetUserByIdAsync(id);
-            if (user == null) return NotFound();
-
-            _unitOfWork.Users.DeleteUser(user);
-            await _unitOfWork.CompleteAsync();
-
-            return Ok();
+            return Ok(_mapper.Map<UserDto>(user));
         }
     }
 }

@@ -70,8 +70,8 @@ namespace Consert.API.Controllers
             return Ok(_mapper.Map<PerformanceDto>(existingPerformance));
         }
 
-        [HttpPost("Add")]
-        public async Task<IActionResult> AddPerformance([FromBody] PerformanceDto performanceDto)
+        [HttpPost]
+        public async Task<IActionResult> CreatePerformance([FromBody] PerformanceDto performanceDto)
         {
             if (performanceDto == null)
                 return BadRequest("Invalid performance data.");
@@ -89,20 +89,6 @@ namespace Consert.API.Controllers
             await _unitOfWork.CompleteAsync();
 
             return CreatedAtAction(nameof(GetPerformance), new { id = performance.Id }, _mapper.Map<PerformanceDto>(performance));
-        }
-
-        [HttpDelete("DeleteByObject")]
-        public async Task<IActionResult> DeletePerformance([FromBody] PerformanceDto performanceDto)
-        {
-            if (performanceDto == null || string.IsNullOrEmpty(performanceDto.Id))
-                return BadRequest("Invalid performance data.");
-
-            var performance = await _unitOfWork.Performances.GetPerformanceByIdAsync(performanceDto.Id);
-            if (performance == null) return NotFound();
-
-            _unitOfWork.Performances.DeletePerformance(performance);
-            await _unitOfWork.CompleteAsync();
-            return Ok();
         }
 
         [HttpDelete("{id}")]

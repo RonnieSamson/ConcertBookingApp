@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:Concert.MAUI.ViewModels"
-    xmlns:dto="clr-namespace:Concert.Data.DTO;assembly=Concert.Data.DTO"
+    xmlns:models="clr-namespace:Concert.MAUI.Models"
     x:DataType="vm:BookingPageViewModel"
     x:Name="Page"
     Title="Booking"
@@ -41,7 +41,7 @@
                 SelectedItem="{Binding SelectedPerformance}"
                 SelectionMode="Single">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="dto:PerformanceDto">
+                    <DataTemplate x:DataType="models:Performance">
                         <Border
                             Margin="5"
                             Padding="10"
@@ -52,7 +52,7 @@
                                 <Label 
                                     FontAttributes="Bold"
                                     FontSize="14" 
-                                    Text="{Binding Id, StringFormat='Performance ID: {0}'}" />
+                                    Text="{Binding Location}" />
                                 <Label 
                                     FontSize="12" 
                                     Text="{Binding StartTime, StringFormat='Start: {0:HH:mm dd/MM/yyyy}'}" />

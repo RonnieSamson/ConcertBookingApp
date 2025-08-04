@@ -1,4 +1,5 @@
-﻿using Concert.MAUI.Views;
+﻿using Concert.MAUI.Services;
+using Concert.MAUI.Views;
 
 namespace Concert.MAUI
 {
@@ -12,7 +13,8 @@ namespace Concert.MAUI
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            var appShell = Handler?.MauiContext?.Services?.GetService<AppShell>();
+            return new Window(appShell ?? new AppShell(null!));
         }
     }
 }

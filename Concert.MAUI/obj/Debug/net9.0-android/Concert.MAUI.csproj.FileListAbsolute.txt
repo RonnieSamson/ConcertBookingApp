@@ -1,3 +1,4 @@
+C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-android\Concert.MAUI.dll.config
 C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-android\Concert.MAUI.runtimeconfig.json
 C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-android\Concert.MAUI.dll
 C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-android\Concert.MAUI.pdb
@@ -13,6 +14,8 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\build.props
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\adb.props
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\_CompileBindingJava.FileList.txt
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\Concert.MAUI.csproj.AssemblyReference.cache
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\Concert.MAUI.csproj.SuggestedBindingRedirects.cache
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\Concert.MAUI.dll.config
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\mauiimage.inputs
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\mauifont.inputs
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\mauisplash.inputs
@@ -962,6 +965,3 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\stamp\_ConvertResourc
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
-C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-android\Concert.MAUI.dll.config
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\Concert.MAUI.csproj.SuggestedBindingRedirects.cache
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-android\Concert.MAUI.dll.config

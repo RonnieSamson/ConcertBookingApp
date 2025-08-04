@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Concert.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63adc755126541c351e836560edfe3f802ab38e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f761c7a44a8420c9a1f39a039d438a8c202a190")]
 [assembly: System.Reflection.AssemblyProductAttribute("Concert.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Concert.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

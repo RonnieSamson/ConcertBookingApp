@@ -50,8 +50,14 @@ namespace Concert.MAUI.ViewModels
 
         public async Task InitializeAsync()
         {
+            System.Diagnostics.Debug.WriteLine("=== BookingPageViewModel InitializeAsync called ===");
+            System.Diagnostics.Debug.WriteLine($"UserIdQuery: {UserIdQuery}");
+            System.Diagnostics.Debug.WriteLine($"PerformanceIdsQuery: {PerformanceIdsQuery}");
+            
             await LoadUserDataAsync();
             await LoadPerformancesAsync();
+            
+            System.Diagnostics.Debug.WriteLine($"Final Performances count: {Performances.Count}");
         }
 
         [RelayCommand]
@@ -78,25 +84,45 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         private async Task LoadPerformancesAsync()
         {
+            System.Diagnostics.Debug.WriteLine("=== LoadPerformancesAsync called ===");
+            System.Diagnostics.Debug.WriteLine($"PerformanceIdsQuery: '{PerformanceIdsQuery}'");
+            
             if (!string.IsNullOrEmpty(PerformanceIdsQuery))
             {
                 try
                 {
                     var performanceIds = PerformanceIdsQuery.Split(',');
+                    System.Diagnostics.Debug.WriteLine($"Performance IDs to load: {string.Join(", ", performanceIds)}");
+                    
                     Performances.Clear();
                     foreach (var id in performanceIds)
                     {
-                        var performance = await _performanceService.GetPerformanceByIdAsync(id);
+                        System.Diagnostics.Debug.WriteLine($"Loading performance with ID: '{id.Trim()}'");
+                        var performance = await _performanceService.GetPerformanceByIdAsync(id.Trim());
                         if (performance != null)
                         {
+                            System.Diagnostics.Debug.WriteLine($"Loaded performance: {performance.Location} at {performance.StartTime}");
                             Performances.Add(performance);
                         }
+                        else
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Performance with ID '{id.Trim()}' was null!");
+                        }
                     }
+                    System.Diagnostics.Debug.WriteLine($"Total performances loaded: {Performances.Count}");
                 }
                 catch (HttpRequestException ex)
                 {
                     System.Diagnostics.Debug.WriteLine($"HTTP ERROR: {ex.Message}");
                 }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"ERROR: {ex.Message}");
+                }
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("PerformanceIdsQuery is null or empty!");
             }
         }
 

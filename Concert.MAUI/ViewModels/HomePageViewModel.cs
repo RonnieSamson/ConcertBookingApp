@@ -10,13 +10,12 @@ using Microsoft.Maui.Controls;
 
 namespace Concert.MAUI.ViewModels
 {
-    [QueryProperty(nameof(UserId), nameof(UserId))]
     public partial class HomepageViewModel : ObservableObject
     {
         private readonly IConcertService _concertService;
         private readonly IPerformanceService _performanceService;
         private readonly IBookingService _bookingService;
-        private readonly IUserService _userService;
+        private readonly IAuthenticationService _authService;
 
         private ObservableCollection<Concert.MAUI.Models.Concert> _concerts = new();
 
@@ -27,40 +26,25 @@ namespace Concert.MAUI.ViewModels
         }
 
         [ObservableProperty]
-        public partial string? UserId { get; set; }
-
-        [ObservableProperty]
         public partial string WelcomeMessage { get; set; }
 
-        public HomepageViewModel(IConcertService concertService, IPerformanceService performanceService, IBookingService bookingService, IUserService userService)
+        public HomepageViewModel(IConcertService concertService, IPerformanceService performanceService, 
+                               IBookingService bookingService, IAuthenticationService authService)
         {
             _concertService = concertService;
             _performanceService = performanceService;
             _bookingService = bookingService;
-            _userService = userService;
+            _authService = authService;
+            
             WelcomeMessage = "Welcome to Concert Booking App";
-
+            UpdateWelcomeMessage();
             Task.Run(async () => await LoadConcerts());
         }
 
-        partial void OnUserIdChanged(string? value)
+        private void UpdateWelcomeMessage()
         {
-            if (!string.IsNullOrEmpty(value))
-            {
-                Task.Run(async () => await LoadUserInfo());
-            }
-        }
-
-        private async Task LoadUserInfo()
-        {
-            if (!string.IsNullOrEmpty(UserId))
-            {
-                var user = await _userService.GetUserByIdAsync(UserId);
-                if (user != null)
-                {
-                    WelcomeMessage = $"Welcome, {user.Name}!";
-                }
-            }
+            var userName = _authService.CurrentUserName ?? "User";
+            WelcomeMessage = $"Welcome, {userName}!";
         }
 
         [RelayCommand]
@@ -81,7 +65,24 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         private async Task ShowPerformances(string concertId)
         {
-            await Shell.Current.GoToAsync($"{nameof(PerformanceDetailsPage)}?ConcertId={concertId}&UserId={UserId}");
+            System.Diagnostics.Debug.WriteLine($"ShowPerformances called with concertId: {concertId}");
+            
+            var userId = _authService.CurrentUserId;
+            System.Diagnostics.Debug.WriteLine($"Current userId: {userId}");
+            
+            var navigationUrl = $"{nameof(PerformanceDetailsPage)}?ConcertId={concertId}&UserId={userId}";
+            System.Diagnostics.Debug.WriteLine($"Navigating to: {navigationUrl}");
+            
+            try
+            {
+                await Shell.Current.GoToAsync(navigationUrl);
+                System.Diagnostics.Debug.WriteLine("Navigation completed successfully");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Navigation failed: {ex.Message}");
+                await Shell.Current.DisplayAlert("Navigation Error", $"Failed to navigate: {ex.Message}", "OK");
+            }
         }
 
         [RelayCommand]
@@ -93,7 +94,7 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         private async Task Logout()
         {
-            await Shell.Current.GoToAsync("//login");
+            await _authService.LogoutAsync();
         }
     }
 }

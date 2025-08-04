@@ -1,3 +1,4 @@
+C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.dll.config
 C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.runtimeconfig.json
 C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.dll
 C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.pdb
@@ -266,9 +267,8 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizeti
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@2x.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@3x.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.stamp
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\check.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\plus.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -281,8 +281,9 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizeti
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\plus.png
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\check.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.stamp
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.outputs
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist
@@ -301,6 +302,8 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\coremlc\
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\_ProcessedBundleResourcesPath.items
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\_ProcessedContentPath.items
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.csproj.AssemblyReference.cache
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.csproj.SuggestedBindingRedirects.cache
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.dll.config
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.AssemblyInfoInputs.cache
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.AssemblyInfo.cs
@@ -313,6 +316,3 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\refint\C
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.pdb
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.genruntimeconfig.cache
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\ref\Concert.MAUI.dll
-C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.dll.config
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.csproj.SuggestedBindingRedirects.cache
-C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-ios\iossimulator-x64\Concert.MAUI.dll.config

@@ -7,35 +7,38 @@
     Title="Concert Booking App"
     Shell.FlyoutBehavior="Disabled">
 
-    <!-- Login page - no flyout items visible until logged in -->
+    <!-- Login page - always visible when not authenticated -->
     <ShellContent
         Title="Login"
         ContentTemplate="{DataTemplate views:LoginPage}"
         Route="login" />
 
-    <!-- These are hidden pages accessible only after login -->
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate views:Homepage}"
-        Route="Homepage"
-        IsVisible="False" />
+    <!-- Main app navigation - only visible when authenticated -->
+    <TabBar x:Name="MainTabBar" IsVisible="False">
+        <ShellContent
+            Title="Home"
+            Icon="home"
+            ContentTemplate="{DataTemplate views:Homepage}"
+            Route="home" />
+            
+        <ShellContent
+            Title="My Bookings"
+            Icon="calendar"
+            ContentTemplate="{DataTemplate views:MyBookingsPage}"
+            Route="bookings" />
+    </TabBar>
 
+    <!-- Hidden pages accessible only after login -->
     <ShellContent
-        Title="Performances"  
+        Title="Performance Details"
         ContentTemplate="{DataTemplate views:PerformanceDetailsPage}" 
-        Route="PerformanceDetailsPage"
+        Route="performance"
         IsVisible="False"/>
 
     <ShellContent
-        Title="Booking"  
+        Title="Book Performance"
         ContentTemplate="{DataTemplate views:BookingPage}" 
-        Route="BookingPage"
-        IsVisible="False"/>
-
-    <ShellContent
-        Title="My Bookings"  
-        ContentTemplate="{DataTemplate views:MyBookingsPage}" 
-        Route="MyBookingsPage"
+        Route="booking"
         IsVisible="False"/>
 
 </Shell>

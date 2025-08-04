@@ -9,8 +9,8 @@ namespace Concert.MAUI.ViewModels
 {
     public partial class LoginViewModel : ObservableObject
     {
-        private readonly IUserService? _userService;
-
+        private readonly IAuthenticationService? _authService;
+        
         [ObservableProperty]
         public partial string Email { get; set; }
 
@@ -23,6 +23,9 @@ namespace Concert.MAUI.ViewModels
         [ObservableProperty]
         public partial bool IsErrorVisible { get; set; }
 
+        [ObservableProperty]
+        public partial bool IsLoading { get; set; }
+
         // Standardkonstruktor för XAML
         public LoginViewModel()
         {
@@ -33,9 +36,9 @@ namespace Concert.MAUI.ViewModels
             SignUpCommand = new AsyncRelayCommand(SignUpAsync);
         }
 
-        public LoginViewModel(IUserService userService)
+        public LoginViewModel(IAuthenticationService authService)
         {
-            _userService = userService;
+            _authService = authService;
             Email = string.Empty;
             Password = string.Empty;
             ErrorMessage = string.Empty;
@@ -48,32 +51,51 @@ namespace Concert.MAUI.ViewModels
 
         private async Task LoginAsync()
         {
-            if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
+            if (IsLoading) return;
+
+            try
             {
-                ErrorMessage = "Please enter your email and password";
-                IsErrorVisible = true;
-                return;
-            }
+                IsLoading = true;
+                IsErrorVisible = false;
 
-            if (_userService == null)
+                if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
+                {
+                    ErrorMessage = "Please enter your email and password";
+                    IsErrorVisible = true;
+                    return;
+                }
+
+                if (_authService == null)
+                {
+                    ErrorMessage = "Service not available";
+                    IsErrorVisible = true;
+                    return;
+                }
+
+                var success = await _authService.LoginAsync(Email, Password);
+                if (!success)
+                {
+                    ErrorMessage = "Invalid email or password";
+                    IsErrorVisible = true;
+                    return;
+                }
+
+                // Clear form
+                Email = string.Empty;
+                Password = string.Empty;
+                IsErrorVisible = false;
+
+                // Navigation will be handled by AuthenticationService event
+            }
+            catch (Exception)
             {
-                ErrorMessage = "Service not available";
+                ErrorMessage = "An error occurred during login";
                 IsErrorVisible = true;
-                return;
             }
-
-            var user = await _userService.GetUserByEmailAsync(Email);
-            if (user == null || user.Password != Password)
+            finally
             {
-                ErrorMessage = "Invalid email or password";
-                IsErrorVisible = true;
-                return;
+                IsLoading = false;
             }
-
-            IsErrorVisible = false;
-
-            // Navigate to the home page with UserId as query parameter
-            await Shell.Current.GoToAsync($"//Homepage?UserId={user.Id}");
         }
 
         private async Task SignUpAsync()
