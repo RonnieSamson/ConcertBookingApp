@@ -7,6 +7,7 @@
         public string CustomerEmail { get; set; } = null!;
         public string PerformanceId { get; set; } = null!;
         public DateTime BookingDate { get; set; }
+        public string? PerformanceName { get; set; } // ✅ KRÄVS: Association information
         
         // Navigation property for display purposes
         public Performance? Performance { get; set; }

@@ -17,21 +17,24 @@ namespace Concert.MAUI.ViewModels
         private readonly IPerformanceService _performanceService;
 
         [ObservableProperty]
-        private ObservableCollection<Performance> performances = new();
+        public partial ObservableCollection<Performance> Performances { get; set; }
 
         [ObservableProperty]
-        private ObservableCollection<object> selectedPerformances = new();
+        public partial ObservableCollection<object> SelectedPerformances { get; set; }
 
         [ObservableProperty]
-        private string concertId;
+        public partial string ConcertId { get; set; }
 
         [ObservableProperty]
-        private string userId;
+        public partial string UserId { get; set; }
 
         public PerformancePageViewModel(IPerformanceService performanceService)
         {
             _performanceService = performanceService;
-            
+            Performances = new ObservableCollection<Performance>();
+            SelectedPerformances = new ObservableCollection<object>();
+            ConcertId = string.Empty;
+            UserId = string.Empty;
         }
 
         partial void OnConcertIdChanged(string value)
@@ -61,7 +64,7 @@ namespace Concert.MAUI.ViewModels
             // Kontrollera om några performances är valda
             if (SelectedPerformances == null || !SelectedPerformances.Any())
             {
-                await App.Current.MainPage.DisplayAlert("Error", "Please select at least one performance", "OK");
+                await Shell.Current.DisplayAlert("Error", "Please select at least one performance", "OK");
                 return;
             }
 

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:Concert.MAUI.ViewModels"
+             x:DataType="vm:LoginViewModel"
              x:Class="Concert.MAUI.Views.LoginPage"
              BackgroundColor="#F0F0F0">
 

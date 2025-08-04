@@ -4,32 +4,38 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:Concert.MAUI.Views"
-    Title="Concert.MAUI"
-    Shell.FlyoutBehavior="Flyout">
+    Title="Concert Booking App"
+    Shell.FlyoutBehavior="Disabled">
 
+    <!-- Login page - no flyout items visible until logged in -->
     <ShellContent
         Title="Login"
         ContentTemplate="{DataTemplate views:LoginPage}"
         Route="login" />
 
+    <!-- These are hidden pages accessible only after login -->
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate views:Homepage}"
-        Route="Homepage" />
+        Route="Homepage"
+        IsVisible="False" />
 
     <ShellContent
         Title="Performances"  
         ContentTemplate="{DataTemplate views:PerformanceDetailsPage}" 
-        Route="PerformanceDetailsPage"/>
+        Route="PerformanceDetailsPage"
+        IsVisible="False"/>
 
     <ShellContent
         Title="Booking"  
         ContentTemplate="{DataTemplate views:BookingPage}" 
-        Route="BookingPage"/>
+        Route="BookingPage"
+        IsVisible="False"/>
 
     <ShellContent
         Title="My Bookings"  
         ContentTemplate="{DataTemplate views:MyBookingsPage}" 
-        Route="MyBookingsPage"/>
+        Route="MyBookingsPage"
+        IsVisible="False"/>
 
 </Shell>

@@ -12,25 +12,25 @@
             <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.UserIdQuery">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.userIdQuery"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.PerformanceIdsQuery">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.performanceIdsQuery"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.User">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.user"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.Performances">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.performances"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.CustomerName">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.customerName"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.CustomerEmail">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.customerEmail"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.BookingPageViewModel.SelectedPerformance">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.BookingPageViewModel.selectedPerformance"/>
+            <inheritdoc/>
         </member>
         <member name="F:Concert.MAUI.ViewModels.BookingPageViewModel.loadUserDataCommand">
             <summary>The backing field for <see cref="P:Concert.MAUI.ViewModels.BookingPageViewModel.LoadUserDataCommand"/>.</summary>
@@ -61,9 +61,18 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.HomepageViewModel.UserId">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.HomepageViewModel.userId"/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.HomepageViewModel.WelcomeMessage">
+            <inheritdoc/>
+        </member>
+        <member name="M:Concert.MAUI.ViewModels.HomepageViewModel.OnUserIdChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:Concert.MAUI.ViewModels.HomepageViewModel.UserId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:Concert.MAUI.ViewModels.HomepageViewModel.UserId"/> is changed.</remarks>
         </member>
         <member name="F:Concert.MAUI.ViewModels.HomepageViewModel.loadConcertsCommand">
             <summary>The backing field for <see cref="P:Concert.MAUI.ViewModels.HomepageViewModel.LoadConcertsCommand"/>.</summary>
@@ -83,20 +92,26 @@
         <member name="P:Concert.MAUI.ViewModels.HomepageViewModel.ViewMyBookingsCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Concert.MAUI.ViewModels.HomepageViewModel.ViewMyBookings"/>.</summary>
         </member>
+        <member name="F:Concert.MAUI.ViewModels.HomepageViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:Concert.MAUI.ViewModels.HomepageViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:Concert.MAUI.ViewModels.HomepageViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Concert.MAUI.ViewModels.HomepageViewModel.Logout"/>.</summary>
+        </member>
         <member name="T:Concert.MAUI.ViewModels.LoginViewModel">
             <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.LoginViewModel.Email">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.LoginViewModel.email"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.LoginViewModel.Password">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.LoginViewModel.password"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.LoginViewModel.ErrorMessage">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.LoginViewModel.errorMessage"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.LoginViewModel.IsErrorVisible">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.LoginViewModel.isErrorVisible"/>
+            <inheritdoc/>
         </member>
         <member name="T:Concert.MAUI.ViewModels.MyBookingsViewModel">
             <inheritdoc/>
@@ -104,10 +119,10 @@
             <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.MyBookingsViewModel.CustomerEmail">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.MyBookingsViewModel.customerEmail"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.MyBookingsViewModel.Bookings">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.MyBookingsViewModel.bookings"/>
+            <inheritdoc/>
         </member>
         <member name="F:Concert.MAUI.ViewModels.MyBookingsViewModel.loadBookingsCommand">
             <summary>The backing field for <see cref="P:Concert.MAUI.ViewModels.MyBookingsViewModel.LoadBookingsCommand"/>.</summary>
@@ -126,16 +141,16 @@
             <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.PerformancePageViewModel.Performances">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.PerformancePageViewModel.performances"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.PerformancePageViewModel.SelectedPerformances">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.PerformancePageViewModel.selectedPerformances"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.PerformancePageViewModel.ConcertId">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.PerformancePageViewModel.concertId"/>
+            <inheritdoc/>
         </member>
         <member name="P:Concert.MAUI.ViewModels.PerformancePageViewModel.UserId">
-            <inheritdoc cref="F:Concert.MAUI.ViewModels.PerformancePageViewModel.userId"/>
+            <inheritdoc/>
         </member>
         <member name="M:Concert.MAUI.ViewModels.PerformancePageViewModel.OnConcertIdChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:Concert.MAUI.ViewModels.PerformancePageViewModel.ConcertId"/> just changed.</summary>
@@ -304,6 +319,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserId" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WelcomeMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WelcomeMessage" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
         </member>
@@ -354,6 +372,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WelcomeMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WelcomeMessage" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>

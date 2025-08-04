@@ -107,6 +107,11 @@ namespace Concert.Data
             modelBuilder.Entity<Performance>().Property(p => p.EndTime)
                 .IsRequired();
 
+            modelBuilder.Entity<Performance>().Property(p => p.Location)
+                .HasColumnType("nvarchar(200)")
+                .HasMaxLength(200)
+                .IsRequired();
+
             modelBuilder.Entity<Performance>().Property(p => p.ConcertId)
                 .HasColumnType("nvarchar(36)")
                 .HasMaxLength(36)
@@ -174,6 +179,7 @@ namespace Concert.Data
                 Id = "1",
                 StartTime = new DateTime(2024, 1, 1, 12, 0, 0),
                 EndTime = new DateTime(2024, 1, 1, 14, 0, 0),
+                Location = "Göteborg Arena", // ✅ KRÄVS: Location för varje Performance
                 ConcertId = "1"
             };
             var performance2 = new Performance
@@ -181,6 +187,7 @@ namespace Concert.Data
                 Id = "2",
                 StartTime = new DateTime(2024, 1, 2, 18, 0, 0),
                 EndTime = new DateTime(2024, 1, 2, 20, 0, 0),
+                Location = "Stockholm Globen", // ✅ KRÄVS: Location för varje Performance
                 ConcertId = "2"
             };
             var performance3 = new Performance
@@ -188,6 +195,7 @@ namespace Concert.Data
                 Id = "3",
                 StartTime = new DateTime(2024, 1, 3, 19, 0, 0),
                 EndTime = new DateTime(2024, 1, 3, 21, 0, 0),
+                Location = "Malmö Live", // ✅ KRÄVS: Location för varje Performance
                 ConcertId = "3"
             };
             builder.Entity<Performance>().HasData(performance1, performance2, performance3);

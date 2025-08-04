@@ -2,6 +2,9 @@
     x:Class="Concert.MAUI.Views.PerformanceDetailsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:Concert.MAUI.ViewModels"
+    xmlns:dto="clr-namespace:Concert.Data.DTO;assembly=Concert.Data.DTO"
+    x:DataType="vm:PerformancePageViewModel"
     x:Name="Page"
     Title="Performances">
 
@@ -12,7 +15,7 @@
                         SelectionMode="Multiple"
                         SelectedItems="{Binding SelectedPerformances, Mode=TwoWay}">
             <CollectionView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="dto:PerformanceDto">
                     <Border Margin="5"
                             Padding="10"
                             BackgroundColor="White"

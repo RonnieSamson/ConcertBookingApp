@@ -4,7 +4,7 @@ namespace Concert.Data.Repository
 {
     public interface IConcertRepository : IRepository<ConcertEntity>
     {
-        Task<ConcertEntity> GetConcertByIdAsync(string id);
+        Task<ConcertEntity?> GetConcertByIdAsync(string id);
         Task<IEnumerable<ConcertEntity>> GetConcertsAsync();
         void AddConcert(ConcertEntity concert);
         void UpdateConcert(ConcertEntity concert);

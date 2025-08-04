@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Concert.Data.DTO;
 using Concert.Data.Entity;
 using Concert.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -20,15 +21,15 @@ namespace Concert.API.Controllers
 
         // ✅ Hämta alla konserter
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ConcertEntity>>> GetConcerts()
+        public async Task<ActionResult<IEnumerable<ConcertDto>>> GetConcerts()
         {
             var concerts = await _unitOfWork.Concerts.GetConcertsAsync(); 
-            return Ok(_mapper.Map<IEnumerable<ConcertEntity>>(concerts));
+            return Ok(_mapper.Map<IEnumerable<ConcertDto>>(concerts));
         }
 
         // ✅ Hämta en specifik konsert
         [HttpGet("{id}")]
-        public async Task<ActionResult<ConcertEntity>> GetConcert(string id)
+        public async Task<ActionResult<ConcertDto>> GetConcert(string id)
         {
             var concert = await _unitOfWork.Concerts.GetConcertByIdAsync(id);
 
@@ -37,35 +38,51 @@ namespace Concert.API.Controllers
                 return NotFound();
             }
 
-            return Ok(_mapper.Map<ConcertEntity>(concert));
+            return Ok(_mapper.Map<ConcertDto>(concert));
         }
 
         // ✅ Uppdatera en konsert
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateConcert(string id, [FromBody] ConcertEntity concert)
+        public async Task<IActionResult> UpdateConcert(string id, [FromBody] ConcertDto concertDto)
         {
-            if (id != concert.ConcertId)
+            if (string.IsNullOrEmpty(id) || concertDto == null)
             {
-                return BadRequest();
+                return BadRequest("Invalid concert data.");
             }
 
             var existingConcert = await _unitOfWork.Concerts.GetConcertByIdAsync(id);
             if (existingConcert == null) return NotFound();
 
-            _unitOfWork.Concerts.UpdateConcert(concert);
+            // Map DTO to existing entity
+            _mapper.Map(concertDto, existingConcert);
+            existingConcert.ConcertId = id; // Ensure ID remains unchanged
+
+            _unitOfWork.Concerts.UpdateConcert(existingConcert);
             await _unitOfWork.CompleteAsync(); 
 
-            return Ok();
+            return Ok(_mapper.Map<ConcertDto>(existingConcert));
         }
 
         // ✅ Lägg till en ny konsert
         [HttpPost]
-        public async Task<ActionResult<ConcertEntity>> CreateConcert([FromBody] ConcertEntity concert)
+        public async Task<ActionResult<ConcertDto>> CreateConcert([FromBody] ConcertDto concertDto)
         {
+            if (concertDto == null)
+                return BadRequest("Invalid concert data.");
+
+            // Validate required fields
+            if (string.IsNullOrEmpty(concertDto.Title) || string.IsNullOrEmpty(concertDto.Description))
+            {
+                return BadRequest("Title and Description are required.");
+            }
+
+            var concert = _mapper.Map<ConcertEntity>(concertDto);
+            concert.ConcertId = Guid.NewGuid().ToString(); // Generate new ID
+
             _unitOfWork.Concerts.AddConcert(concert);
             await _unitOfWork.CompleteAsync(); 
 
-            return CreatedAtAction(nameof(GetConcert), new { id = concert.ConcertId }, concert);
+            return CreatedAtAction(nameof(GetConcert), new { id = concert.ConcertId }, _mapper.Map<ConcertDto>(concert));
         }
 
         // ✅ Ta bort en konsert

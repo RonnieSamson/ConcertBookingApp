@@ -4,7 +4,7 @@ namespace Concert.Data.Repository
 {
     public interface IPerformanceRepository : IRepository<Performance>
     {
-        Task<Performance> GetPerformanceByIdAsync(string id);
+        Task<Performance?> GetPerformanceByIdAsync(string id);
         Task<IEnumerable<Performance>> GetPerformancesAsync();
         Task<IEnumerable<Performance>> GetPerformancesByConcertIdAsync(string concertId);
         void AddPerformance(Performance performance);

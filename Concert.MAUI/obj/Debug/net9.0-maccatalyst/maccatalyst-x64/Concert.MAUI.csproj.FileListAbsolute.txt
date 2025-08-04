@@ -301,3 +301,6 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\r
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.pdb
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.genruntimeconfig.cache
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\Concert.MAUI.dll
+C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.dll.config
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.csproj.SuggestedBindingRedirects.cache
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Concert.MAUI.dll.config

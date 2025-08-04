@@ -16,6 +16,7 @@ namespace Concert.MAUI.ViewModels
         private readonly IConcertService _concertService;
         private readonly IPerformanceService _performanceService;
         private readonly IBookingService _bookingService;
+        private readonly IUserService _userService;
 
         private ObservableCollection<Concert.MAUI.Models.Concert> _concerts = new();
 
@@ -26,15 +27,40 @@ namespace Concert.MAUI.ViewModels
         }
 
         [ObservableProperty]
-        private string? userId;
+        public partial string? UserId { get; set; }
 
-        public HomepageViewModel(IConcertService concertService, IPerformanceService performanceService, IBookingService bookingService)
+        [ObservableProperty]
+        public partial string WelcomeMessage { get; set; }
+
+        public HomepageViewModel(IConcertService concertService, IPerformanceService performanceService, IBookingService bookingService, IUserService userService)
         {
             _concertService = concertService;
             _performanceService = performanceService;
             _bookingService = bookingService;
+            _userService = userService;
+            WelcomeMessage = "Welcome to Concert Booking App";
 
             Task.Run(async () => await LoadConcerts());
+        }
+
+        partial void OnUserIdChanged(string? value)
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                Task.Run(async () => await LoadUserInfo());
+            }
+        }
+
+        private async Task LoadUserInfo()
+        {
+            if (!string.IsNullOrEmpty(UserId))
+            {
+                var user = await _userService.GetUserByIdAsync(UserId);
+                if (user != null)
+                {
+                    WelcomeMessage = $"Welcome, {user.Name}!";
+                }
+            }
         }
 
         [RelayCommand]
@@ -62,6 +88,12 @@ namespace Concert.MAUI.ViewModels
         private async Task ViewMyBookings()
         {
             await Shell.Current.GoToAsync($"{nameof(MyBookingsPage)}");
+        }
+
+        [RelayCommand]
+        private async Task Logout()
+        {
+            await Shell.Current.GoToAsync("//login");
         }
     }
 }

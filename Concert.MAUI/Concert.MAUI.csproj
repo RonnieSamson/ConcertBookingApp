@@ -20,6 +20,17 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
+		<!-- Enable C# preview for partial property support with field keyword -->
+		<LangVersion>preview</LangVersion>
+
+		<!-- Suppress WinRT.Runtime version conflict warnings and XAML binding performance warnings -->
+		<WarningsAsErrors />
+		<WarningsNotAsErrors />
+		<NoWarn>MSB3277;XC0022;XC0025</NoWarn>
+
+		<!-- Enable compiled bindings with Source for better performance -->
+		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
+
 		<!-- Display name -->
 		<ApplicationTitle>Concert.MAUI</ApplicationTitle>
 
@@ -58,6 +69,12 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+
+	<!-- Resolve WinRT.Runtime version conflicts -->
+	<PropertyGroup>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="13.0.1" />

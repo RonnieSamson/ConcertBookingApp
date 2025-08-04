@@ -4,15 +4,16 @@ namespace Concert.Data.Repository
 {
     public class PerformanceRepository : Repository<Performance>, IPerformanceRepository
     {
-        public ApplicationDbContext DbContext => Context as ApplicationDbContext;
+        public ApplicationDbContext DbContext => (Context as ApplicationDbContext)!;
 
         public PerformanceRepository(ApplicationDbContext context) : base(context)
         {
         }
 
-        public async Task<Performance> GetPerformanceByIdAsync(string id)
+        public async Task<Performance?> GetPerformanceByIdAsync(string id)
         {
-            return (await Find(p => p.Id == id)).FirstOrDefault();
+            var results = await Find(p => p.Id == id);
+            return results.FirstOrDefault();
         }
 
         public async Task<IEnumerable<Performance>> GetPerformancesByConcertIdAsync(string concertId)

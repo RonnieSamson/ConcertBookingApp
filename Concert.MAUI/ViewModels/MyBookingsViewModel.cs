@@ -12,19 +12,22 @@ namespace Concert.MAUI.ViewModels
         private readonly IBookingService _bookingService;
 
         [ObservableProperty]
-        private string customerEmail = string.Empty;
+        public partial string CustomerEmail { get; set; }
 
         [ObservableProperty]
-        private ObservableCollection<Booking> bookings = new();
+        public partial ObservableCollection<Booking> Bookings { get; set; }
 
         public MyBookingsViewModel(IBookingService bookingService)
         {
             _bookingService = bookingService;
+            CustomerEmail = string.Empty;
+            Bookings = new ObservableCollection<Booking>();
         }
 
-        public async Task InitializeAsync()
+        public Task InitializeAsync()
         {
-            // You can load bookings here if needed
+            // Return completed task since no async work is done
+            return Task.CompletedTask;
         }
 
         [RelayCommand]

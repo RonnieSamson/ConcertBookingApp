@@ -4,7 +4,7 @@ using Concert.Data.Repository;
 
 public class UserRepository : Repository<User>, IUserRepository
 {
-    public ApplicationDbContext DbContext => Context as ApplicationDbContext;
+    public ApplicationDbContext DbContext => (Context as ApplicationDbContext)!;
 
     public UserRepository(ApplicationDbContext context) : base(context)
     {
@@ -12,7 +12,8 @@ public class UserRepository : Repository<User>, IUserRepository
 
     public async Task<User?> GetUserByIdAsync(string id)
     {
-        return (await Find(u => u.Id == id)).FirstOrDefault();
+        var results = await Find(u => u.Id == id);
+        return results.FirstOrDefault();
     }
 
     public async Task<User?> GetUserByEmailAsync(string email)

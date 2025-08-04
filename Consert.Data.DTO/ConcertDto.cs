@@ -2,8 +2,9 @@
 {
     public class ConcertDto
     {
-        public string ConcertId { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public required string ConcertId { get; set; }
+        public required string Title { get; set; }
+        public required string Description { get; set; }
+        public int BookingCount { get; set; } // ✅ KRÄVS: Antal bokningar för konserter
     }
 }

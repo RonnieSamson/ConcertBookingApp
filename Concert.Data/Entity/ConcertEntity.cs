@@ -5,9 +5,9 @@ namespace Concert.Data.Entity
     public class ConcertEntity
     {
         [Key]
-        public string ConcertId { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public required string ConcertId { get; set; }
+        public required string Title { get; set; }
+        public required string Description { get; set; }
         public ICollection<Performance> Performances { get; set; } = new List<Performance>();
     }
 }

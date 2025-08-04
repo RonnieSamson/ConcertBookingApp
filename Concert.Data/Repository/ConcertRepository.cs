@@ -5,7 +5,7 @@ namespace Concert.Data.Repository
 {
     public class ConcertRepository : Repository<ConcertEntity>, IConcertRepository
     {
-        public ApplicationDbContext DbContext => Context as ApplicationDbContext;
+        public ApplicationDbContext DbContext => (Context as ApplicationDbContext)!;
 
         public ConcertRepository(ApplicationDbContext context) : base(context)
         {
@@ -13,7 +13,8 @@ namespace Concert.Data.Repository
 
         public async Task<ConcertEntity?> GetConcertByIdAsync(string id)
         {
-            return (await Find(c => c.ConcertId == id)).FirstOrDefault();
+            var results = await Find(c => c.ConcertId == id);
+            return results.FirstOrDefault();
         }
 
         public async Task<IEnumerable<ConcertEntity>> GetConcertsAsync()

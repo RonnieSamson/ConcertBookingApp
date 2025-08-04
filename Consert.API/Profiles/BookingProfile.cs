@@ -15,7 +15,10 @@ namespace Concert.API.Profiles
                 .ForMember(dest => dest.Performance, opt => opt.Ignore()); // Navigation property will be loaded separately
 
             // Entity → DTO
-            CreateMap<Booking, BookingDto>();
+            CreateMap<Booking, BookingDto>()
+                .ForMember(dest => dest.PerformanceName, opt => opt.MapFrom(src => 
+                    src.Performance != null && src.Performance.Concert != null ? 
+                    $"{src.Performance.Concert.Title} - {src.Performance.Location}" : null));
         }
     }
 }

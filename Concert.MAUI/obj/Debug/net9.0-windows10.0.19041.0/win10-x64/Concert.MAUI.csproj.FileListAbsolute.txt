@@ -481,3 +481,6 @@ C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-windows10.0.19041.0\win10-x64
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Concertbookingapp\Concert.MAUI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Concert.MAUI.dll.config
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\Concert.MAUI.csproj.SuggestedBindingRedirects.cache
+C:\Concertbookingapp\Concert.MAUI\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\Concert.MAUI.dll.config
