@@ -18,11 +18,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.dll": {
@@ -35,11 +35,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
@@ -2414,11 +2414,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.dll": {
@@ -2431,11 +2431,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
@@ -4810,11 +4810,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.dll": {
@@ -4827,11 +4827,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
@@ -7206,11 +7206,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.dll": {
@@ -7223,11 +7223,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
@@ -9602,11 +9602,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.dll": {
@@ -9619,11 +9619,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
@@ -11998,11 +11998,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.dll": {
@@ -12015,11 +12015,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
@@ -14394,11 +14394,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.dll": {
@@ -14411,11 +14411,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
@@ -14872,11 +14872,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.dll": {
@@ -14889,11 +14889,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
@@ -15350,11 +15350,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.dll": {
@@ -15367,11 +15367,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
@@ -15828,11 +15828,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.dll": {
@@ -15845,11 +15845,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
@@ -16306,11 +16306,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.dll": {
@@ -16323,11 +16323,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
@@ -16784,11 +16784,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.dll": {
@@ -16801,11 +16801,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
@@ -17262,11 +17262,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
@@ -17279,11 +17279,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
@@ -17740,11 +17740,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
@@ -17757,11 +17757,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
@@ -18218,11 +18218,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
@@ -18235,11 +18235,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
@@ -18696,11 +18696,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
@@ -18713,11 +18713,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
@@ -19174,11 +19174,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
@@ -19191,11 +19191,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
@@ -19652,11 +19652,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.dll": {
@@ -19669,11 +19669,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)"
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
@@ -20130,11 +20130,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
@@ -20147,11 +20147,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)",
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)",
           "System.Speech": "9.0.0"
         },
         "compile": {
@@ -20663,7 +20663,7 @@
           }
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.1": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -20841,11 +20841,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
@@ -20858,11 +20858,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)",
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)",
           "System.Speech": "9.0.0"
         },
         "compile": {
@@ -21346,7 +21346,7 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.1": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -21504,11 +21504,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
@@ -21521,11 +21521,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)",
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)",
           "System.Speech": "9.0.0"
         },
         "compile": {
@@ -22009,7 +22009,7 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.1": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -22167,11 +22167,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
@@ -22184,11 +22184,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)",
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)",
           "System.Speech": "9.0.0"
         },
         "compile": {
@@ -22672,7 +22672,7 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.1": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -22830,11 +22830,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
@@ -22847,11 +22847,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)",
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)",
           "System.Speech": "9.0.0"
         },
         "compile": {
@@ -23335,7 +23335,7 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.1": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -23493,11 +23493,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
-          "Microsoft.Maui.Controls": "[9.0.30, 10.0.0)"
+          "CommunityToolkit.Maui.Core": "10.0.0",
+          "Microsoft.Maui.Controls": "[9.0.21, 10.0.0)"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
@@ -23510,11 +23510,11 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Core": "[9.0.30, 10.0.0)",
-          "Microsoft.Maui.Essentials": "[9.0.30, 10.0.0)",
+          "Microsoft.Maui.Core": "[9.0.21, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.21, 10.0.0)",
           "System.Speech": "9.0.0"
         },
         "compile": {
@@ -24004,7 +24004,7 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.1": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -24165,10 +24165,10 @@
         "lib/net6.0/AutoMapper.xml"
       ]
     },
-    "CommunityToolkit.Maui/11.0.0": {
-      "sha512": "NjGc6XzGjYl1GvV6HHpLqReWDJlER7yz8HxcC1n/vKQNDVn1fB+MSoY59d9gaut65Aa5WDYnS4j6BF0L97CxyQ==",
+    "CommunityToolkit.Maui/10.0.0": {
+      "sha512": "Yh4CAqewB1Voq+RwCeWP7jxD10MAkjeM3WRkhsr5KMYzuJleM/H0wM2aLIuODVnO787NM/wleI7JFOf9EU1Dbw==",
       "type": "package",
-      "path": "communitytoolkit.maui/11.0.0",
+      "path": "communitytoolkit.maui/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -24176,7 +24176,7 @@
         "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.CodeFixes.dll",
         "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.dll",
         "analyzers/dotnet/cs/CommunityToolkit.Maui.SourceGenerators.dll",
-        "communitytoolkit.maui.11.0.0.nupkg.sha512",
+        "communitytoolkit.maui.10.0.0.nupkg.sha512",
         "communitytoolkit.maui.nuspec",
         "icon.png",
         "lib/net9.0-android35.0/CommunityToolkit.Maui.dll",
@@ -24193,15 +24193,15 @@
         "lib/net9.0/CommunityToolkit.Maui.xml"
       ]
     },
-    "CommunityToolkit.Maui.Core/11.0.0": {
-      "sha512": "5G7LJTrySg+YcnDASScmBOuQNrYzI2nBWF+4J2rK0NKt/3ArR91zOAbKvBe9EKpUtUqVprb7+RcL9djEhukh/g==",
+    "CommunityToolkit.Maui.Core/10.0.0": {
+      "sha512": "kbozkLBRArk4GWpfYYa6WAnu3jYFEyPKlkR+9cgyYqM6wrtNlRMS/uXXRo8IhN8qCrrvlxBerQnK4gQmMW0cJg==",
       "type": "package",
-      "path": "communitytoolkit.maui.core/11.0.0",
+      "path": "communitytoolkit.maui.core/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ReadMe.txt",
-        "communitytoolkit.maui.core.11.0.0.nupkg.sha512",
+        "communitytoolkit.maui.core.10.0.0.nupkg.sha512",
         "communitytoolkit.maui.core.nuspec",
         "icon.png",
         "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll",
@@ -24766,73 +24766,39 @@
         "lib/net9.0-android35.0/Microsoft.Maui.Controls.pdb",
         "lib/net9.0-android35.0/Microsoft.Maui.Controls.xml",
         "lib/net9.0-android35.0/ar/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ar/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ca/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ca/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/cs/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/cs/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/da/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/da/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/de/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/de/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/el/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/el/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/es/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/es/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/fi/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/fi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/fr/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/fr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/he/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/he/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/hi/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/hi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/hr/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/hr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/hu/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/hu/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/id/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/id/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/it/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/it/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ja/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ja/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ko/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ko/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ms/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ms/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/nb/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/nb/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/nl/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/nl/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/pl/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/pl/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/pt-BR/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/pt-BR/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/pt/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/pt/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ro/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ro/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ru/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ru/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/sk/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/sk/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/sv/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/sv/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/th/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/th/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/tr/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/tr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/uk/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/uk/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/vi/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/vi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/zh-HK/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/zh-HK/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/zh-Hans/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/zh-Hans/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/zh-Hant/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/zh-Hant/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-ios18.0/Design/Microsoft.Maui.Controls.DesignTools.dll",
         "lib/net9.0-ios18.0/Design/Microsoft.Maui.Controls.DesignTools.pdb",
         "lib/net9.0-ios18.0/Microsoft.Maui.Controls.dll",
@@ -25573,197 +25539,201 @@
         "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
     },
-    "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
-      "sha512": "7ZL2sFSioYm1Ry067Kw1hg0SCcW5kuVezC2SwjGbcPE61Nn+gTbH86T73G3LcEOVj0S3IZzNuE/29gZvOLS7VA==",
+    "Microsoft.Windows.SDK.BuildTools/10.0.26100.1": {
+      "sha512": "ju02pHSp1LDEIvFgLIDbCbXGPpTTrXJrH90HxC6neclpbRpdS8RxeRbYOzPQFByUPCgT/Egbz4s/cpNMamW1Sg==",
       "type": "package",
-      "path": "microsoft.windows.sdk.buildtools/10.0.22621.756",
+      "path": "microsoft.windows.sdk.buildtools/10.0.26100.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "bin/10.0.22621.0/arm/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.22621.0/arm/DeployUtil.exe",
-        "bin/10.0.22621.0/arm64/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.22621.0/arm64/ComparePackage.exe",
-        "bin/10.0.22621.0/arm64/DeployUtil.exe",
-        "bin/10.0.22621.0/arm64/MakeCert.exe",
-        "bin/10.0.22621.0/arm64/Microsoft.ComparePackage.Lib.dll",
-        "bin/10.0.22621.0/arm64/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.22621.0/arm64/Microsoft.PackageEditor.Lib.dll",
-        "bin/10.0.22621.0/arm64/Microsoft.Tools.Connectivity.dll",
-        "bin/10.0.22621.0/arm64/Microsoft.Tools.Deploy.dll",
-        "bin/10.0.22621.0/arm64/Microsoft.Windows.Build.Appx.AppxPackaging.dll.manifest",
-        "bin/10.0.22621.0/arm64/Microsoft.Windows.Build.Appx.AppxSip.dll.manifest",
-        "bin/10.0.22621.0/arm64/Microsoft.Windows.Build.Appx.OpcServices.dll.manifest",
-        "bin/10.0.22621.0/arm64/Microsoft.Windows.Build.Signing.mssign32.dll.manifest",
-        "bin/10.0.22621.0/arm64/Microsoft.Windows.Build.Signing.wintrust.dll.manifest",
-        "bin/10.0.22621.0/arm64/PackageEditor.exe",
-        "bin/10.0.22621.0/arm64/ServicingCommon.dll",
-        "bin/10.0.22621.0/arm64/SirepClient.assembly.manifest",
-        "bin/10.0.22621.0/arm64/SirepClient.dll",
-        "bin/10.0.22621.0/arm64/SirepInterop.dll",
-        "bin/10.0.22621.0/arm64/SshClient.dll",
-        "bin/10.0.22621.0/arm64/WinAppDeployCmd.exe",
-        "bin/10.0.22621.0/arm64/WinAppDeployCommon.dll",
-        "bin/10.0.22621.0/arm64/appxpackaging.dll",
-        "bin/10.0.22621.0/arm64/appxsip.dll",
-        "bin/10.0.22621.0/arm64/en-US/AppxPackaging.dll.mui",
-        "bin/10.0.22621.0/arm64/en/Microsoft.Tools.Deploy.resources.dll",
-        "bin/10.0.22621.0/arm64/en/WinAppDeployCmd.resources.dll",
-        "bin/10.0.22621.0/arm64/ipoverusb.discoverpartners.dll",
-        "bin/10.0.22621.0/arm64/makeappx.exe",
-        "bin/10.0.22621.0/arm64/makecat.exe",
-        "bin/10.0.22621.0/arm64/makecat.exe.manifest",
-        "bin/10.0.22621.0/arm64/makepri.exe",
-        "bin/10.0.22621.0/arm64/mc.exe",
-        "bin/10.0.22621.0/arm64/mdmerge.exe",
-        "bin/10.0.22621.0/arm64/midl.exe",
-        "bin/10.0.22621.0/arm64/midlc.exe",
-        "bin/10.0.22621.0/arm64/midlrt.exe",
-        "bin/10.0.22621.0/arm64/midlrtmd.dll",
-        "bin/10.0.22621.0/arm64/mrmsupport.dll",
-        "bin/10.0.22621.0/arm64/msisip.dll",
-        "bin/10.0.22621.0/arm64/mssign32.dll",
-        "bin/10.0.22621.0/arm64/mt.exe",
-        "bin/10.0.22621.0/arm64/mt.exe.config",
-        "bin/10.0.22621.0/arm64/opcservices.dll",
-        "bin/10.0.22621.0/arm64/rc.exe",
-        "bin/10.0.22621.0/arm64/rcdll.dll",
-        "bin/10.0.22621.0/arm64/signtool.exe",
-        "bin/10.0.22621.0/arm64/signtool.exe.manifest",
-        "bin/10.0.22621.0/arm64/tracewpp.exe",
-        "bin/10.0.22621.0/arm64/uuidgen.exe",
-        "bin/10.0.22621.0/arm64/winmdidl.exe",
-        "bin/10.0.22621.0/arm64/wintrust.dll",
-        "bin/10.0.22621.0/arm64/wintrust.dll.ini",
-        "bin/10.0.22621.0/x64/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.22621.0/x64/ComparePackage.exe",
-        "bin/10.0.22621.0/x64/DeployUtil.exe",
-        "bin/10.0.22621.0/x64/MakeCert.exe",
-        "bin/10.0.22621.0/x64/Microsoft.ComparePackage.Lib.dll",
-        "bin/10.0.22621.0/x64/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.22621.0/x64/Microsoft.PackageEditor.Lib.dll",
-        "bin/10.0.22621.0/x64/Microsoft.Tools.Connectivity.dll",
-        "bin/10.0.22621.0/x64/Microsoft.Tools.Deploy.dll",
-        "bin/10.0.22621.0/x64/Microsoft.Windows.Build.Appx.AppxPackaging.dll.manifest",
-        "bin/10.0.22621.0/x64/Microsoft.Windows.Build.Appx.AppxSip.dll.manifest",
-        "bin/10.0.22621.0/x64/Microsoft.Windows.Build.Appx.OpcServices.dll.manifest",
-        "bin/10.0.22621.0/x64/Microsoft.Windows.Build.Signing.mssign32.dll.manifest",
-        "bin/10.0.22621.0/x64/Microsoft.Windows.Build.Signing.wintrust.dll.manifest",
-        "bin/10.0.22621.0/x64/PackageEditor.exe",
-        "bin/10.0.22621.0/x64/ServicingCommon.dll",
-        "bin/10.0.22621.0/x64/SirepClient.assembly.manifest",
-        "bin/10.0.22621.0/x64/SirepClient.dll",
-        "bin/10.0.22621.0/x64/SirepInterop.dll",
-        "bin/10.0.22621.0/x64/SshClient.dll",
-        "bin/10.0.22621.0/x64/WinAppDeployCmd.exe",
-        "bin/10.0.22621.0/x64/WinAppDeployCommon.dll",
-        "bin/10.0.22621.0/x64/appxpackaging.dll",
-        "bin/10.0.22621.0/x64/appxsip.dll",
-        "bin/10.0.22621.0/x64/en-US/AppxPackaging.dll.mui",
-        "bin/10.0.22621.0/x64/en/Microsoft.Tools.Deploy.resources.dll",
-        "bin/10.0.22621.0/x64/en/WinAppDeployCmd.resources.dll",
-        "bin/10.0.22621.0/x64/ipoverusb.discoverpartners.dll",
-        "bin/10.0.22621.0/x64/makeappx.exe",
-        "bin/10.0.22621.0/x64/makecat.exe",
-        "bin/10.0.22621.0/x64/makecat.exe.manifest",
-        "bin/10.0.22621.0/x64/makepri.exe",
-        "bin/10.0.22621.0/x64/mc.exe",
-        "bin/10.0.22621.0/x64/mdmerge.exe",
-        "bin/10.0.22621.0/x64/midl.exe",
-        "bin/10.0.22621.0/x64/midlc.exe",
-        "bin/10.0.22621.0/x64/midlrt.exe",
-        "bin/10.0.22621.0/x64/midlrtmd.dll",
-        "bin/10.0.22621.0/x64/mrmsupport.dll",
-        "bin/10.0.22621.0/x64/msisip.dll",
-        "bin/10.0.22621.0/x64/mssign32.dll",
-        "bin/10.0.22621.0/x64/mt.exe",
-        "bin/10.0.22621.0/x64/mt.exe.config",
-        "bin/10.0.22621.0/x64/opcservices.dll",
-        "bin/10.0.22621.0/x64/rc.exe",
-        "bin/10.0.22621.0/x64/rcdll.dll",
-        "bin/10.0.22621.0/x64/signtool.exe",
-        "bin/10.0.22621.0/x64/signtool.exe.manifest",
-        "bin/10.0.22621.0/x64/tracewpp.exe",
-        "bin/10.0.22621.0/x64/uuidgen.exe",
-        "bin/10.0.22621.0/x64/winmdidl.exe",
-        "bin/10.0.22621.0/x64/wintrust.dll",
-        "bin/10.0.22621.0/x64/wintrust.dll.ini",
-        "bin/10.0.22621.0/x86/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.22621.0/x86/ComparePackage.exe",
-        "bin/10.0.22621.0/x86/DeployUtil.exe",
-        "bin/10.0.22621.0/x86/MakeCert.exe",
-        "bin/10.0.22621.0/x86/Microsoft.ComparePackage.Lib.dll",
-        "bin/10.0.22621.0/x86/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.22621.0/x86/Microsoft.PackageEditor.Lib.dll",
-        "bin/10.0.22621.0/x86/Microsoft.Tools.Connectivity.dll",
-        "bin/10.0.22621.0/x86/Microsoft.Tools.Deploy.dll",
-        "bin/10.0.22621.0/x86/Microsoft.Windows.Build.Appx.AppxPackaging.dll.manifest",
-        "bin/10.0.22621.0/x86/Microsoft.Windows.Build.Appx.AppxSip.dll.manifest",
-        "bin/10.0.22621.0/x86/Microsoft.Windows.Build.Appx.OpcServices.dll.manifest",
-        "bin/10.0.22621.0/x86/Microsoft.Windows.Build.Signing.mssign32.dll.manifest",
-        "bin/10.0.22621.0/x86/Microsoft.Windows.Build.Signing.wintrust.dll.manifest",
-        "bin/10.0.22621.0/x86/PackageEditor.exe",
-        "bin/10.0.22621.0/x86/ServicingCommon.dll",
-        "bin/10.0.22621.0/x86/SirepClient.assembly.manifest",
-        "bin/10.0.22621.0/x86/SirepClient.dll",
-        "bin/10.0.22621.0/x86/SirepInterop.dll",
-        "bin/10.0.22621.0/x86/SshClient.dll",
-        "bin/10.0.22621.0/x86/WinAppDeployCmd.exe",
-        "bin/10.0.22621.0/x86/WinAppDeployCommon.dll",
-        "bin/10.0.22621.0/x86/appxpackaging.dll",
-        "bin/10.0.22621.0/x86/appxsip.dll",
-        "bin/10.0.22621.0/x86/en-US/AppxPackaging.dll.mui",
-        "bin/10.0.22621.0/x86/en/Microsoft.Tools.Deploy.resources.dll",
-        "bin/10.0.22621.0/x86/en/WinAppDeployCmd.resources.dll",
-        "bin/10.0.22621.0/x86/ipoverusb.discoverpartners.dll",
-        "bin/10.0.22621.0/x86/makeappx.exe",
-        "bin/10.0.22621.0/x86/makecat.exe",
-        "bin/10.0.22621.0/x86/makecat.exe.manifest",
-        "bin/10.0.22621.0/x86/makepri.exe",
-        "bin/10.0.22621.0/x86/mc.exe",
-        "bin/10.0.22621.0/x86/mdmerge.exe",
-        "bin/10.0.22621.0/x86/midl.exe",
-        "bin/10.0.22621.0/x86/midlc.exe",
-        "bin/10.0.22621.0/x86/midlrt.exe",
-        "bin/10.0.22621.0/x86/midlrtmd.dll",
-        "bin/10.0.22621.0/x86/mrmsupport.dll",
-        "bin/10.0.22621.0/x86/msisip.dll",
-        "bin/10.0.22621.0/x86/mssign32.dll",
-        "bin/10.0.22621.0/x86/mt.exe",
-        "bin/10.0.22621.0/x86/mt.exe.config",
-        "bin/10.0.22621.0/x86/opcservices.dll",
-        "bin/10.0.22621.0/x86/rc.exe",
-        "bin/10.0.22621.0/x86/rcdll.dll",
-        "bin/10.0.22621.0/x86/signtool.exe",
-        "bin/10.0.22621.0/x86/signtool.exe.manifest",
-        "bin/10.0.22621.0/x86/tracewpp.exe",
-        "bin/10.0.22621.0/x86/uuidgen.exe",
-        "bin/10.0.22621.0/x86/winmdidl.exe",
-        "bin/10.0.22621.0/x86/wintrust.dll",
-        "bin/10.0.22621.0/x86/wintrust.dll.ini",
+        "bin/10.0.26100.0/arm64/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "bin/10.0.26100.0/arm64/ComparePackage.exe",
+        "bin/10.0.26100.0/arm64/DeployUtil.exe",
+        "bin/10.0.26100.0/arm64/MakeCert.exe",
+        "bin/10.0.26100.0/arm64/Microsoft.ComparePackage.Lib.dll",
+        "bin/10.0.26100.0/arm64/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "bin/10.0.26100.0/arm64/Microsoft.PackageEditor.Lib.dll",
+        "bin/10.0.26100.0/arm64/Microsoft.Tools.Connectivity.dll",
+        "bin/10.0.26100.0/arm64/Microsoft.Tools.Deploy.dll",
+        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Appx.AppxPackaging.dll.manifest",
+        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Appx.AppxSip.dll.manifest",
+        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Appx.OpcServices.dll.manifest",
+        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Signing.mssign32.dll.manifest",
+        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Signing.wintrust.dll.manifest",
+        "bin/10.0.26100.0/arm64/PackageEditor.exe",
+        "bin/10.0.26100.0/arm64/ServicingCommon.dll",
+        "bin/10.0.26100.0/arm64/SirepClient.assembly.manifest",
+        "bin/10.0.26100.0/arm64/SirepClient.dll",
+        "bin/10.0.26100.0/arm64/SirepInterop.dll",
+        "bin/10.0.26100.0/arm64/SshClient.dll",
+        "bin/10.0.26100.0/arm64/WinAppDeployCmd.exe",
+        "bin/10.0.26100.0/arm64/WinAppDeployCommon.dll",
+        "bin/10.0.26100.0/arm64/appxpackaging.dll",
+        "bin/10.0.26100.0/arm64/appxsip.dll",
+        "bin/10.0.26100.0/arm64/en-US/AppxPackaging.dll.mui",
+        "bin/10.0.26100.0/arm64/en/Microsoft.Tools.Deploy.resources.dll",
+        "bin/10.0.26100.0/arm64/en/WinAppDeployCmd.resources.dll",
+        "bin/10.0.26100.0/arm64/ipoverusb.discoverpartners.dll",
+        "bin/10.0.26100.0/arm64/makeappx.exe",
+        "bin/10.0.26100.0/arm64/makecat.exe",
+        "bin/10.0.26100.0/arm64/makecat.exe.manifest",
+        "bin/10.0.26100.0/arm64/makepri.exe",
+        "bin/10.0.26100.0/arm64/mc.exe",
+        "bin/10.0.26100.0/arm64/mdmerge.exe",
+        "bin/10.0.26100.0/arm64/midl.exe",
+        "bin/10.0.26100.0/arm64/midlc.exe",
+        "bin/10.0.26100.0/arm64/midlrt.exe",
+        "bin/10.0.26100.0/arm64/midlrtmd.dll",
+        "bin/10.0.26100.0/arm64/mrmsupport.dll",
+        "bin/10.0.26100.0/arm64/msisip.dll",
+        "bin/10.0.26100.0/arm64/mssign32.dll",
+        "bin/10.0.26100.0/arm64/mt.exe",
+        "bin/10.0.26100.0/arm64/mt.exe.config",
+        "bin/10.0.26100.0/arm64/opcservices.dll",
+        "bin/10.0.26100.0/arm64/rc.exe",
+        "bin/10.0.26100.0/arm64/rcdll.dll",
+        "bin/10.0.26100.0/arm64/signtool.exe",
+        "bin/10.0.26100.0/arm64/signtool.exe.manifest",
+        "bin/10.0.26100.0/arm64/tracewpp.exe",
+        "bin/10.0.26100.0/arm64/uuidgen.exe",
+        "bin/10.0.26100.0/arm64/veiid.exe",
+        "bin/10.0.26100.0/arm64/winmdidl.exe",
+        "bin/10.0.26100.0/arm64/wintrust.dll",
+        "bin/10.0.26100.0/arm64/wintrust.dll.ini",
+        "bin/10.0.26100.0/x64/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "bin/10.0.26100.0/x64/ComparePackage.exe",
+        "bin/10.0.26100.0/x64/DeployUtil.exe",
+        "bin/10.0.26100.0/x64/MakeCert.exe",
+        "bin/10.0.26100.0/x64/Microsoft.ComparePackage.Lib.dll",
+        "bin/10.0.26100.0/x64/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "bin/10.0.26100.0/x64/Microsoft.PackageEditor.Lib.dll",
+        "bin/10.0.26100.0/x64/Microsoft.Tools.Connectivity.dll",
+        "bin/10.0.26100.0/x64/Microsoft.Tools.Deploy.dll",
+        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Appx.AppxPackaging.dll.manifest",
+        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Appx.AppxSip.dll.manifest",
+        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Appx.OpcServices.dll.manifest",
+        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Signing.mssign32.dll.manifest",
+        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Signing.wintrust.dll.manifest",
+        "bin/10.0.26100.0/x64/PackageEditor.exe",
+        "bin/10.0.26100.0/x64/ServicingCommon.dll",
+        "bin/10.0.26100.0/x64/SirepClient.assembly.manifest",
+        "bin/10.0.26100.0/x64/SirepClient.dll",
+        "bin/10.0.26100.0/x64/SirepInterop.dll",
+        "bin/10.0.26100.0/x64/SshClient.dll",
+        "bin/10.0.26100.0/x64/WinAppDeployCmd.exe",
+        "bin/10.0.26100.0/x64/WinAppDeployCommon.dll",
+        "bin/10.0.26100.0/x64/appxpackaging.dll",
+        "bin/10.0.26100.0/x64/appxsip.dll",
+        "bin/10.0.26100.0/x64/en-US/AppxPackaging.dll.mui",
+        "bin/10.0.26100.0/x64/en/Microsoft.Tools.Deploy.resources.dll",
+        "bin/10.0.26100.0/x64/en/WinAppDeployCmd.resources.dll",
+        "bin/10.0.26100.0/x64/ipoverusb.discoverpartners.dll",
+        "bin/10.0.26100.0/x64/makeappx.exe",
+        "bin/10.0.26100.0/x64/makecat.exe",
+        "bin/10.0.26100.0/x64/makecat.exe.manifest",
+        "bin/10.0.26100.0/x64/makepri.exe",
+        "bin/10.0.26100.0/x64/mc.exe",
+        "bin/10.0.26100.0/x64/mdmerge.exe",
+        "bin/10.0.26100.0/x64/midl.exe",
+        "bin/10.0.26100.0/x64/midlc.exe",
+        "bin/10.0.26100.0/x64/midlrt.exe",
+        "bin/10.0.26100.0/x64/midlrtmd.dll",
+        "bin/10.0.26100.0/x64/mrmsupport.dll",
+        "bin/10.0.26100.0/x64/msisip.dll",
+        "bin/10.0.26100.0/x64/mssign32.dll",
+        "bin/10.0.26100.0/x64/mt.exe",
+        "bin/10.0.26100.0/x64/mt.exe.config",
+        "bin/10.0.26100.0/x64/opcservices.dll",
+        "bin/10.0.26100.0/x64/rc.exe",
+        "bin/10.0.26100.0/x64/rcdll.dll",
+        "bin/10.0.26100.0/x64/signtool.exe",
+        "bin/10.0.26100.0/x64/signtool.exe.manifest",
+        "bin/10.0.26100.0/x64/tracewpp.exe",
+        "bin/10.0.26100.0/x64/uuidgen.exe",
+        "bin/10.0.26100.0/x64/veiid.exe",
+        "bin/10.0.26100.0/x64/winmdidl.exe",
+        "bin/10.0.26100.0/x64/wintrust.dll",
+        "bin/10.0.26100.0/x64/wintrust.dll.ini",
+        "bin/10.0.26100.0/x86/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "bin/10.0.26100.0/x86/ComparePackage.exe",
+        "bin/10.0.26100.0/x86/DeployUtil.exe",
+        "bin/10.0.26100.0/x86/MakeCert.exe",
+        "bin/10.0.26100.0/x86/Microsoft.ComparePackage.Lib.dll",
+        "bin/10.0.26100.0/x86/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "bin/10.0.26100.0/x86/Microsoft.PackageEditor.Lib.dll",
+        "bin/10.0.26100.0/x86/Microsoft.Tools.Connectivity.dll",
+        "bin/10.0.26100.0/x86/Microsoft.Tools.Deploy.dll",
+        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Appx.AppxPackaging.dll.manifest",
+        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Appx.AppxSip.dll.manifest",
+        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Appx.OpcServices.dll.manifest",
+        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Signing.mssign32.dll.manifest",
+        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Signing.wintrust.dll.manifest",
+        "bin/10.0.26100.0/x86/PackageEditor.exe",
+        "bin/10.0.26100.0/x86/ServicingCommon.dll",
+        "bin/10.0.26100.0/x86/SirepClient.assembly.manifest",
+        "bin/10.0.26100.0/x86/SirepClient.dll",
+        "bin/10.0.26100.0/x86/SirepInterop.dll",
+        "bin/10.0.26100.0/x86/SshClient.dll",
+        "bin/10.0.26100.0/x86/WinAppDeployCmd.exe",
+        "bin/10.0.26100.0/x86/WinAppDeployCommon.dll",
+        "bin/10.0.26100.0/x86/appxpackaging.dll",
+        "bin/10.0.26100.0/x86/appxsip.dll",
+        "bin/10.0.26100.0/x86/en-US/AppxPackaging.dll.mui",
+        "bin/10.0.26100.0/x86/en/Microsoft.Tools.Deploy.resources.dll",
+        "bin/10.0.26100.0/x86/en/WinAppDeployCmd.resources.dll",
+        "bin/10.0.26100.0/x86/ipoverusb.discoverpartners.dll",
+        "bin/10.0.26100.0/x86/makeappx.exe",
+        "bin/10.0.26100.0/x86/makecat.exe",
+        "bin/10.0.26100.0/x86/makecat.exe.manifest",
+        "bin/10.0.26100.0/x86/makepri.exe",
+        "bin/10.0.26100.0/x86/mc.exe",
+        "bin/10.0.26100.0/x86/mdmerge.exe",
+        "bin/10.0.26100.0/x86/midl.exe",
+        "bin/10.0.26100.0/x86/midlc.exe",
+        "bin/10.0.26100.0/x86/midlrt.exe",
+        "bin/10.0.26100.0/x86/midlrtmd.dll",
+        "bin/10.0.26100.0/x86/mrmsupport.dll",
+        "bin/10.0.26100.0/x86/msisip.dll",
+        "bin/10.0.26100.0/x86/mssign32.dll",
+        "bin/10.0.26100.0/x86/mt.exe",
+        "bin/10.0.26100.0/x86/mt.exe.config",
+        "bin/10.0.26100.0/x86/opcservices.dll",
+        "bin/10.0.26100.0/x86/rc.exe",
+        "bin/10.0.26100.0/x86/rcdll.dll",
+        "bin/10.0.26100.0/x86/signtool.exe",
+        "bin/10.0.26100.0/x86/signtool.exe.manifest",
+        "bin/10.0.26100.0/x86/tracewpp.exe",
+        "bin/10.0.26100.0/x86/uuidgen.exe",
+        "bin/10.0.26100.0/x86/winmdidl.exe",
+        "bin/10.0.26100.0/x86/wintrust.dll",
+        "bin/10.0.26100.0/x86/wintrust.dll.ini",
         "build/Microsoft.Windows.SDK.BuildTools.props",
         "build/Microsoft.Windows.SDK.BuildTools.targets",
         "buildTransitive/Microsoft.Windows.SDK.BuildTools.props",
         "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets",
-        "microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
+        "microsoft.windows.sdk.buildtools.10.0.26100.1.nupkg.sha512",
         "microsoft.windows.sdk.buildtools.nuspec",
-        "schemas/10.0.22621.0/winrt/AppxManifestSchema.xsd",
-        "schemas/10.0.22621.0/winrt/AppxManifestSchema2010_v2.xsd",
-        "schemas/10.0.22621.0/winrt/AppxManifestSchema2013.xsd",
-        "schemas/10.0.22621.0/winrt/FoundationManifestSchema.xsd",
-        "schemas/10.0.22621.0/winrt/FoundationManifestSchema_v2.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v10.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v11.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v12.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v13.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v2.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v3.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v4.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v5.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v6.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v7.xsd",
-        "schemas/10.0.22621.0/winrt/UapManifestSchema_v8.xsd"
+        "schemas/10.0.26100.0/winrt/AppxManifestSchema.xsd",
+        "schemas/10.0.26100.0/winrt/AppxManifestSchema2010_v2.xsd",
+        "schemas/10.0.26100.0/winrt/AppxManifestSchema2013.xsd",
+        "schemas/10.0.26100.0/winrt/FoundationManifestSchema.xsd",
+        "schemas/10.0.26100.0/winrt/FoundationManifestSchema_v2.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v10.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v11.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v12.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v13.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v15.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v15a.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v16.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v17.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v2.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v3.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v4.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v5.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v6.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v7.xsd",
+        "schemas/10.0.26100.0/winrt/UapManifestSchema_v8.xsd"
       ]
     },
     "Microsoft.WindowsAppSDK/1.6.250108002": {
@@ -28309,7 +28279,7 @@
   "projectFileDependencyGroups": {
     "net9.0-android35.0": [
       "AutoMapper >= 13.0.1",
-      "CommunityToolkit.Maui >= 11.0.0",
+      "CommunityToolkit.Maui >= 10.0.0",
       "CommunityToolkit.Mvvm >= 8.4.0",
       "Concert.Data.DTO >= 1.0.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.2",
@@ -28318,7 +28288,7 @@
     ],
     "net9.0-ios18.0": [
       "AutoMapper >= 13.0.1",
-      "CommunityToolkit.Maui >= 11.0.0",
+      "CommunityToolkit.Maui >= 10.0.0",
       "CommunityToolkit.Mvvm >= 8.4.0",
       "Concert.Data.DTO >= 1.0.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.2",
@@ -28327,7 +28297,7 @@
     ],
     "net9.0-maccatalyst18.0": [
       "AutoMapper >= 13.0.1",
-      "CommunityToolkit.Maui >= 11.0.0",
+      "CommunityToolkit.Maui >= 10.0.0",
       "CommunityToolkit.Mvvm >= 8.4.0",
       "Concert.Data.DTO >= 1.0.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.2",
@@ -28336,11 +28306,13 @@
     ],
     "net9.0-windows10.0.19041": [
       "AutoMapper >= 13.0.1",
-      "CommunityToolkit.Maui >= 11.0.0",
+      "CommunityToolkit.Maui >= 10.0.0",
       "CommunityToolkit.Mvvm >= 8.4.0",
       "Concert.Data.DTO >= 1.0.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.2",
-      "Microsoft.Maui.Controls >= 9.0.40"
+      "Microsoft.Maui.Controls >= 9.0.40",
+      "Microsoft.Windows.SDK.BuildTools >= 10.0.26100.1",
+      "Microsoft.WindowsAppSDK >= 1.6.250108002"
     ]
   },
   "packageFolders": {
@@ -28413,7 +28385,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -28427,7 +28399,7 @@
           },
           "CommunityToolkit.Maui": {
             "target": "Package",
-            "version": "[11.0.0, )"
+            "version": "[10.0.0, )"
           },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
@@ -28478,7 +28450,7 @@
           },
           "CommunityToolkit.Maui": {
             "target": "Package",
-            "version": "[11.0.0, )"
+            "version": "[10.0.0, )"
           },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
@@ -28529,7 +28501,7 @@
           },
           "CommunityToolkit.Maui": {
             "target": "Package",
-            "version": "[11.0.0, )"
+            "version": "[10.0.0, )"
           },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
@@ -28581,7 +28553,7 @@
           },
           "CommunityToolkit.Maui": {
             "target": "Package",
-            "version": "[11.0.0, )"
+            "version": "[10.0.0, )"
           },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
@@ -28594,6 +28566,14 @@
           "Microsoft.Maui.Controls": {
             "target": "Package",
             "version": "[9.0.40, )"
+          },
+          "Microsoft.Windows.SDK.BuildTools": {
+            "target": "Package",
+            "version": "[10.0.26100.1, )"
+          },
+          "Microsoft.WindowsAppSDK": {
+            "target": "Package",
+            "version": "[1.6.250108002, )"
           }
         },
         "imports": [

@@ -10,11 +10,13 @@
       "Concert.MAUI/1.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
-          "CommunityToolkit.Maui": "11.0.0",
+          "CommunityToolkit.Maui": "10.0.0",
           "CommunityToolkit.Mvvm": "8.4.0",
           "Concert.Data.DTO": "1.0.0",
           "Microsoft.Extensions.Logging.Debug": "9.0.2",
           "Microsoft.Maui.Controls": "9.0.40",
+          "Microsoft.Windows.SDK.BuildTools": "10.0.26100.1",
+          "Microsoft.WindowsAppSDK": "1.6.250108002",
           "Microsoft.Web.WebView2.Core.Projection": "1.0.2792.45",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.54"
         },
@@ -45,19 +47,19 @@
           }
         }
       },
-      "CommunityToolkit.Maui/11.0.0": {
+      "CommunityToolkit.Maui/10.0.0": {
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "11.0.0",
+          "CommunityToolkit.Maui.Core": "10.0.0",
           "Microsoft.Maui.Controls": "9.0.40"
         },
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.0.0"
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
           }
         }
       },
-      "CommunityToolkit.Maui.Core/11.0.0": {
+      "CommunityToolkit.Maui.Core/10.0.0": {
         "dependencies": {
           "Microsoft.Maui.Core": "9.0.40",
           "Microsoft.Maui.Essentials": "9.0.40",
@@ -65,8 +67,8 @@
         },
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.0.0"
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
           }
         }
       },
@@ -358,7 +360,7 @@
           "Microsoft.Maui.Graphics": "9.0.40",
           "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": "9.0.40",
           "Microsoft.Web.WebView2": "1.0.2792.45",
-          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.Windows.SDK.BuildTools": "10.0.26100.1",
           "Microsoft.WindowsAppSDK": "1.6.250108002"
         },
         "runtime": {
@@ -411,11 +413,11 @@
           }
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {},
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.1": {},
       "Microsoft.WindowsAppSDK/1.6.250108002": {
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.2792.45",
-          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756"
+          "Microsoft.Windows.SDK.BuildTools": "10.0.26100.1"
         },
         "runtime": {
           "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
@@ -533,19 +535,19 @@
       "path": "automapper/13.0.1",
       "hashPath": "automapper.13.0.1.nupkg.sha512"
     },
-    "CommunityToolkit.Maui/11.0.0": {
+    "CommunityToolkit.Maui/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NjGc6XzGjYl1GvV6HHpLqReWDJlER7yz8HxcC1n/vKQNDVn1fB+MSoY59d9gaut65Aa5WDYnS4j6BF0L97CxyQ==",
-      "path": "communitytoolkit.maui/11.0.0",
-      "hashPath": "communitytoolkit.maui.11.0.0.nupkg.sha512"
+      "sha512": "sha512-Yh4CAqewB1Voq+RwCeWP7jxD10MAkjeM3WRkhsr5KMYzuJleM/H0wM2aLIuODVnO787NM/wleI7JFOf9EU1Dbw==",
+      "path": "communitytoolkit.maui/10.0.0",
+      "hashPath": "communitytoolkit.maui.10.0.0.nupkg.sha512"
     },
-    "CommunityToolkit.Maui.Core/11.0.0": {
+    "CommunityToolkit.Maui.Core/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5G7LJTrySg+YcnDASScmBOuQNrYzI2nBWF+4J2rK0NKt/3ArR91zOAbKvBe9EKpUtUqVprb7+RcL9djEhukh/g==",
-      "path": "communitytoolkit.maui.core/11.0.0",
-      "hashPath": "communitytoolkit.maui.core.11.0.0.nupkg.sha512"
+      "sha512": "sha512-kbozkLBRArk4GWpfYYa6WAnu3jYFEyPKlkR+9cgyYqM6wrtNlRMS/uXXRo8IhN8qCrrvlxBerQnK4gQmMW0cJg==",
+      "path": "communitytoolkit.maui.core/10.0.0",
+      "hashPath": "communitytoolkit.maui.core.10.0.0.nupkg.sha512"
     },
     "CommunityToolkit.Mvvm/8.4.0": {
       "type": "package",
@@ -701,12 +703,12 @@
       "path": "microsoft.web.webview2/1.0.2792.45",
       "hashPath": "microsoft.web.webview2.1.0.2792.45.nupkg.sha512"
     },
-    "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
+    "Microsoft.Windows.SDK.BuildTools/10.0.26100.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7ZL2sFSioYm1Ry067Kw1hg0SCcW5kuVezC2SwjGbcPE61Nn+gTbH86T73G3LcEOVj0S3IZzNuE/29gZvOLS7VA==",
-      "path": "microsoft.windows.sdk.buildtools/10.0.22621.756",
-      "hashPath": "microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512"
+      "sha512": "sha512-ju02pHSp1LDEIvFgLIDbCbXGPpTTrXJrH90HxC6neclpbRpdS8RxeRbYOzPQFByUPCgT/Egbz4s/cpNMamW1Sg==",
+      "path": "microsoft.windows.sdk.buildtools/10.0.26100.1",
+      "hashPath": "microsoft.windows.sdk.buildtools.10.0.26100.1.nupkg.sha512"
     },
     "Microsoft.WindowsAppSDK/1.6.250108002": {
       "type": "package",

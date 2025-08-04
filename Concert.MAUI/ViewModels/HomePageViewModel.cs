@@ -38,7 +38,7 @@ namespace Concert.MAUI.ViewModels
             
             WelcomeMessage = "Welcome to Concert Booking App";
             UpdateWelcomeMessage();
-            Task.Run(async () => await LoadConcerts());
+            _ = LoadConcerts(); // Call LoadConcerts on the UI thread
         }
 
         private void UpdateWelcomeMessage()
@@ -50,15 +50,32 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         private async Task LoadConcerts()
         {
-            var concertsList = await _concertService.GetAllConcertsAsync();
-            if (concertsList != null)
+            System.Diagnostics.Debug.WriteLine("🔄 LoadConcerts() started");
+            
+            try
             {
-                // Clear existing concerts to prevent duplicates
-                Concerts.Clear();
-                foreach (var concert in concertsList)
+                var concertsList = await _concertService.GetAllConcertsAsync();
+                System.Diagnostics.Debug.WriteLine($"📊 API returned {concertsList?.Count ?? 0} concerts");
+                
+                if (concertsList != null)
                 {
-                    Concerts.Add(concert);
+                    // Clear existing concerts to prevent duplicates
+                    Concerts.Clear();
+                    foreach (var concert in concertsList)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"➕ Adding concert: {concert.Title}");
+                        Concerts.Add(concert);
+                    }
+                    System.Diagnostics.Debug.WriteLine($"✅ Total concerts in UI: {Concerts.Count}");
                 }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine("❌ No concerts returned from API");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"💥 Error loading concerts: {ex.Message}");
             }
         }
 

@@ -17,12 +17,20 @@ namespace Concert.MAUI.Services
 
         public async Task<List<Concert.MAUI.Models.Concert>?> GetAllConcertsAsync()
         {
+            System.Diagnostics.Debug.WriteLine("🌐 ConcertService: Calling API for concerts...");
+            
             // Hämta DTOs från API
             var concertDtos = await _restService.GetAsync<List<ConcertDto>>("concerts");
+            
+            System.Diagnostics.Debug.WriteLine($"📦 API Response: {concertDtos?.Count ?? 0} DTOs received");
+            
             if (concertDtos == null) return null;
 
             // Konvertera till MAUI Models
-            return _mapper.Map<List<Concert.MAUI.Models.Concert>>(concertDtos);
+            var concerts = _mapper.Map<List<Concert.MAUI.Models.Concert>>(concertDtos);
+            System.Diagnostics.Debug.WriteLine($"🔄 Mapped to {concerts?.Count ?? 0} MAUI models");
+            
+            return concerts;
         }
 
         public async Task<Concert.MAUI.Models.Concert?> GetConcertByIdAsync(string id)

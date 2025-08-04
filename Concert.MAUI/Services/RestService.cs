@@ -23,11 +23,11 @@ namespace Concert.MAUI.Services
 
             // 🔥 Dynamiskt väljer rätt URL beroende på plattform
 #if ANDROID
-            _baseUrl = "https://10.0.2.2:5001/api/"; // Android Emulator
+            _baseUrl = "http://10.0.2.2:5000/api/"; // Android Emulator - HTTP för testning
 #elif IOS
-            _baseUrl = "https://127.0.0.1:5001/api/"; // iOS Simulator
+            _baseUrl = "http://127.0.0.1:5000/api/"; // iOS Simulator - HTTP för testning
 #else
-            _baseUrl = "https://localhost:5001/api/"; // Windows/Mac
+            _baseUrl = "http://localhost:5000/api/"; // Windows/Mac - HTTP för testning
 #endif
 
 #if DEBUG

@@ -70,7 +70,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -84,7 +84,7 @@
             },
             "CommunityToolkit.Maui": {
               "target": "Package",
-              "version": "[11.0.0, )"
+              "version": "[10.0.0, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -135,7 +135,7 @@
             },
             "CommunityToolkit.Maui": {
               "target": "Package",
-              "version": "[11.0.0, )"
+              "version": "[10.0.0, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -186,7 +186,7 @@
             },
             "CommunityToolkit.Maui": {
               "target": "Package",
-              "version": "[11.0.0, )"
+              "version": "[10.0.0, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -238,7 +238,7 @@
             },
             "CommunityToolkit.Maui": {
               "target": "Package",
-              "version": "[11.0.0, )"
+              "version": "[10.0.0, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -251,6 +251,14 @@
             "Microsoft.Maui.Controls": {
               "target": "Package",
               "version": "[9.0.40, )"
+            },
+            "Microsoft.Windows.SDK.BuildTools": {
+              "target": "Package",
+              "version": "[10.0.26100.1, )"
+            },
+            "Microsoft.WindowsAppSDK": {
+              "target": "Package",
+              "version": "[1.6.250108002, )"
             }
           },
           "imports": [
@@ -338,7 +346,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.100"
       },

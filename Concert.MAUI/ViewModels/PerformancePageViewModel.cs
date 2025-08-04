@@ -39,6 +39,7 @@ namespace Concert.MAUI.ViewModels
 
         partial void OnConcertIdChanged(string value)
         {
+            System.Diagnostics.Debug.WriteLine($"🎬 PerformancePageViewModel.OnConcertIdChanged: '{value}'");
             _ = LoadPerformancesAsync();
         }
 
@@ -47,7 +48,12 @@ namespace Concert.MAUI.ViewModels
 
         public async Task LoadPerformancesAsync()
         {
+            System.Diagnostics.Debug.WriteLine($"🎬 PerformancePageViewModel.LoadPerformancesAsync starting with ConcertId: '{ConcertId}'");
+            
             var performanceList = await _performanceService.GetPerformancesByConcertIdAsync(ConcertId);
+            
+            System.Diagnostics.Debug.WriteLine($"🎬 PerformancePageViewModel.LoadPerformancesAsync got {performanceList?.Count() ?? 0} performances");
+            
             if (performanceList != null)
             {
                 Performances.Clear();
@@ -55,6 +61,10 @@ namespace Concert.MAUI.ViewModels
                 {
                     Performances.Add(perf);
                 }
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine($"🎬 PerformancePageViewModel.LoadPerformancesAsync: No performances found for concertId '{ConcertId}'");
             }
         }
 

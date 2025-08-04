@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Concert.Data.DTO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f761c7a44a8420c9a1f39a039d438a8c202a190")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96fa8ce2cee30be39dedb763212894bcbb857ce0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Concert.Data.DTO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Concert.Data.DTO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
