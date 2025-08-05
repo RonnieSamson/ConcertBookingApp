@@ -31,10 +31,6 @@
                         <!-- Performance Info with simple layout -->
                         <VerticalStackLayout>
                             <HorizontalStackLayout Spacing="10">
-                                <Label Text="☐" 
-                                       FontSize="20"
-                                       TextColor="Gray"
-                                       VerticalOptions="Center"/>
                                 <Label FontAttributes="Bold" 
                                        FontSize="16" 
                                        TextColor="Black"

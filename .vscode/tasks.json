@@ -36,6 +36,28 @@
 			"problemMatcher": [
 				"$msCompile"
 			]
+		},
+		{
+			"label": "Build and Deploy MAUI App (Android)",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"Concert.MAUI/Concert.MAUI.csproj",
+				"--framework",
+				"net9.0-android",
+				"-t:Run"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "new"
+			}
 		}
 	]
 }
