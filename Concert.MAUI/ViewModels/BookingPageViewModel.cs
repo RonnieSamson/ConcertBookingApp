@@ -14,6 +14,7 @@ namespace Concert.MAUI.ViewModels
         private readonly IUserService _userService;
         private readonly IPerformanceService _performanceService;
         private readonly IBookingService _bookingService;
+        private readonly IAuthenticationService _authService;
 
         [ObservableProperty]
         public partial string? UserIdQuery { get; set; }
@@ -36,16 +37,24 @@ namespace Concert.MAUI.ViewModels
         [ObservableProperty]
         public partial Performance? SelectedPerformance { get; set; }
 
-        public BookingPageViewModel(IUserService userService, IPerformanceService performanceService, IBookingService bookingService)
+        public BookingPageViewModel(IUserService userService, IPerformanceService performanceService, IBookingService bookingService, IAuthenticationService authService)
         {
             _userService = userService;
             _performanceService = performanceService;
             _bookingService = bookingService;
+            _authService = authService;
             
             // Initialize properties with default values
             Performances = new ObservableCollection<Performance>();
             CustomerName = string.Empty;
             CustomerEmail = string.Empty;
+            
+            // Auto-fill with logged-in user information
+            if (_authService.IsAuthenticated)
+            {
+                CustomerName = _authService.CurrentUserName ?? string.Empty;
+                CustomerEmail = _authService.CurrentUserEmail ?? string.Empty;
+            }
         }
 
         public async Task InitializeAsync()
@@ -110,6 +119,8 @@ namespace Concert.MAUI.ViewModels
                         }
                     }
                     System.Diagnostics.Debug.WriteLine($"Total performances loaded: {Performances.Count}");
+                    
+                    System.Diagnostics.Debug.WriteLine($"Performances ready for booking confirmation: {Performances.Count}");
                 }
                 catch (HttpRequestException ex)
                 {
@@ -129,9 +140,11 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         public async Task ConfirmBookingAsync()
         {
-            if (SelectedPerformance == null)
+            // Use first performance from the list since they're pre-selected
+            var performanceToBook = Performances.FirstOrDefault();
+            if (performanceToBook == null)
             {
-                await Shell.Current.DisplayAlert("Error", "Please select a performance!", "OK");
+                await Shell.Current.DisplayAlert("Error", "No performance available to book!", "OK");
                 return;
             }
 
@@ -141,7 +154,19 @@ namespace Concert.MAUI.ViewModels
                 return;
             }
 
-            if (await _bookingService.BookPerformanceAsync(SelectedPerformance.Id, CustomerName, CustomerEmail))
+            // Check if user has already booked this performance
+            var existingBookings = await _bookingService.GetBookingsByEmailAsync(CustomerEmail);
+            if (existingBookings != null && existingBookings.Any(b => b.PerformanceId == performanceToBook.Id))
+            {
+                await Shell.Current.DisplayAlert("Already Booked", 
+                    $"You have already booked this performance: {performanceToBook.Location}. " +
+                    "You can only book each performance once.", "OK");
+                return;
+            }
+
+            System.Diagnostics.Debug.WriteLine($"Booking performance: {performanceToBook.Location} for {CustomerName} ({CustomerEmail})");
+
+            if (await _bookingService.BookPerformanceAsync(performanceToBook.Id, CustomerName, CustomerEmail))
             {
                 await Shell.Current.DisplayAlert("Success", "Booking confirmed!", "OK");
                 await Shell.Current.GoToAsync("..");

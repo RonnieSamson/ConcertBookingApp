@@ -21,45 +21,81 @@
             <Label
                 FontAttributes="Bold"
                 FontSize="16"
+                TextColor="Black"
                 Text="Customer Information:" />
 
+            <Label
+                Text="Name:"
+                FontSize="14"
+                TextColor="Gray"
+                Margin="0,5,0,0" />
             <Entry
                 Placeholder="Enter customer name"
-                Text="{Binding CustomerName}" />
+                Text="{Binding CustomerName}"
+                TextColor="Black"
+                PlaceholderColor="Gray" />
 
+            <Label
+                Text="Email:"
+                FontSize="14"
+                TextColor="Gray"
+                Margin="0,10,0,0" />
             <Entry
                 Placeholder="Enter customer email"
-                Text="{Binding CustomerEmail}" />
+                Text="{Binding CustomerEmail}"
+                TextColor="Black"
+                PlaceholderColor="Gray" />
 
             <Label
                 FontAttributes="Bold"
                 FontSize="16"
-                Text="Select Performance:" />
+                TextColor="Black"
+                Text="Selected Performance:" />
+                
+            <Label 
+                Text="This is the performance you selected. Review and confirm your booking below."
+                FontSize="12"
+                TextColor="Gray"
+                Margin="0,5,0,10" />
 
+            <!-- Show selected performances as information cards (non-selectable) -->
             <CollectionView 
                 ItemsSource="{Binding Performances}"
-                SelectedItem="{Binding SelectedPerformance}"
-                SelectionMode="Single">
+                SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Performance">
                         <Border
                             Margin="5"
-                            Padding="10"
-                            BackgroundColor="LightBlue"
-                            Stroke="DarkBlue"
+                            Padding="15"
+                            BackgroundColor="LightGreen"
+                            Stroke="Green"
                             StrokeThickness="2">
-                            <VerticalStackLayout>
-                                <Label 
-                                    FontAttributes="Bold"
-                                    FontSize="14" 
-                                    Text="{Binding Location}" />
-                                <Label 
-                                    FontSize="12" 
-                                    Text="{Binding StartTime, StringFormat='Start: {0:HH:mm dd/MM/yyyy}'}" />
-                                <Label 
-                                    FontSize="12" 
-                                    Text="{Binding EndTime, StringFormat='End: {0:HH:mm dd/MM/yyyy}'}" />
-                            </VerticalStackLayout>
+                            
+                            <HorizontalStackLayout Spacing="15">
+                                <!-- Checkmark to show this is selected -->
+                                <Label Text="✓" 
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="Green"
+                                       VerticalOptions="Center"/>
+                                
+                                <!-- Performance Info -->
+                                <VerticalStackLayout>
+                                    <Label 
+                                        FontAttributes="Bold"
+                                        FontSize="14"
+                                        TextColor="Black"
+                                        Text="{Binding Location}" />
+                                    <Label 
+                                        FontSize="12"
+                                        TextColor="Black"
+                                        Text="{Binding StartTime, StringFormat='Start: {0:HH:mm dd/MM/yyyy}'}" />
+                                    <Label 
+                                        FontSize="12"
+                                        TextColor="Black"
+                                        Text="{Binding EndTime, StringFormat='End: {0:HH:mm dd/MM/yyyy}'}" />
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
                         </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

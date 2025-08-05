@@ -109,7 +109,8 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         private async Task ViewMyBookings()
         {
-            await Shell.Current.GoToAsync($"{nameof(MyBookingsPage)}");
+            // Use tab navigation instead of page navigation
+            await Shell.Current.GoToAsync("//bookings");
         }
 
         [RelayCommand]

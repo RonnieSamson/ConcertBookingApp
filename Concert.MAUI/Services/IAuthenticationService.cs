@@ -7,6 +7,7 @@ namespace Concert.MAUI.Services
         bool IsAuthenticated { get; }
         string? CurrentUserId { get; }
         string? CurrentUserName { get; }
+        string? CurrentUserEmail { get; }
         
         event EventHandler<AuthenticationChangedEventArgs> AuthenticationChanged;
         

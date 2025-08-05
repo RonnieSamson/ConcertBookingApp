@@ -30,7 +30,7 @@ namespace Concert.MAUI.Services
                 BookingDate = DateTime.UtcNow
             };
 
-            var response = await _restService.PostAsync<BookingDto>("bookings/book", bookingDto);
+            var response = await _restService.PostAsync<BookingDto>("bookings", bookingDto);
             return response != null;
         }
 

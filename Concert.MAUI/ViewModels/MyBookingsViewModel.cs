@@ -10,6 +10,7 @@ namespace Concert.MAUI.ViewModels
     public partial class MyBookingsViewModel : ObservableObject
     {
         private readonly IBookingService _bookingService;
+        private readonly IAuthenticationService _authService;
 
         [ObservableProperty]
         public partial string CustomerEmail { get; set; }
@@ -17,17 +18,23 @@ namespace Concert.MAUI.ViewModels
         [ObservableProperty]
         public partial ObservableCollection<Booking> Bookings { get; set; }
 
-        public MyBookingsViewModel(IBookingService bookingService)
+        public MyBookingsViewModel(IBookingService bookingService, IAuthenticationService authService)
         {
             _bookingService = bookingService;
+            _authService = authService;
             CustomerEmail = string.Empty;
             Bookings = new ObservableCollection<Booking>();
         }
 
-        public Task InitializeAsync()
+        public async Task InitializeAsync()
         {
-            // Return completed task since no async work is done
-            return Task.CompletedTask;
+            // Automatically set email from logged-in user
+            if (_authService.IsAuthenticated && !string.IsNullOrEmpty(_authService.CurrentUserEmail))
+            {
+                CustomerEmail = _authService.CurrentUserEmail;
+                // Automatically load bookings for the logged-in user
+                await LoadBookings();
+            }
         }
 
         [RelayCommand]

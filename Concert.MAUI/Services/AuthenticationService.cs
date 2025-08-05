@@ -21,6 +21,8 @@ namespace Concert.MAUI.Services
 
         public string? CurrentUserName => _currentUserName;
 
+        public string? CurrentUserEmail => _currentUserEmail;
+
         public event EventHandler<AuthenticationChangedEventArgs>? AuthenticationChanged;
 
         public async Task<bool> LoginAsync(string email, string password)

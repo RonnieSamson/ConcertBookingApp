@@ -1,6 +1,7 @@
 ﻿using Concert.Data;
 using Concert.Data.Entity;
 using Concert.Data.Repository;
+using Microsoft.EntityFrameworkCore;
 
 public class BookingRepository : Repository<Booking>, IBookingRepository
 {
@@ -12,7 +13,12 @@ public class BookingRepository : Repository<Booking>, IBookingRepository
 
     public async Task<Booking?> GetBookingByIdAsync(string id)
     {
-        return (await Find(b => b.Id == id)).FirstOrDefault();
+        if (DbContext == null) return null;
+        
+        return await DbContext.Bookings
+            .Include(b => b.Performance)
+                .ThenInclude(p => p!.Concert)
+            .FirstOrDefaultAsync(b => b.Id == id);
     }
 
     public async Task<IEnumerable<Booking>> GetBookingsByUserIdAsync(string userId)
@@ -24,13 +30,23 @@ public class BookingRepository : Repository<Booking>, IBookingRepository
 
     public async Task<IEnumerable<Booking>> GetBookingsByEmailAsync(string email)
     {
-        var bookings = await Find(b => b.CustomerEmail == email);
-        return bookings.ToList();
+        if (DbContext == null) return new List<Booking>();
+        
+        return await DbContext.Bookings
+            .Include(b => b.Performance)
+                .ThenInclude(p => p!.Concert)
+            .Where(b => b.CustomerEmail == email)
+            .ToListAsync();
     }
 
     public async Task<IEnumerable<Booking>> GetBookingsAsync()
     {
-        return await All();
+        if (DbContext == null) return new List<Booking>();
+        
+        return await DbContext.Bookings
+            .Include(b => b.Performance)
+                .ThenInclude(p => p!.Concert)
+            .ToListAsync();
     }
 
     public void AddBooking(Booking booking)
