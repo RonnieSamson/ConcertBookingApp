@@ -16,6 +16,7 @@
         <Label 
             FontSize="18" 
             FontAttributes="Bold"
+            TextColor="Black"
             Text="{Binding WelcomeMessage}"
             Margin="0,0,0,20" />
 
@@ -39,8 +40,12 @@
                             <Label
                                 FontAttributes="Bold"
                                 FontSize="18"
+                                TextColor="Black"
                                 Text="{Binding Title}" />
-                            <Label FontSize="14" Text="{Binding Description}" />
+                            <Label 
+                                FontSize="14" 
+                                TextColor="Black"
+                                Text="{Binding Description}" />
                             <Label 
                                 FontSize="12" 
                                 TextColor="Gray"

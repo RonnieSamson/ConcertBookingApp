@@ -59,14 +59,18 @@ namespace Concert.MAUI.ViewModels
                 
                 if (concertsList != null)
                 {
-                    // Clear existing concerts to prevent duplicates
-                    Concerts.Clear();
-                    foreach (var concert in concertsList)
+                    // Update UI on main thread
+                    await MainThread.InvokeOnMainThreadAsync(() =>
                     {
-                        System.Diagnostics.Debug.WriteLine($"➕ Adding concert: {concert.Title}");
-                        Concerts.Add(concert);
-                    }
-                    System.Diagnostics.Debug.WriteLine($"✅ Total concerts in UI: {Concerts.Count}");
+                        // Clear existing concerts to prevent duplicates
+                        Concerts.Clear();
+                        foreach (var concert in concertsList)
+                        {
+                            System.Diagnostics.Debug.WriteLine($"➕ Adding concert: {concert.Title}");
+                            Concerts.Add(concert);
+                        }
+                        System.Diagnostics.Debug.WriteLine($"✅ Total concerts in UI: {Concerts.Count}");
+                    });
                 }
                 else
                 {

@@ -21,14 +21,17 @@ namespace Concert.MAUI.Services
             _mapper = mapper;
             _httpsClientHandlerService = httpsClientHandlerService;
 
-            // 🔥 Dynamiskt väljer rätt URL beroende på plattform
+            // 🔥 Dynamiskt väljer rätt URL beroende på plattform - HTTPS för säker kommunikation
 #if ANDROID
-            _baseUrl = "http://10.0.2.2:5000/api/"; // Android Emulator - HTTP för testning
+            _baseUrl = "https://10.0.2.2:5001/api/"; // Android Emulator - HTTPS med localhost-certifikat
 #elif IOS
-            _baseUrl = "http://127.0.0.1:5000/api/"; // iOS Simulator - HTTP för testning
+            _baseUrl = "https://127.0.0.1:5001/api/"; // iOS Simulator - HTTPS med localhost-certifikat
 #else
-            _baseUrl = "http://localhost:5000/api/"; // Windows/Mac - HTTP för testning
+            _baseUrl = "https://localhost:5001/api/"; // Windows/Mac - HTTPS med localhost-certifikat
 #endif
+
+            // 🐛 DEBUG: Visa vilken URL som faktiskt används
+            System.Diagnostics.Debug.WriteLine($"🔧 RestService konstruktor: _baseUrl = {_baseUrl}");
 
 #if DEBUG
             HttpMessageHandler? handler = _httpsClientHandlerService.GetPlatformMessageHandler();

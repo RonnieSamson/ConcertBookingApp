@@ -66,7 +66,9 @@
                            Keyboard="Email"
                            FontSize="16"
                            Margin="20,15"
-                           BackgroundColor="Transparent"/>
+                           BackgroundColor="Transparent"
+                           TextColor="Black"
+                           PlaceholderColor="Gray"/>
                 </Border>
 
                 <!-- Password Input -->
@@ -81,7 +83,9 @@
                            IsPassword="True"
                            FontSize="16"
                            Margin="20,15"
-                           BackgroundColor="Transparent"/>
+                           BackgroundColor="Transparent"
+                           TextColor="Black"
+                           PlaceholderColor="Gray"/>
                 </Border>
 
                 <!-- Error Message -->
