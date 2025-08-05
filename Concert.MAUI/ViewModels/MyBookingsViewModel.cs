@@ -32,7 +32,11 @@ namespace Concert.MAUI.ViewModels
             if (_authService.IsAuthenticated && !string.IsNullOrEmpty(_authService.CurrentUserEmail))
             {
                 CustomerEmail = _authService.CurrentUserEmail;
-                // Automatically load bookings for the logged-in user
+            }
+            
+            // Always reload bookings when the page appears
+            if (!string.IsNullOrEmpty(CustomerEmail))
+            {
                 await LoadBookings();
             }
         }

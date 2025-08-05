@@ -140,11 +140,9 @@ namespace Concert.MAUI.ViewModels
         [RelayCommand]
         public async Task ConfirmBookingAsync()
         {
-            // Use first performance from the list since they're pre-selected
-            var performanceToBook = Performances.FirstOrDefault();
-            if (performanceToBook == null)
+            if (!Performances.Any())
             {
-                await Shell.Current.DisplayAlert("Error", "No performance available to book!", "OK");
+                await Shell.Current.DisplayAlert("Error", "No performances available to book!", "OK");
                 return;
             }
 
@@ -154,27 +152,79 @@ namespace Concert.MAUI.ViewModels
                 return;
             }
 
-            // Check if user has already booked this performance
+            // Check if user has already booked any of these performances
             var existingBookings = await _bookingService.GetBookingsByEmailAsync(CustomerEmail);
-            if (existingBookings != null && existingBookings.Any(b => b.PerformanceId == performanceToBook.Id))
+            var alreadyBookedPerformances = new List<Performance>();
+            
+            if (existingBookings != null)
+            {
+                foreach (var performance in Performances)
+                {
+                    if (existingBookings.Any(b => b.PerformanceId == performance.Id))
+                    {
+                        alreadyBookedPerformances.Add(performance);
+                    }
+                }
+            }
+
+            // If some performances are already booked, ask user what to do
+            if (alreadyBookedPerformances.Any())
+            {
+                var alreadyBookedNames = string.Join(", ", alreadyBookedPerformances.Select(p => p.Location));
+                bool continueWithRest = await Shell.Current.DisplayAlert("Some Already Booked", 
+                    $"You have already booked: {alreadyBookedNames}\n\n" +
+                    "Do you want to book the remaining performances?", 
+                    "Yes", "Cancel");
+                
+                if (!continueWithRest)
+                {
+                    return;
+                }
+            }
+
+            // Get performances that are not already booked
+            var performancesToBook = Performances.Where(p => 
+                existingBookings == null || !existingBookings.Any(b => b.PerformanceId == p.Id)).ToList();
+
+            if (!performancesToBook.Any())
             {
                 await Shell.Current.DisplayAlert("Already Booked", 
-                    $"You have already booked this performance: {performanceToBook.Location}. " +
-                    "You can only book each performance once.", "OK");
+                    "You have already booked all selected performances.", "OK");
                 return;
             }
 
-            System.Diagnostics.Debug.WriteLine($"Booking performance: {performanceToBook.Location} for {CustomerName} ({CustomerEmail})");
+            // Book all unbooked performances
+            var successfulBookings = new List<string>();
+            var failedBookings = new List<string>();
 
-            if (await _bookingService.BookPerformanceAsync(performanceToBook.Id, CustomerName, CustomerEmail))
+            foreach (var performance in performancesToBook)
             {
-                await Shell.Current.DisplayAlert("Success", "Booking confirmed!", "OK");
-                await Shell.Current.GoToAsync("..");
+                System.Diagnostics.Debug.WriteLine($"Booking performance: {performance.Location} for {CustomerName} ({CustomerEmail})");
+                
+                if (await _bookingService.BookPerformanceAsync(performance.Id, CustomerName, CustomerEmail))
+                {
+                    successfulBookings.Add(performance.Location);
+                }
+                else
+                {
+                    failedBookings.Add(performance.Location);
+                }
             }
-            else
+
+            // Show results
+            var message = "";
+            if (successfulBookings.Any())
             {
-                await Shell.Current.DisplayAlert("Error", "Booking failed!", "OK");
+                message += $"Successfully booked: {string.Join(", ", successfulBookings)}";
             }
+            if (failedBookings.Any())
+            {
+                if (!string.IsNullOrEmpty(message)) message += "\n\n";
+                message += $"Failed to book: {string.Join(", ", failedBookings)}";
+            }
+
+            await Shell.Current.DisplayAlert("Booking Results", message, "OK");
+            await Shell.Current.GoToAsync("..");
         }
 
         [RelayCommand]
