@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Concertbookingapp\\Concert.Data\\Concert.Data.csproj": {}
+    "C:\\ConcertBookingApp\\Concert.Data\\Concert.Data.csproj": {}
   },
   "projects": {
-    "C:\\Concertbookingapp\\Concert.Data\\Concert.Data.csproj": {
+    "C:\\ConcertBookingApp\\Concert.Data\\Concert.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Concertbookingapp\\Concert.Data\\Concert.Data.csproj",
+        "projectUniqueName": "C:\\ConcertBookingApp\\Concert.Data\\Concert.Data.csproj",
         "projectName": "Concert.Data",
-        "projectPath": "C:\\Concertbookingapp\\Concert.Data\\Concert.Data.csproj",
+        "projectPath": "C:\\ConcertBookingApp\\Concert.Data\\Concert.Data.csproj",
         "packagesPath": "C:\\Users\\MSI - GF63\\.nuget\\packages\\",
-        "outputPath": "C:\\Concertbookingapp\\Concert.Data\\obj\\",
+        "outputPath": "C:\\ConcertBookingApp\\Concert.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,7 +43,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.100"
       },

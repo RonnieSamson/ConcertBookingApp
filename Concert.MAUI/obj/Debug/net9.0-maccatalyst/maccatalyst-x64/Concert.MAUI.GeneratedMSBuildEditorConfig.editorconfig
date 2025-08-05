@@ -17,61 +17,61 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Concert.MAUI
-build_property.ProjectDir = C:\Concertbookingapp\Concert.MAUI\
+build_property.ProjectDir = C:\ConcertBookingApp\Concert.MAUI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Concertbookingapp/Concert.MAUI/App.xaml]
+[C:/ConcertBookingApp/Concert.MAUI/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Concertbookingapp/Concert.MAUI/AppShell.xaml]
+[C:/ConcertBookingApp/Concert.MAUI/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Concertbookingapp/Concert.MAUI/Resources/Styles/Colors.xaml]
+[C:/ConcertBookingApp/Concert.MAUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Concertbookingapp/Concert.MAUI/Resources/Styles/Styles.xaml]
+[C:/ConcertBookingApp/Concert.MAUI/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Concertbookingapp/Concert.MAUI/Views/BookingPage.xaml]
+[C:/ConcertBookingApp/Concert.MAUI/Views/BookingPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Views.BookingPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\BookingPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\BookingPage.xaml
 
-[C:/Concertbookingapp/Concert.MAUI/Views/Homepage.xaml]
+[C:/ConcertBookingApp/Concert.MAUI/Views/Homepage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Views.Homepage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Homepage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Homepage.xaml
 
-[C:/Concertbookingapp/Concert.MAUI/Views/LoginPage.xaml]
+[C:/ConcertBookingApp/Concert.MAUI/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Views.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
 
-[C:/Concertbookingapp/Concert.MAUI/Views/MyBookingsPage.xaml]
+[C:/ConcertBookingApp/Concert.MAUI/Views/MyBookingsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Views.MyBookingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MyBookingsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MyBookingsPage.xaml
 
-[C:/Concertbookingapp/Concert.MAUI/Views/PerformanceDetailsPage.xaml]
+[C:/ConcertBookingApp/Concert.MAUI/Views/PerformanceDetailsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Concert.MAUI.Views.PerformanceDetailsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PerformanceDetailsPage.xaml
