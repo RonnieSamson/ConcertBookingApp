@@ -4,7 +4,7 @@ using Concert.Data.Entity;
 using Concert.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Consert.API.Controllers
+namespace Concert.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

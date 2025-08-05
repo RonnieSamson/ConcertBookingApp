@@ -28272,8 +28272,8 @@
     },
     "Concert.Data.DTO/1.0.0": {
       "type": "project",
-      "path": "../Consert.Data.DTO/Concert.Data.DTO.csproj",
-      "msbuildProject": "../Consert.Data.DTO/Concert.Data.DTO.csproj"
+      "path": "../Concert.Data.DTO/Concert.Data.DTO.csproj",
+      "msbuildProject": "../Concert.Data.DTO/Concert.Data.DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -28352,32 +28352,32 @@
         "net9.0-android35.0": {
           "targetAlias": "net9.0-android",
           "projectReferences": {
-            "C:\\Concertbookingapp\\Consert.Data.DTO\\Concert.Data.DTO.csproj": {
-              "projectPath": "C:\\Concertbookingapp\\Consert.Data.DTO\\Concert.Data.DTO.csproj"
+            "C:\\Concertbookingapp\\Concert.Data.DTO\\Concert.Data.DTO.csproj": {
+              "projectPath": "C:\\Concertbookingapp\\Concert.Data.DTO\\Concert.Data.DTO.csproj"
             }
           }
         },
         "net9.0-ios18.0": {
           "targetAlias": "net9.0-ios",
           "projectReferences": {
-            "C:\\Concertbookingapp\\Consert.Data.DTO\\Concert.Data.DTO.csproj": {
-              "projectPath": "C:\\Concertbookingapp\\Consert.Data.DTO\\Concert.Data.DTO.csproj"
+            "C:\\Concertbookingapp\\Concert.Data.DTO\\Concert.Data.DTO.csproj": {
+              "projectPath": "C:\\Concertbookingapp\\Concert.Data.DTO\\Concert.Data.DTO.csproj"
             }
           }
         },
         "net9.0-maccatalyst18.0": {
           "targetAlias": "net9.0-maccatalyst",
           "projectReferences": {
-            "C:\\Concertbookingapp\\Consert.Data.DTO\\Concert.Data.DTO.csproj": {
-              "projectPath": "C:\\Concertbookingapp\\Consert.Data.DTO\\Concert.Data.DTO.csproj"
+            "C:\\Concertbookingapp\\Concert.Data.DTO\\Concert.Data.DTO.csproj": {
+              "projectPath": "C:\\Concertbookingapp\\Concert.Data.DTO\\Concert.Data.DTO.csproj"
             }
           }
         },
         "net9.0-windows10.0.19041": {
           "targetAlias": "net9.0-windows10.0.19041.0",
           "projectReferences": {
-            "C:\\Concertbookingapp\\Consert.Data.DTO\\Concert.Data.DTO.csproj": {
-              "projectPath": "C:\\Concertbookingapp\\Consert.Data.DTO\\Concert.Data.DTO.csproj"
+            "C:\\Concertbookingapp\\Concert.Data.DTO\\Concert.Data.DTO.csproj": {
+              "projectPath": "C:\\Concertbookingapp\\Concert.Data.DTO\\Concert.Data.DTO.csproj"
             }
           }
         }

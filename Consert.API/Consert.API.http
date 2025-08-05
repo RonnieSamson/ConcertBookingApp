@@ -1,6 +1,0 @@
-@Consert.API_HostAddress = http://localhost:5134
-
-GET {{Consert.API_HostAddress}}/user/
-Accept: application/json
-
-###

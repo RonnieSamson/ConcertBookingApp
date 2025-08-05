@@ -84,7 +84,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Consert.Data.DTO\Concert.Data.DTO.csproj" />
+	  <ProjectReference Include="..\Concert.Data.DTO\Concert.Data.DTO.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

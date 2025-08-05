@@ -1,0 +1,16 @@
+@Concert_API_HostAddress = https://localhost:5001
+
+GET {{Concert_API_HostAddress}}/user/
+Accept: application/json
+
+###
+
+# Test concerts endpoint
+GET {{Concert_API_HostAddress}}/concerts
+Accept: application/json
+
+###
+
+# Test performances endpoint
+GET {{Concert_API_HostAddress}}/performances
+Accept: application/json

@@ -37,9 +37,9 @@
             "name": "Launch API Server",
             "type": "coreclr", 
             "request": "launch",
-            "program": "${workspaceFolder}/Consert.API/bin/Debug/net9.0/Concert.API.dll",
+            "program": "${workspaceFolder}/Concert.API/bin/Debug/net9.0/Concert.API.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Consert.API",
+            "cwd": "${workspaceFolder}/Concert.API",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",

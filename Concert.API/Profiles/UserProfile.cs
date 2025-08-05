@@ -4,7 +4,7 @@ using Concert.Data.Entity;
 
 
 
-namespace Consert.API.Profiles
+namespace Concert.API.Profiles
 {
     public class UserProfile : Profile
     {
